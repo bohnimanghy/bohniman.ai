@@ -86,8 +86,8 @@ export const products: Product[] = [
     ],
   },
   {
-    slug: "rasoios",
-    name: "RasoiOS",
+    slug: "zalpan",
+    name: "Zalpan",
     category: "Restaurant Management",
     status: "BETA",
     tagline: "From order to kitchen to ledger — your restaurant, orchestrated.",

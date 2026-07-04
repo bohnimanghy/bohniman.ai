@@ -1,5 +1,7 @@
 # Bohniman AI — website
 
+**Live:** https://www.bohniman.ai (hosted on Vercel, custom domain via GoDaddy DNS)
+
 Marketing site + product pages + git-backed MDX blog for **Bohniman Systems**.
 
 Built with **Next.js (App Router) · TypeScript · Tailwind v4**. The home page is
@@ -35,7 +37,7 @@ Nothing is required for the site to render locally. Features degrade gracefully:
 
 ```
 /                     Home (design port)
-/products/[slug]      Samagam · Kathan AI · Curioversity · RasoiOS · Biocrat
+/products/[slug]      Samagam · Kathan AI · Curioversity · Zalpan · Biocrat
 /about
 /contact              Enquiry form (Resend)
 /blog                 Post list

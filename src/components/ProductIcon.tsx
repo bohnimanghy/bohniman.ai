@@ -5,26 +5,38 @@ const iconTransition: CSSProperties = {
   flex: "0 0 auto",
 };
 
-/** Flagship Samagam hub — 58px, beating center node. */
+// 8 nodes evenly on a ring of radius 26 around centre (36,36)
+const RING = [
+  [62, 36],
+  [54.4, 17.6],
+  [36, 10],
+  [17.6, 17.6],
+  [10, 36],
+  [17.6, 54.4],
+  [36, 62],
+  [54.4, 54.4],
+] as const;
+
+/** Flagship Samagam mark — nodes on a ring converging to a beating core. */
 export function SamagamHubIcon() {
   return (
     <svg width="58" height="58" viewBox="0 0 72 72" fill="none" style={iconTransition}>
-      <line x1="16" y1="16" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.4" />
-      <line x1="56" y1="16" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.4" />
-      <line x1="16" y1="56" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.4" />
-      <line x1="56" y1="56" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.4" />
-      <line x1="36" y1="10" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.4" />
-      <line x1="36" y1="62" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.4" />
-      <circle cx="16" cy="16" r="3.4" fill="#17191E" />
-      <circle cx="56" cy="16" r="3.4" fill="#17191E" />
-      <circle cx="16" cy="56" r="3.4" fill="#17191E" />
-      <circle cx="56" cy="56" r="3.4" fill="#17191E" />
-      <circle cx="36" cy="10" r="3.4" fill="#17191E" />
-      <circle cx="36" cy="62" r="3.4" fill="#17191E" />
+      {/* gathering ring */}
+      <circle cx="36" cy="36" r="26" stroke="#C9C6BC" strokeWidth="1" opacity="0.55" />
+      {/* converging lines */}
+      {RING.map(([x, y], i) => (
+        <line key={`l${i}`} x1={x} y1={y} x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.3" />
+      ))}
+      {/* outer nodes */}
+      {RING.map(([x, y], i) => (
+        <circle key={`n${i}`} cx={x} cy={y} r="3.1" fill="#17191E" />
+      ))}
+      {/* glowing core */}
+      <circle cx="36" cy="36" r="11" fill="var(--accent)" opacity="0.14" />
       <circle
         cx="36"
         cy="36"
-        r="6.5"
+        r="6.8"
         fill="var(--accent)"
         style={{
           transformBox: "fill-box",
@@ -42,15 +54,14 @@ export function ProductIcon({ slug }: { slug: string }) {
     case "samagam":
       return (
         <svg width="38" height="38" viewBox="0 0 72 72" fill="none" style={iconTransition}>
-          <line x1="16" y1="16" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.6" />
-          <line x1="56" y1="16" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.6" />
-          <line x1="16" y1="56" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.6" />
-          <line x1="56" y1="56" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.6" />
-          <circle cx="16" cy="16" r="3.6" fill="#17191E" />
-          <circle cx="56" cy="16" r="3.6" fill="#17191E" />
-          <circle cx="16" cy="56" r="3.6" fill="#17191E" />
-          <circle cx="56" cy="56" r="3.6" fill="#17191E" />
-          <circle cx="36" cy="36" r="6.5" fill="var(--accent)" />
+          <circle cx="36" cy="36" r="26" stroke="#C9C6BC" strokeWidth="1.1" opacity="0.55" />
+          {RING.map(([x, y], i) => (
+            <line key={`l${i}`} x1={x} y1={y} x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.4" />
+          ))}
+          {RING.map(([x, y], i) => (
+            <circle key={`n${i}`} cx={x} cy={y} r="3.2" fill="#17191E" />
+          ))}
+          <circle cx="36" cy="36" r="6.8" fill="var(--accent)" />
         </svg>
       );
     case "kathan-ai":
@@ -71,7 +82,7 @@ export function ProductIcon({ slug }: { slug: string }) {
           <rect x="22" y="22" width="8" height="8" rx="1.5" transform="rotate(45 26 26)" fill="var(--accent)" />
         </svg>
       );
-    case "rasoios":
+    case "zalpan":
       return (
         <svg width="40" height="38" viewBox="0 0 56 52" fill="none" style={iconTransition}>
           <line x1="12" y1="26" x2="28" y2="26" stroke="#17191E" strokeWidth="1.6" />
