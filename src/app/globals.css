@@ -1,26 +1,171 @@
 @import "tailwindcss";
 
+@theme {
+  /* Brand palette (from design) */
+  --color-canvas: #f5f4ef;
+  --color-canvas-soft: #fcfbf8;
+  --color-ink: #17191e;
+  --color-ink-soft: #14161b;
+  --color-accent: #f0531c;
+  --color-line: #e2e0d7;
+  --color-line-soft: #e9e7de;
+  --color-muted: #54585f;
+  --color-mono: #8a8e96;
+
+  /* Fonts (bound to next/font CSS vars in layout) */
+  --font-display: var(--font-schibsted), "IBM Plex Sans", sans-serif;
+  --font-sans: var(--font-plex-sans), sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Live accent — read by canvas scripts via getComputedStyle */
+  --accent: #f0531c;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes caret {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes hubBeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.32);
+  }
+}
+
+@keyframes glowDrift {
+  0% {
+    transform: translate(-6%, -4%) scale(1);
+  }
+  50% {
+    transform: translate(9%, 7%) scale(1.12);
+  }
+  100% {
+    transform: translate(-6%, -4%) scale(1);
+  }
+}
+
+/* Scroll-reveal base + revealed state */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.6, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Prose for MDX blog posts */
+.prose {
+  color: #3f434a;
+  font-size: 18px;
+  line-height: 1.7;
+}
+.prose h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: 30px;
+  line-height: 1.2;
+  color: var(--color-ink);
+  margin: 48px 0 16px;
+}
+.prose h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 23px;
+  color: var(--color-ink);
+  margin: 36px 0 12px;
+}
+.prose p {
+  margin: 0 0 22px;
+}
+.prose a {
+  color: color-mix(in oklab, var(--accent), black 18%);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose ul,
+.prose ol {
+  margin: 0 0 22px;
+  padding-left: 24px;
+}
+.prose li {
+  margin: 0 0 8px;
+}
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 28px 0;
+  border: 1px solid var(--color-line);
+}
+.prose blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 20px;
+  margin: 28px 0;
+  color: var(--color-muted);
+  font-style: italic;
+}
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: #efeee7;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+.prose pre {
+  background: #14161b;
+  color: #edece6;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 0 0 22px;
+}
+.prose pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
 }

@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bohniman AI — website
 
-## Getting Started
+Marketing site + product pages + git-backed MDX blog for **Bohniman Systems**.
 
-First, run the development server:
+Built with **Next.js (App Router) · TypeScript · Tailwind v4**. The home page is
+an exact port of the Claude design in [`design/`](design/).
+
+## Stack
+
+| Concern      | Choice                                                     |
+| ------------ | ---------------------------------------------------------- |
+| Framework    | Next.js 16 (App Router, RSC, Server Actions)               |
+| Styling      | Tailwind v4 (CSS `@theme` tokens) + brand palette          |
+| Fonts        | Schibsted Grotesk (display), IBM Plex Sans / Mono          |
+| Blog         | MDX files in `content/blog/*.mdx` (`next-mdx-remote/rsc`)  |
+| Contact form | Server action → [Resend](https://resend.com) email        |
+| Admin        | `/admin` password gate → commits MDX + images via GitHub API |
+| Deploy       | Vercel                                                     |
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # fill in the values you need
+npm run dev                  # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Nothing is required for the site to render locally. Features degrade gracefully:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Contact form** works once `RESEND_API_KEY` is set (otherwise it shows an
+  "email us directly" message and logs the submission to the server console).
+- **/admin** needs `ADMIN_PASSWORD`; publishing needs the `GITHUB_*` vars.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Routes
 
-## Learn More
+```
+/                     Home (design port)
+/products/[slug]      Samagam · Kathan AI · Curioversity · RasoiOS · Biocrat
+/about
+/contact              Enquiry form (Resend)
+/blog                 Post list
+/blog/[slug]          MDX post
+/admin                Login → blog editor (git-backed publish)
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Writing blog posts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Two ways:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Commit a file** — add `content/blog/<slug>.mdx` with frontmatter:
 
-## Deploy on Vercel
+   ```mdx
+   ---
+   title: "Post title"
+   date: "2026-07-04"
+   excerpt: "Shown on the blog list."
+   author: "Your name"
+   cover: "/blog/<slug>/cover.jpg"   # optional
+   tags: ["engineering"]
+   ---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Body in Markdown. Images: ![alt](/blog/<slug>/photo.jpg)
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   Put images under `public/blog/<slug>/`. Commit → Vercel rebuilds → live.
+
+2. **Use `/admin`** — sign in, fill the form, upload images, hit publish. The
+   server commits the `.mdx` + images to the repo in a single commit (via the
+   GitHub API). Vercel redeploys automatically (~40s to live).
+
+## Environment variables
+
+See [`.env.example`](.env.example). Summary:
+
+| Var                    | Used by      | Notes                                          |
+| ---------------------- | ------------ | ---------------------------------------------- |
+| `RESEND_API_KEY`       | contact form | Resend API key                                 |
+| `CONTACT_TO_EMAIL`     | contact form | Inbox for enquiries                            |
+| `CONTACT_FROM_EMAIL`   | contact form | Verified sender                                |
+| `ADMIN_PASSWORD`       | /admin       | Sign-in password                               |
+| `ADMIN_SESSION_SECRET` | /admin       | Optional cookie-signing secret                 |
+| `GITHUB_TOKEN`         | /admin       | Fine-grained PAT, **Contents: Read and write** |
+| `GITHUB_REPO`          | /admin       | `owner/repo`                                    |
+| `GITHUB_BRANCH`        | /admin       | Deploy branch (default `main`)                 |
+
+## Deploy (Vercel)
+
+1. Push this repo to GitHub.
+2. Import it in Vercel.
+3. Add the env vars above in **Project → Settings → Environment Variables**.
+4. `GITHUB_REPO` must point at this same repo so `/admin` can commit to it.
+
+## Notes
+
+- The two hero/track-record animations are `<canvas>` client components
+  (`NeuralCanvas`, `NetCanvas`) ported 1:1 from the design.
+- The accent colour is a single CSS variable (`--accent`) read by both the CSS
+  and the canvases — change it in `globals.css` to re-theme.
+- The original design source is kept in `design/` for reference.

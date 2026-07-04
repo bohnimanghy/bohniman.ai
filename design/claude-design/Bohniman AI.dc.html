@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#F5F4EF">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#F5F4EF"/>
+    <text x="600" y="440" text-anchor="middle" font-family="'Schibsted Grotesk',sans-serif" font-weight="700" font-size="240" letter-spacing="-8" fill="#17191E">bohn<tspan fill="#F0531C">i</tspan>man</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;background:#F5F4EF;}
+  *{box-sizing:border-box;}
+  ::selection{background:#F0531C;color:#fff;}
+  @keyframes pulseDot{0%,100%{opacity:1;}50%{opacity:.4;}}
+  @keyframes caret{0%,100%{opacity:1;}50%{opacity:0;}}
+  @keyframes hubBeat{0%,100%{transform:scale(1);}50%{transform:scale(1.32);}}
+  @keyframes glowDrift{0%{transform:translate(-6%,-4%) scale(1);}50%{transform:translate(9%,7%) scale(1.12);}100%{transform:translate(-6%,-4%) scale(1);}}
+</style>
+</helmet>
+
+<div id="top" style="--accent:#F0531C; background:#F5F4EF; color:#17191E; font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased; min-height:100%;">
+
+  <!-- ============ HEADER ============ -->
+  <header style="position:sticky;top:0;z-index:50;background:rgba(245,244,239,0.82);backdrop-filter:saturate(1.3) blur(10px);-webkit-backdrop-filter:saturate(1.3) blur(10px);border-bottom:1px solid #E2E0D7;">
+    <div style="max-width:1240px;margin:0 auto;padding:15px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="#top" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+        <span style="display:flex;flex-direction:column;line-height:1;gap:4px;">
+          <svg role="img" aria-label="Bohniman" viewBox="-1.5 -1.5 273.14 47.24" xmlns="http://www.w3.org/2000/svg" style="height:27px;width:auto;display:block;color:#17191E;"><defs><style>.cls-1{fill:currentColor;stroke:currentColor;stroke-width:0.9px}.cls-2{fill:var(--accent);stroke:var(--accent);stroke-width:0.9px}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M159.58,30.93c0-3,0-6.05,0-9.07A10.9,10.9,0,0,1,168.3,11a10.47,10.47,0,0,1,9.46,2.57c.56.5.85.58,1.47,0a10.48,10.48,0,0,1,10.6-2.3,10.67,10.67,0,0,1,7.57,8.24,8.09,8.09,0,0,1,.24,1.89q0,9.7,0,19.42a2.86,2.86,0,0,1-3.15,3,2.77,2.77,0,0,1-2.59-2.29,7.49,7.49,0,0,1-.11-1.42c0-5.94,0-11.89,0-17.83A5.18,5.18,0,0,0,187.93,17a5,5,0,0,0-6.41,4.83q0,9.22,0,18.46a4.82,4.82,0,0,1-.29,1.78A2.86,2.86,0,0,1,175.74,41c0-3.9,0-7.8,0-11.7,0-2.38,0-4.77,0-7.16A5.26,5.26,0,0,0,172.05,17a5.11,5.11,0,0,0-6.53,4.78q0,9.42-.07,18.86c0,2.45-2,3.86-4.12,2.95a2.79,2.79,0,0,1-1.75-2.78C159.57,37.51,159.58,34.22,159.58,30.93Z"></path><path class="cls-1" d="M6,17.47c.29-.4.55-.83.86-1.21a11.83,11.83,0,0,1,11.39-4.4c6.44.91,10.88,4.52,13.25,10.6,2.88,7.41-.73,16.4-7.85,20A16.35,16.35,0,0,1,.87,33.19,15.93,15.93,0,0,1,0,27.8Q0,15.67,0,3.53a4.83,4.83,0,0,1,.3-1.78A2.88,2.88,0,0,1,3.74.1,2.86,2.86,0,0,1,5.86,2.94c0,4.5,0,9,0,13.52v.95ZM26.62,28A10.15,10.15,0,0,0,16.38,17.7a10.31,10.31,0,1,0-.06,20.61A10.24,10.24,0,0,0,26.62,28Z"></path><path class="cls-1" d="M78.55,16.6a38.24,38.24,0,0,1,3.56-2.83c4.8-2.94,9.69-2.72,14.45.05a14.17,14.17,0,0,1,6.77,9.76,20,20,0,0,1,.46,3.85c.06,4.43,0,8.86,0,13.29a2.94,2.94,0,1,1-5.87.16c0-4.32,0-8.65,0-13a18.66,18.66,0,0,0-.29-3.16,8.79,8.79,0,0,0-11-6.88c-3.54,1-6.21,2.94-7.5,6.45a9.76,9.76,0,0,0-.5,3.27c-.06,4.35,0,8.7,0,13.05a3,3,0,0,1-3.09,3.2,2.93,2.93,0,0,1-2.82-2.72c0-.21,0-.42,0-.63q0-18.54,0-37.08A3.28,3.28,0,0,1,73.7.7,2.82,2.82,0,0,1,76.61.2a2.88,2.88,0,0,1,1.91,2.53,8.86,8.86,0,0,1,0,1V16.6Z"></path><path class="cls-1" d="M228.07,40.78c-1,.62-2,1.23-2.94,1.74a16.14,16.14,0,0,1-21.59-7.17,16.43,16.43,0,0,1,8.69-22.6,16.09,16.09,0,0,1,20,7.86A16.94,16.94,0,0,1,234,28.2c0,4.27,0,8.54,0,12.81A3,3,0,0,1,230,43.86a2.62,2.62,0,0,1-1.66-2C228.21,41.53,228.15,41.17,228.07,40.78Zm.07-12.69a10.22,10.22,0,1,0-20.44-.17,10.22,10.22,0,1,0,20.44.17Z"></path><path class="cls-1" d="M51.69,44.24A16.26,16.26,0,1,1,67.94,28,16.34,16.34,0,0,1,51.69,44.24Zm0-26.54A10.33,10.33,0,1,0,62.07,28,10.29,10.29,0,0,0,51.71,17.7Z"></path><path class="cls-2" d="M140.29,33.43c0,2.55,0,5.09,0,7.64A2.72,2.72,0,0,1,138,43.8a2.88,2.88,0,0,1-3.25-1.71,4.88,4.88,0,0,1-.23-1.71c0-4.14,0-8.28,0-12.42A10.74,10.74,0,0,0,133,22.2a9.52,9.52,0,0,0-9.67-4.43,9.26,9.26,0,0,0-7.51,7.28,14.19,14.19,0,0,0-.27,2.76c0,4.33,0,8.65,0,13a2.84,2.84,0,0,1-3.09,3.06,3,3,0,0,1-2.79-2.77c0-5-.18-9.93,0-14.88A15.3,15.3,0,0,1,139.4,22a15.64,15.64,0,0,1,.9,5.46c0,2,0,4,0,6Z"></path><path class="cls-1" d="M270.13,33.41c0,2.55,0,5.09,0,7.64a2.64,2.64,0,0,1-1.9,2.64,3.09,3.09,0,0,1-3.21-.83,3.22,3.22,0,0,1-.68-2.3c0-3.9,0-7.8,0-11.7a23.88,23.88,0,0,0-.18-2.93,9.64,9.64,0,0,0-8.68-8.26A9.26,9.26,0,0,0,245.63,25a15,15,0,0,0-.27,2.84c0,4.27,0,8.54,0,12.81a2.87,2.87,0,0,1-1.91,3,3,3,0,0,1-4-2.59c-.06-5-.19-9.93,0-14.88a15.29,15.29,0,0,1,29.16-5.62,15.65,15.65,0,0,1,1.48,6.69c0,2,0,4.09,0,6.13Z"></path><path class="cls-2" d="M153,27.91h0c0,4.3,0,8.59,0,12.89a3,3,0,1,1-5.88.63,5.06,5.06,0,0,1,0-.55V36h0V23a3,3,0,0,1,2.76-3.19A2.9,2.9,0,0,1,153,22.94C153,24.59,153,26.26,153,27.91Z"></path><path class="cls-1" d="M121.59,33.66a3.33,3.33,0,0,1,6.65,0,3.33,3.33,0,1,1-6.65,0Z"></path><path class="cls-2" d="M146.69,14a3.33,3.33,0,0,1,6.65,0,3.33,3.33,0,1,1-6.65,0Z"></path></g></g></svg>
+        </span>
+      </a>
+      <nav style="display:flex;align-items:center;gap:34px;">
+        <a href="#products" style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#3A3E45;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Products</a>
+        <a href="#contact" style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#3A3E45;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Services</a>
+        <a href="#about" style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#3A3E45;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">About</a>
+        <a href="#contact" style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#3A3E45;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Contact</a>
+      </nav>
+      <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;background:#17191E;color:#F5F4EF;padding:11px 20px;border-radius:9px;font-size:14px;font-weight:500;text-decoration:none;transition:background .2s;" style-hover="background:#2A2D34;">Book a demo</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section data-screen-label="Hero" style="position:relative;overflow:hidden;border-bottom:1px solid #E2E0D7;">
+    <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ true }}">
+      <div aria-hidden="true" style="position:absolute;inset:0;background-image:linear-gradient(#EAE8DF 1px,transparent 1px),linear-gradient(90deg,#EAE8DF 1px,transparent 1px);background-size:54px 54px;-webkit-mask-image:radial-gradient(130% 90% at 82% 8%,#000 0%,transparent 70%);mask-image:radial-gradient(130% 90% at 82% 8%,#000 0%,transparent 70%);pointer-events:none;"></div>
+    </sc-if>
+    <div style="max-width:1240px;margin:0 auto;padding:92px 40px 84px;position:relative;">
+      <div style="display:grid;grid-template-columns:minmax(0,1.12fr) minmax(320px,0.88fr);gap:64px;align-items:center;">
+
+        <!-- left -->
+        <div>
+          <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#8A8E96;margin-bottom:30px;">
+            <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);"></span>
+            <span style="color:#17191E;">Bohniman Systems</span>
+            <span style="color:#C9C6BC;">/</span>
+            <span>Guwahati, India</span>
+            <span style="color:#C9C6BC;">/</span>
+            <span>Est. 1999</span>
+          </div>
+          <h1 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.025em;font-size:clamp(40px,5.4vw,68px);line-height:1.04;letter-spacing:-0.015em;color:#17191E;margin:0 0 26px;text-wrap:balance;">AI products, built on <span data-yrs>26</span> years of proof.</h1>
+          <p style="font-size:19px;line-height:1.6;color:#54585F;max-width:53ch;margin:0 0 38px;">We spent <span data-yrs>26</span> years engineering mission-critical systems for governments. Now that same discipline powers AI products for events, restaurants, health, education and Indic languages.</p>
+          <div style="display:flex;align-items:center;gap:26px;flex-wrap:wrap;">
+            <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;background:#17191E;color:#F5F4EF;padding:14px 24px;border-radius:10px;font-size:15px;font-weight:500;text-decoration:none;transition:background .2s;" style-hover="background:#2A2D34;">Book a demo</a>
+            <a href="#products" style="display:inline-flex;align-items:center;gap:9px;color:color-mix(in oklab,var(--accent),black 18%);font-size:15px;font-weight:500;text-decoration:none;transition:gap .2s;" style-hover="gap:14px;">Explore products <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span></a>
+          </div>
+        </div>
+
+        <!-- right : neural signal animation -->
+        <div>
+          <div style="position:relative;width:100%;height:min(46vw,460px);min-height:350px;">
+            <canvas id="neuralCanvas" style="width:100%;height:100%;display:block;"></canvas>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#9A9A90;">
+            <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulseDot 2.4s ease-in-out infinite;"></span><span id="heroYears">1999 &rarr; 2026 · neural signal</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CREDENTIALS BAND ============ -->
+  <section style="border-bottom:1px solid #E2E0D7;background:#FCFBF8;">
+    <div style="max-width:1240px;margin:0 auto;padding:0 40px;">
+      <div data-reveal style="opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;padding:26px 0;border-bottom:1px solid #EDEBE2;">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);white-space:nowrap;">Trusted across</span>
+        <span style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#54585F;">Government · Events · Education · Health · Restaurants · Indic-language AI</span>
+      </div>
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);display:grid;grid-template-columns:repeat(5,1fr);">
+        <div style="padding:40px 26px 40px 0;border-right:1px solid #E9E7DE;">
+          <div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.02em;font-size:clamp(19px,2vw,29px);color:#17191E;line-height:1.05;margin-bottom:14px;" data-count="26" data-suffix="+" data-yrs-stat>26+</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#8A8E96;">Years engineering</div>
+        </div>
+        <div style="padding:40px 26px;border-right:1px solid #E9E7DE;">
+          <div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.02em;font-size:clamp(19px,2vw,29px);color:#17191E;line-height:1.05;margin-bottom:14px;" data-count="250" data-suffix="+">250+</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#8A8E96;">Projects · 100% delivered</div>
+        </div>
+        <div style="padding:40px 26px;border-right:1px solid #E9E7DE;">
+          <div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.02em;font-size:clamp(19px,2vw,29px);color:#17191E;line-height:1.05;margin-bottom:14px;">CMMI&nbsp;L3</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#8A8E96;">Appraised processes</div>
+        </div>
+        <div style="padding:40px 26px;border-right:1px solid #E9E7DE;">
+          <div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.02em;font-size:clamp(19px,2vw,29px);color:#17191E;line-height:1.05;margin-bottom:14px;">ISO&nbsp;27001</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#8A8E96;">First in NE India</div>
+        </div>
+        <div style="padding:40px 0 40px 26px;">
+          <div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.02em;font-size:clamp(19px,2vw,29px);color:#17191E;line-height:1.05;margin-bottom:14px;" data-count="2" data-suffix=" Cr">2 Cr</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#8A8E96;">Citizen records digitized</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section id="products" style="border-bottom:1px solid #E2E0D7;">
+    <div style="max-width:1240px;margin:0 auto;padding:96px 40px;">
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);max-width:760px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;">01 / Products</div>
+        <h2 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.025em;font-size:clamp(30px,3.6vw,46px);line-height:1.1;letter-spacing:-0.01em;color:#17191E;margin:0 0 18px;">Five products. One engineering standard.</h2>
+        <p style="font-size:18px;line-height:1.6;color:#54585F;margin:0;max-width:56ch;">Purpose-built SaaS for the industries we know deeply &mdash; with AI at the core, not bolted on.</p>
+      </div>
+
+      <!-- flagship -->
+      <div data-reveal data-product style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1) .05s,transform .7s cubic-bezier(.2,.6,.2,1) .05s;margin-top:52px;border:1px solid color-mix(in oklab,var(--accent) 24%,#E2E0D7);border-radius:16px;background:color-mix(in oklab,var(--accent) 5%,#FCFBF8);padding:40px;display:grid;grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr);gap:48px;align-items:center;">
+        <div>
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:22px;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A8E96;">Event Management · Flagship</span>
+            <span style="display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#17191E;"><span style="width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px color-mix(in oklab,var(--accent) 22%,transparent);animation:pulseDot 2.4s ease-in-out infinite;"></span>LIVE</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:18px;">
+            <svg width="58" height="58" viewBox="0 0 72 72" fill="none" style="flex:0 0 auto;">
+              <line x1="16" y1="16" x2="36" y2="36" stroke="#C9C6BC" stroke-width="1.4"/>
+              <line x1="56" y1="16" x2="36" y2="36" stroke="#C9C6BC" stroke-width="1.4"/>
+              <line x1="16" y1="56" x2="36" y2="36" stroke="#C9C6BC" stroke-width="1.4"/>
+              <line x1="56" y1="56" x2="36" y2="36" stroke="#C9C6BC" stroke-width="1.4"/>
+              <line x1="36" y1="10" x2="36" y2="36" stroke="#C9C6BC" stroke-width="1.4"/>
+              <line x1="36" y1="62" x2="36" y2="36" stroke="#C9C6BC" stroke-width="1.4"/>
+              <circle cx="16" cy="16" r="3.4" fill="#17191E"/>
+              <circle cx="56" cy="16" r="3.4" fill="#17191E"/>
+              <circle cx="16" cy="56" r="3.4" fill="#17191E"/>
+              <circle cx="56" cy="56" r="3.4" fill="#17191E"/>
+              <circle cx="36" cy="10" r="3.4" fill="#17191E"/>
+              <circle cx="36" cy="62" r="3.4" fill="#17191E"/>
+              <circle cx="36" cy="36" r="6.5" fill="var(--accent)" style="transform-box:fill-box;transform-origin:center;animation:hubBeat 3.2s ease-in-out infinite;"/>
+            </svg>
+            <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.025em;font-size:clamp(34px,4vw,48px);line-height:1;letter-spacing:-0.01em;color:#17191E;margin:0;">Samagam</h3>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:18px;line-height:1.62;color:#3F434A;margin:0 0 24px;">End-to-end event management &mdash; registrations, ticketing, QR check-in, agendas, sponsor management and real-time analytics, with AI automating check-in, scheduling and insights.</p>
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:9px;color:color-mix(in oklab,var(--accent),black 18%);font-size:15px;font-weight:500;text-decoration:none;transition:gap .2s;" style-hover="gap:14px;">Explore Samagam <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span></a>
+        </div>
+      </div>
+
+      <!-- grid of 4 -->
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1) .1s,transform .7s cubic-bezier(.2,.6,.2,1) .1s;margin-top:40px;display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid #E2E0D7;border-left:1px solid #E2E0D7;">
+
+        <div data-product style="padding:36px;border-right:1px solid #E2E0D7;border-bottom:1px solid #E2E0D7;transition:background .25s;" style-hover="background:#FBFAF6;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A8E96;">Speech-to-Text</div>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#17191E;"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);"></span>LIVE</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
+            <svg width="38" height="38" viewBox="0 0 52 52" fill="none" style="flex:0 0 auto;">
+              <rect x="4" y="18" width="4" height="16" rx="2" fill="#17191E"/>
+              <rect x="13" y="11" width="4" height="30" rx="2" fill="#17191E"/>
+              <rect x="22" y="4" width="4" height="44" rx="2" fill="var(--accent)"/>
+              <rect x="31" y="14" width="4" height="24" rx="2" fill="#17191E"/>
+              <rect x="40" y="8" width="4" height="36" rx="2" fill="#17191E"/>
+            </svg>
+            <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;letter-spacing:-0.01em;font-size:27px;color:#17191E;margin:0;">Kathan AI</h3>
+          </div>
+          <p style="font-size:15.5px;line-height:1.6;color:#5A5E66;margin:0 0 22px;">Speech-to-text for 22 Indic languages.</p>
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;color:color-mix(in oklab,var(--accent),black 18%);font-size:14px;font-weight:500;text-decoration:none;transition:gap .2s;" style-hover="gap:12px;">Learn more <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span></a>
+        </div>
+
+        <div data-product style="padding:36px;border-right:1px solid #E2E0D7;border-bottom:1px solid #E2E0D7;transition:background .25s;" style-hover="background:#FBFAF6;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A8E96;">Education</div>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#17191E;"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);"></span>LIVE</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
+            <svg width="38" height="38" viewBox="0 0 52 52" fill="none" style="flex:0 0 auto;">
+              <rect x="9" y="9" width="34" height="34" rx="3" transform="rotate(45 26 26)" stroke="#17191E" stroke-width="1.6"/>
+              <rect x="17" y="17" width="18" height="18" rx="2.5" transform="rotate(45 26 26)" stroke="#17191E" stroke-width="1.6"/>
+              <rect x="22" y="22" width="8" height="8" rx="1.5" transform="rotate(45 26 26)" fill="var(--accent)"/>
+            </svg>
+            <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;letter-spacing:-0.01em;font-size:27px;color:#17191E;margin:0;">Curioversity</h3>
+          </div>
+          <p style="font-size:15.5px;line-height:1.6;color:#5A5E66;margin:0 0 22px;">The operating system for modern institutions.</p>
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;color:color-mix(in oklab,var(--accent),black 18%);font-size:14px;font-weight:500;text-decoration:none;transition:gap .2s;" style-hover="gap:12px;">Learn more <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span></a>
+        </div>
+
+        <div data-product style="padding:36px;border-right:1px solid #E2E0D7;border-bottom:1px solid #E2E0D7;transition:background .25s;" style-hover="background:#FBFAF6;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A8E96;">Restaurant Management</div>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#8A6A1E;"><span style="width:6px;height:6px;border-radius:50%;background:#C08A2C;"></span>BETA</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
+            <svg width="40" height="38" viewBox="0 0 56 52" fill="none" style="flex:0 0 auto;">
+              <line x1="12" y1="26" x2="28" y2="26" stroke="#17191E" stroke-width="1.6"/>
+              <line x1="28" y1="26" x2="44" y2="26" stroke="#17191E" stroke-width="1.6"/>
+              <circle cx="12" cy="26" r="5" fill="none" stroke="#17191E" stroke-width="1.6"/>
+              <circle cx="28" cy="26" r="5" fill="none" stroke="#17191E" stroke-width="1.6"/>
+              <circle cx="44" cy="26" r="5.5" fill="var(--accent)"/>
+            </svg>
+            <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;letter-spacing:-0.01em;font-size:27px;color:#17191E;margin:0;">RasoiOS</h3>
+          </div>
+          <p style="font-size:15.5px;line-height:1.6;color:#5A5E66;margin:0 0 22px;">From order to kitchen to ledger &mdash; your restaurant, orchestrated.</p>
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;color:color-mix(in oklab,var(--accent),black 18%);font-size:14px;font-weight:500;text-decoration:none;transition:gap .2s;" style-hover="gap:12px;">Learn more <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span></a>
+        </div>
+
+        <div data-product style="padding:36px;border-right:1px solid #E2E0D7;border-bottom:1px solid #E2E0D7;transition:background .25s;" style-hover="background:#FBFAF6;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A8E96;">Health</div>
+            <span style="display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#8A8E96;"><span style="width:6px;height:6px;border-radius:50%;background:#B9B6AC;"></span>COMING SOON</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
+            <svg width="38" height="38" viewBox="0 0 52 52" fill="none" style="flex:0 0 auto;">
+              <circle cx="26" cy="26" r="21" fill="none" stroke="#17191E" stroke-width="1.3" opacity="0.28"/>
+              <circle cx="26" cy="26" r="13" fill="none" stroke="#17191E" stroke-width="1.5"/>
+              <circle cx="26" cy="26" r="5" fill="var(--accent)"/>
+            </svg>
+            <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;letter-spacing:-0.01em;font-size:27px;color:#17191E;margin:0;">Biocrat</h3>
+          </div>
+          <p style="font-size:15.5px;line-height:1.6;color:#5A5E66;margin:0 0 22px;">Healthcare operations, intelligently managed.</p>
+          <span style="display:inline-flex;align-items:center;gap:8px;color:#A6A399;font-size:14px;font-weight:500;font-family:'IBM Plex Sans';">In development</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRACK RECORD ============ -->
+  <section id="about" style="border-bottom:1px solid #E2E0D7;">
+    <div style="max-width:1240px;margin:0 auto;padding:96px 40px;">
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(240px,0.85fr);gap:60px;align-items:center;">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;">02 / Track record</div>
+          <h2 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.025em;font-size:clamp(30px,3.8vw,48px);line-height:1.08;letter-spacing:-0.01em;color:#17191E;margin:0;text-wrap:balance;">Most startups are learning to engineer.<br><span style="color:var(--accent);">We already did.</span></h2>
+        </div>
+        <div>
+          <div style="position:relative;width:100%;height:296px;border:1px solid #E4E2D9;border-radius:12px;background:#FBFAF7;overflow:hidden;">
+            <canvas id="netCanvas" style="width:100%;height:100%;display:block;"></canvas>
+          </div>
+          <div style="display:flex;align-items:center;gap:9px;margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A8E96;">
+            <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulseDot 2.4s ease-in-out infinite;"></span>Neural inference · live
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1) .08s,transform .7s cubic-bezier(.2,.6,.2,1) .08s;margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid #E2E0D7;">
+        <div style="padding:36px 34px 8px 0;border-right:1px solid #E2E0D7;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:20px;">01</div>
+          <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;letter-spacing:-0.01em;font-size:23px;line-height:1.2;color:#17191E;margin:0 0 14px;">Government-grade engineering</h3>
+          <p style="font-size:16px;line-height:1.62;color:#54585F;margin:0;"><span data-yrs>26</span> years of mission-critical delivery &mdash; including digitizing 2 crore citizen records and powering education departments and World Bank projects.</p>
+        </div>
+        <div style="padding:36px 34px 8px 34px;border-right:1px solid #E2E0D7;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:20px;">02</div>
+          <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;letter-spacing:-0.01em;font-size:23px;line-height:1.2;color:#17191E;margin:0 0 14px;">Process maturity that ships</h3>
+          <p style="font-size:16px;line-height:1.62;color:#54585F;margin:0;">CMMI Level 3 appraised, ISO 27001 certified &mdash; the first in Northeast India. 250+ projects delivered, every one successful.</p>
+        </div>
+        <div style="padding:36px 0 8px 34px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:20px;">03</div>
+          <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;letter-spacing:-0.01em;font-size:23px;line-height:1.2;color:#17191E;margin:0 0 14px;">AI where it matters</h3>
+          <p style="font-size:16px;line-height:1.62;color:#54585F;margin:0;">We build AI into products that solve real operational problems &mdash; events, kitchens, clinics, classrooms and 22 Indic languages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES CTA + FOOTER (dark) ============ -->
+  <section id="contact" style="background:#14161B;color:#EDECE6;position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:-15%;left:-8%;width:65%;height:130%;background:radial-gradient(circle at 42% 42%,rgba(240,83,28,0.18),rgba(255,122,0,0.06) 42%,transparent 62%);filter:blur(28px);pointer-events:none;animation:glowDrift 18s ease-in-out infinite;"></div>
+    <div style="max-width:1240px;margin:0 auto;padding:92px 40px 0;position:relative;z-index:1;">
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);display:grid;grid-template-columns:minmax(0,0.95fr) minmax(0,1.05fr);gap:56px;align-items:end;padding-bottom:80px;">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:color-mix(in oklab,var(--accent),white 18%);margin-bottom:22px;">03 / Custom work</div>
+          <h2 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.025em;font-size:clamp(32px,4vw,50px);line-height:1.05;letter-spacing:-0.01em;color:#F6F5EF;margin:0;text-wrap:balance;">Need something custom?</h2>
+        </div>
+        <div>
+          <p style="font-size:18px;line-height:1.62;color:#B7BAC0;margin:0 0 26px;max-width:52ch;">We also build bespoke software and AI solutions &mdash; the same team behind our products, for hire on your hardest problems.</p>
+          <a href="mailto:hello@bohniman.com" style="display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#0A1417;padding:14px 24px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;transition:transform .2s;" style-hover="transform:translateY(-2px);">Explore services <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span></a>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,0.11);padding:52px 0;display:grid;grid-template-columns:minmax(0,1.4fr) 1fr 1fr;gap:48px;">
+        <div>
+          <a href="#top" style="display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:20px;">
+            <span style="display:flex;flex-direction:column;line-height:1;gap:4px;">
+              <svg role="img" aria-label="Bohniman" viewBox="-1.5 -1.5 273.14 47.24" xmlns="http://www.w3.org/2000/svg" style="height:27px;width:auto;display:block;color:#F6F5EF;"><defs><style>.cls-1{fill:currentColor;stroke:currentColor;stroke-width:0.9px}.cls-2{fill:var(--accent);stroke:var(--accent);stroke-width:0.9px}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M159.58,30.93c0-3,0-6.05,0-9.07A10.9,10.9,0,0,1,168.3,11a10.47,10.47,0,0,1,9.46,2.57c.56.5.85.58,1.47,0a10.48,10.48,0,0,1,10.6-2.3,10.67,10.67,0,0,1,7.57,8.24,8.09,8.09,0,0,1,.24,1.89q0,9.7,0,19.42a2.86,2.86,0,0,1-3.15,3,2.77,2.77,0,0,1-2.59-2.29,7.49,7.49,0,0,1-.11-1.42c0-5.94,0-11.89,0-17.83A5.18,5.18,0,0,0,187.93,17a5,5,0,0,0-6.41,4.83q0,9.22,0,18.46a4.82,4.82,0,0,1-.29,1.78A2.86,2.86,0,0,1,175.74,41c0-3.9,0-7.8,0-11.7,0-2.38,0-4.77,0-7.16A5.26,5.26,0,0,0,172.05,17a5.11,5.11,0,0,0-6.53,4.78q0,9.42-.07,18.86c0,2.45-2,3.86-4.12,2.95a2.79,2.79,0,0,1-1.75-2.78C159.57,37.51,159.58,34.22,159.58,30.93Z"></path><path class="cls-1" d="M6,17.47c.29-.4.55-.83.86-1.21a11.83,11.83,0,0,1,11.39-4.4c6.44.91,10.88,4.52,13.25,10.6,2.88,7.41-.73,16.4-7.85,20A16.35,16.35,0,0,1,.87,33.19,15.93,15.93,0,0,1,0,27.8Q0,15.67,0,3.53a4.83,4.83,0,0,1,.3-1.78A2.88,2.88,0,0,1,3.74.1,2.86,2.86,0,0,1,5.86,2.94c0,4.5,0,9,0,13.52v.95ZM26.62,28A10.15,10.15,0,0,0,16.38,17.7a10.31,10.31,0,1,0-.06,20.61A10.24,10.24,0,0,0,26.62,28Z"></path><path class="cls-1" d="M78.55,16.6a38.24,38.24,0,0,1,3.56-2.83c4.8-2.94,9.69-2.72,14.45.05a14.17,14.17,0,0,1,6.77,9.76,20,20,0,0,1,.46,3.85c.06,4.43,0,8.86,0,13.29a2.94,2.94,0,1,1-5.87.16c0-4.32,0-8.65,0-13a18.66,18.66,0,0,0-.29-3.16,8.79,8.79,0,0,0-11-6.88c-3.54,1-6.21,2.94-7.5,6.45a9.76,9.76,0,0,0-.5,3.27c-.06,4.35,0,8.7,0,13.05a3,3,0,0,1-3.09,3.2,2.93,2.93,0,0,1-2.82-2.72c0-.21,0-.42,0-.63q0-18.54,0-37.08A3.28,3.28,0,0,1,73.7.7,2.82,2.82,0,0,1,76.61.2a2.88,2.88,0,0,1,1.91,2.53,8.86,8.86,0,0,1,0,1V16.6Z"></path><path class="cls-1" d="M228.07,40.78c-1,.62-2,1.23-2.94,1.74a16.14,16.14,0,0,1-21.59-7.17,16.43,16.43,0,0,1,8.69-22.6,16.09,16.09,0,0,1,20,7.86A16.94,16.94,0,0,1,234,28.2c0,4.27,0,8.54,0,12.81A3,3,0,0,1,230,43.86a2.62,2.62,0,0,1-1.66-2C228.21,41.53,228.15,41.17,228.07,40.78Zm.07-12.69a10.22,10.22,0,1,0-20.44-.17,10.22,10.22,0,1,0,20.44.17Z"></path><path class="cls-1" d="M51.69,44.24A16.26,16.26,0,1,1,67.94,28,16.34,16.34,0,0,1,51.69,44.24Zm0-26.54A10.33,10.33,0,1,0,62.07,28,10.29,10.29,0,0,0,51.71,17.7Z"></path><path class="cls-2" d="M140.29,33.43c0,2.55,0,5.09,0,7.64A2.72,2.72,0,0,1,138,43.8a2.88,2.88,0,0,1-3.25-1.71,4.88,4.88,0,0,1-.23-1.71c0-4.14,0-8.28,0-12.42A10.74,10.74,0,0,0,133,22.2a9.52,9.52,0,0,0-9.67-4.43,9.26,9.26,0,0,0-7.51,7.28,14.19,14.19,0,0,0-.27,2.76c0,4.33,0,8.65,0,13a2.84,2.84,0,0,1-3.09,3.06,3,3,0,0,1-2.79-2.77c0-5-.18-9.93,0-14.88A15.3,15.3,0,0,1,139.4,22a15.64,15.64,0,0,1,.9,5.46c0,2,0,4,0,6Z"></path><path class="cls-1" d="M270.13,33.41c0,2.55,0,5.09,0,7.64a2.64,2.64,0,0,1-1.9,2.64,3.09,3.09,0,0,1-3.21-.83,3.22,3.22,0,0,1-.68-2.3c0-3.9,0-7.8,0-11.7a23.88,23.88,0,0,0-.18-2.93,9.64,9.64,0,0,0-8.68-8.26A9.26,9.26,0,0,0,245.63,25a15,15,0,0,0-.27,2.84c0,4.27,0,8.54,0,12.81a2.87,2.87,0,0,1-1.91,3,3,3,0,0,1-4-2.59c-.06-5-.19-9.93,0-14.88a15.29,15.29,0,0,1,29.16-5.62,15.65,15.65,0,0,1,1.48,6.69c0,2,0,4.09,0,6.13Z"></path><path class="cls-2" d="M153,27.91h0c0,4.3,0,8.59,0,12.89a3,3,0,1,1-5.88.63,5.06,5.06,0,0,1,0-.55V36h0V23a3,3,0,0,1,2.76-3.19A2.9,2.9,0,0,1,153,22.94C153,24.59,153,26.26,153,27.91Z"></path><path class="cls-1" d="M121.59,33.66a3.33,3.33,0,0,1,6.65,0,3.33,3.33,0,1,1-6.65,0Z"></path><path class="cls-2" d="M146.69,14a3.33,3.33,0,0,1,6.65,0,3.33,3.33,0,1,1-6.65,0Z"></path></g></g></svg>
+            </span>
+          </a>
+          <p style="font-size:15px;line-height:1.6;color:#9A9EA6;margin:0 0 16px;max-width:38ch;">Bohniman Systems Pvt Ltd · Est. 1999. Enabling business flow for <span data-yrs>26</span> years.</p>
+          <p style="font-size:14px;line-height:1.6;color:#7C808A;margin:0;max-width:34ch;">4A Kalindi Plaza, Dr. J.C. Das Road, Panbazar, Guwahati, Assam 781001</p>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#7C808A;margin-bottom:20px;">Products</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <a href="#products" style="font-size:15px;color:#C7CAD0;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Samagam &mdash; Event Management</a>
+            <a href="#products" style="font-size:15px;color:#C7CAD0;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Kathan AI &mdash; Speech-to-Text</a>
+            <a href="#products" style="font-size:15px;color:#C7CAD0;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Curioversity &mdash; Education</a>
+            <a href="#products" style="font-size:15px;color:#C7CAD0;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">RasoiOS &mdash; Restaurant</a>
+            <a href="#products" style="font-size:15px;color:#C7CAD0;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Biocrat &mdash; Health</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#7C808A;margin-bottom:20px;">Contact</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <a href="mailto:hello@bohniman.com" style="font-size:15px;color:#C7CAD0;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">hello@bohniman.com</a>
+            <a href="tel:+918047789933" style="font-size:15px;color:#C7CAD0;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">+91 80477 89933</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,0.11);padding:24px 0 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#7C808A;">&copy; 2026 Bohniman Systems Pvt Ltd. All rights reserved.</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#6A6E78;">CMMI L3 · ISO 27001 · EST. 1999</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#F0531C&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#F0531C&quot;,&quot;#FF7A00&quot;,&quot;#0AA2C4&quot;,&quot;#545861&quot;,&quot;#2563EB&quot;],&quot;section&quot;:&quot;Theme&quot;},&quot;heroBackdrop&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;grid&quot;,&quot;options&quot;:[&quot;grid&quot;,&quot;plain&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const showGrid = (this.props.heroBackdrop ?? 'grid') === 'grid';
+    return { showGrid };
+  }
+
+  applyAccent() {
+    const acc = this.props.accentColor;
+    if (!acc) return;
+    document.documentElement.style.setProperty('--accent', acc);
+    const root = document.getElementById('top');
+    if (root) root.style.setProperty('--accent', acc);
+    if (this._redraw) this._redraw();
+    if (this._redraw2) this._redraw2();
+  }
+
+  applyYears() {
+    const yrs = new Date().getFullYear() - 1999;
+    document.querySelectorAll('[data-yrs]').forEach((el) => { el.textContent = yrs; });
+    const stat = document.querySelector('[data-yrs-stat]');
+    if (stat) {
+      stat.setAttribute('data-count', String(yrs));
+      stat.textContent = yrs + (stat.getAttribute('data-suffix') || '');
+    }
+  }
+
+  componentDidMount() {
+    this.applyAccent();
+    this.applyYears();
+    this.initNeural();
+    this.initNet();
+    this.initCountUp();
+    this.initProductHover();
+    const reveal = this.props.scrollReveal ?? true;
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    const show = (e) => { e.style.opacity = '1'; e.style.transform = 'none'; };
+    if (!reveal || !('IntersectionObserver' in window)) { els.forEach(show); return; }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting) { show(en.target); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
+    els.forEach((e) => io.observe(e));
+    setTimeout(() => els.forEach(show), 3200);
+  }
+
+  componentDidUpdate() {
+    this.applyAccent();
+    this.initNeural();
+    this.initNet();
+  }
+
+  componentWillUnmount() {
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._ro) this._ro.disconnect();
+    if (this._raf2) cancelAnimationFrame(this._raf2);
+    if (this._ro2) this._ro2.disconnect();
+    if (this._yearTimer) clearInterval(this._yearTimer);
+  }
+
+  initNet() {
+    const canvas = document.getElementById('netCanvas');
+    if (!canvas) return;
+    if (this._netCanvas === canvas) return;
+    if (this._raf2) { cancelAnimationFrame(this._raf2); this._raf2 = 0; }
+    if (this._ro2) { this._ro2.disconnect(); this._ro2 = null; }
+    this._netCanvas = canvas;
+    const ctx = canvas.getContext('2d');
+    const rootEl = document.getElementById('top');
+    const accent = () => (getComputedStyle(rootEl).getPropertyValue('--accent').trim() || '#F0531C');
+    const layers = [4, 6, 6, 3];
+    let W = 0, H = 0, dpr = 1, pts = [];
+
+    const build = () => {
+      pts = [];
+      const padX = 30, padY = 22, L = layers.length;
+      for (let i = 0; i < L; i++) {
+        const n = layers[i];
+        const x = padX + (i * (W - 2 * padX)) / (L - 1);
+        const col = [];
+        for (let k = 0; k < n; k++) {
+          const y = n === 1 ? H / 2 : padY + (k * (H - 2 * padY)) / (n - 1);
+          col.push({ x, y });
+        }
+        pts.push(col);
+      }
+    };
+
+    const frame = (ts) => {
+      const acc = accent();
+      const L = layers.length;
+      const period = 3200;
+      const front = ((ts % period) / period) * (L - 1 + 0.6) - 0.3; // sweep with slight lead/lag
+      ctx.clearRect(0, 0, W, H);
+      // edges (faint base + accent sweep band)
+      for (let i = 0; i < L - 1; i++) {
+        const band = Math.max(0, 1 - Math.abs(front - (i + 0.5)) / 0.7);
+        for (const a of pts[i]) for (const b of pts[i + 1]) {
+          ctx.strokeStyle = 'rgba(23,25,30,0.07)';
+          ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+          if (band > 0.03) {
+            ctx.strokeStyle = acc; ctx.globalAlpha = band * 0.45; ctx.lineWidth = 1.3;
+            ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+            ctx.globalAlpha = 1;
+          }
+        }
+      }
+      // nodes (light as the activation front reaches each layer)
+      for (let i = 0; i < L; i++) {
+        const act = Math.max(0, 1 - Math.abs(front - i) / 0.85);
+        for (const p of pts[i]) {
+          if (act > 0.03) {
+            ctx.fillStyle = acc; ctx.globalAlpha = act * 0.22;
+            ctx.beginPath(); ctx.arc(p.x, p.y, 4 + 8 * act, 0, Math.PI * 2); ctx.fill();
+            ctx.globalAlpha = 1;
+          }
+          ctx.fillStyle = act > 0.4 ? acc : '#CBC8BE';
+          ctx.beginPath(); ctx.arc(p.x, p.y, 3.3 + 1.8 * act, 0, Math.PI * 2); ctx.fill();
+        }
+      }
+    };
+
+    const resize = () => {
+      const rect = canvas.getBoundingClientRect();
+      if (rect.width < 2 || rect.height < 2) return false;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = rect.width; H = rect.height;
+      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      build();
+      frame(performance.now());
+      return true;
+    };
+
+    const step = (ts) => {
+      if (!W || canvas.width < 4) { if (!resize()) { this._raf2 = requestAnimationFrame(step); return; } }
+      frame(ts);
+      this._raf2 = requestAnimationFrame(step);
+    };
+
+    this._redraw2 = () => { if (W) frame(performance.now()); };
+    if ('ResizeObserver' in window) { this._ro2 = new ResizeObserver(() => resize()); this._ro2.observe(canvas); }
+    else window.addEventListener('resize', resize);
+    resize();
+    this._raf2 = requestAnimationFrame(step);
+    setTimeout(() => resize(), 150);
+  }
+
+  initCountUp() {
+    const els = Array.from(document.querySelectorAll('[data-count]'));
+    if (!els.length) return;
+    const run = (el) => {
+      const target = parseFloat(el.getAttribute('data-count'));
+      const suffix = el.getAttribute('data-suffix') || '';
+      const dur = 1150, start = performance.now();
+      const tick = (now) => {
+        const p = Math.min(1, (now - start) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    if (!('IntersectionObserver' in window)) { els.forEach(run); return; }
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach((en) => { if (en.isIntersecting) { run(en.target); io.unobserve(en.target); } });
+    }, { threshold: 0.5 });
+    els.forEach((e) => io.observe(e));
+  }
+
+  initProductHover() {
+    Array.from(document.querySelectorAll('[data-product]')).forEach((card) => {
+      const svg = card.querySelector('svg');
+      if (!svg) return;
+      svg.style.transition = 'transform .38s cubic-bezier(.2,.7,.2,1)';
+      card.addEventListener('mouseenter', () => { svg.style.transform = 'scale(1.1)'; });
+      card.addEventListener('mouseleave', () => { svg.style.transform = 'none'; });
+    });
+  }
+
+  initNeural() {
+    const canvas = document.getElementById('neuralCanvas');
+    if (!canvas) return;
+    if (this._neuralCanvas === canvas) return; // already running for this node
+    if (this._raf) { cancelAnimationFrame(this._raf); this._raf = 0; }
+    if (this._ro) { this._ro.disconnect(); this._ro = null; }
+    this._neuralCanvas = canvas;
+    const ctx = canvas.getContext('2d');
+    const yl = document.getElementById('heroYears');
+    if (yl) yl.textContent = '1999 \u2192 ' + new Date().getFullYear() + ' · neural signal';
+    const rootEl = document.getElementById('top');
+    const accent = () => (getComputedStyle(rootEl).getPropertyValue('--accent').trim() || '#F0531C');
+    let W = 0, H = 0, dpr = 1;
+    const nodes = [];
+    let signals = [];
+    let lastSpawn = 0;
+    const rand = (a, b) => a + Math.random() * (b - a);
+
+    const build = () => {
+      nodes.length = 0;
+      for (let i = 0; i < 15; i++) {
+        nodes.push({
+          x: rand(0.08, 0.92) * W,
+          y: rand(0.1, 0.88) * H,
+          r: rand(2, 3.2),
+          vx: rand(-0.14, 0.14),
+          vy: rand(-0.14, 0.14),
+          pulse: 0,
+          hub: false
+        });
+      }
+      const milestones = [
+        { year: '1999', event: 'Established', founded: true },
+        { year: '2000s', event: 'E-governance at scale' },
+        { year: '2014', event: 'ISO 27001' },
+        { year: '2017', event: 'CMMI' },
+        { year: '2020', event: 'Curioversity' },
+        { year: '2026', event: 'AI Generation' },
+      ];
+      const chosen = [0, 3, 5, 8, 11, 13].filter((i) => nodes[i]).sort((a, b) => nodes[a].x - nodes[b].x);
+      chosen.forEach((idx, k) => {
+        const n = nodes[idx];
+        const m = milestones[k]; if (!m) return;
+        n.hub = true; n.r = 5; n.labelBelow = (k % 2 === 1);
+        n.vx *= 0.2; n.vy *= 0.2;
+        n.year = m.year; n.event = m.event; n.founded = !!m.founded;
+      });
+    };
+
+    const resize = () => {
+      const rect = canvas.getBoundingClientRect();
+      if (rect.width < 2 || rect.height < 2) return false;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = rect.width; H = rect.height;
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if (nodes.length === 0) build();
+      frame(performance.now());
+      return true;
+    };
+
+    const thresh = () => Math.min(W, H) * 0.58;
+
+    const spawn = () => {
+      const t = thresh();
+      const cand = [];
+      for (let i = 0; i < nodes.length; i++)
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+          if (Math.hypot(dx, dy) < t) cand.push([i, j]);
+        }
+      if (!cand.length) return;
+      const e = cand[Math.floor(Math.random() * cand.length)];
+      const dir = Math.random() < 0.5;
+      signals.push({ a: dir ? e[0] : e[1], b: dir ? e[1] : e[0], t: 0, sp: rand(0.006, 0.011) });
+    };
+
+    const frame = (ts) => {
+      const acc = accent();
+      const t = thresh();
+
+      const _m = this._mouseN;
+      for (const n of nodes) {
+        n.x += n.vx; n.y += n.vy;
+        if (n.x < 8 || n.x > W - 8) n.vx *= -1;
+        if (n.y < 8 || n.y > H - 8) n.vy *= -1;
+        if (n.pulse > 0) n.pulse -= 0.02;
+      }
+      if (ts - lastSpawn > 500 && signals.length < 6) { spawn(); lastSpawn = ts; }
+
+      ctx.clearRect(0, 0, W, H);
+
+      for (let i = 0; i < nodes.length; i++)
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+          const d = Math.hypot(dx, dy);
+          if (d < t) {
+            ctx.strokeStyle = 'rgba(23,25,30,' + ((1 - d / t) * 0.2).toFixed(3) + ')';
+            ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.moveTo(nodes[i].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y); ctx.stroke();
+          }
+        }
+
+      if (_m && _m.x != null) {
+        for (const n of nodes) {
+          const dx = _m.x - n.x, dy = _m.y - n.y, dd = Math.hypot(dx, dy);
+          if (dd < 150) {
+            ctx.strokeStyle = acc; ctx.globalAlpha = (1 - dd / 150) * 0.5; ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.moveTo(_m.x, _m.y); ctx.lineTo(n.x, n.y); ctx.stroke(); ctx.globalAlpha = 1;
+          }
+        }
+        ctx.fillStyle = acc; ctx.beginPath(); ctx.arc(_m.x, _m.y, 3, 0, Math.PI * 2); ctx.fill();
+      }
+      signals = signals.filter((s) => {
+        s.t += s.sp;
+        const A = nodes[s.a], B = nodes[s.b];
+        if (!A || !B) return false;
+        if (s.t >= 1) {
+          B.pulse = 1;
+          return false;
+        }
+        return true;
+      });
+
+      for (const n of nodes) {
+        if (n.pulse > 0) {
+          ctx.strokeStyle = acc;
+          ctx.globalAlpha = n.pulse * 0.55;
+          ctx.lineWidth = 1.4;
+          ctx.beginPath(); ctx.arc(n.x, n.y, n.r + 3 + 7 * (1 - n.pulse), 0, Math.PI * 2); ctx.stroke();
+          ctx.globalAlpha = 1;
+        }
+        ctx.fillStyle = n.hub ? acc : '#17191E';
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2); ctx.fill();
+        if (n.hub) {
+          ctx.fillStyle = '#F5F4EF';
+          ctx.beginPath(); ctx.arc(n.x, n.y, n.r - 2, 0, Math.PI * 2); ctx.fill();
+        }
+        if (n.year) {
+          ctx.textAlign = 'center';
+          const below = n.labelBelow;
+          // year (bold)
+          ctx.font = "600 12px 'IBM Plex Mono', ui-monospace, monospace";
+          const yy = below ? n.y + n.r + 16 : n.y - n.r - 20;
+          ctx.fillStyle = '#3A3D43';
+          ctx.fillText(n.year, n.x, yy);
+          // event caption in a greyed pill
+          if (n.event) {
+            ctx.font = "500 8.5px 'IBM Plex Mono', ui-monospace, monospace";
+            const label = n.event.toUpperCase();
+            const tw = ctx.measureText(label).width;
+            const ph = 15, pw = tw + 16;
+            const rx = n.x - pw / 2;
+            const ry = below ? yy + 6 : yy - 12 - ph;
+            ctx.fillStyle = '#3A3D43';
+            ctx.beginPath();
+            if (ctx.roundRect) ctx.roundRect(rx, ry, pw, ph, ph / 2);
+            else ctx.rect(rx, ry, pw, ph);
+            ctx.fill();
+            ctx.fillStyle = '#FBFAF7';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(label, n.x, ry + ph / 2 + 0.5);
+            ctx.textBaseline = 'alphabetic';
+          }
+        }
+      }
+
+    };
+    this._redraw = () => { if (W) frame(performance.now()); };
+    this._mouseN = this._mouseN || { x: null, y: null };
+    canvas.onmousemove = (e) => { const r = canvas.getBoundingClientRect(); this._mouseN.x = e.clientX - r.left; this._mouseN.y = e.clientY - r.top; };
+    canvas.onmouseleave = () => { this._mouseN.x = null; this._mouseN.y = null; };
+    const step = (ts) => {
+      if (!W || canvas.width < 4) {
+        if (!resize()) { this._raf = requestAnimationFrame(step); return; }
+      }
+      frame(ts);
+      this._raf = requestAnimationFrame(step);
+    };
+
+    if ('ResizeObserver' in window) {
+      this._ro = new ResizeObserver(() => resize());
+      this._ro.observe(canvas);
+    } else {
+      window.addEventListener('resize', resize);
+    }
+    resize();                                   // try now (may be 0 pre-layout)
+    this._raf = requestAnimationFrame(step);    // loop keeps retrying resize until sized
+    setTimeout(() => resize(), 150);            // safety kick after layout settles
+  }
+}
+</script>
+</body>
+</html>
