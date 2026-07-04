@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { nav } from "@/lib/site";
+import { NavLinks } from "./NavLinks";
 
 export function Header() {
   return (
@@ -17,17 +17,7 @@ export function Header() {
           <Logo color="#17191E" />
         </Link>
 
-        <nav className="hidden items-center gap-[34px] md:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="font-sans text-[15px] text-[#3A3E45] transition-colors hover:text-accent"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <NavLinks />
 
         {/* CTA slot — "Book a demo" hidden for now, reserved for future use */}
       </div>

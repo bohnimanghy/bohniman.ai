@@ -36,9 +36,23 @@ export function SamagamHubIcon() {
   );
 }
 
-/** Small per-product icons for the grid of four. */
+/** Small per-product icons (also used in the nav mega-menu). */
 export function ProductIcon({ slug }: { slug: string }) {
   switch (slug) {
+    case "samagam":
+      return (
+        <svg width="38" height="38" viewBox="0 0 72 72" fill="none" style={iconTransition}>
+          <line x1="16" y1="16" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.6" />
+          <line x1="56" y1="16" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.6" />
+          <line x1="16" y1="56" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.6" />
+          <line x1="56" y1="56" x2="36" y2="36" stroke="#C9C6BC" strokeWidth="1.6" />
+          <circle cx="16" cy="16" r="3.6" fill="#17191E" />
+          <circle cx="56" cy="16" r="3.6" fill="#17191E" />
+          <circle cx="16" cy="56" r="3.6" fill="#17191E" />
+          <circle cx="56" cy="56" r="3.6" fill="#17191E" />
+          <circle cx="36" cy="36" r="6.5" fill="var(--accent)" />
+        </svg>
+      );
     case "kathan-ai":
       return (
         <svg width="38" height="38" viewBox="0 0 52 52" fill="none" style={iconTransition}>

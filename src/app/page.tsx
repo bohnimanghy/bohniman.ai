@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { NeuralCanvas } from "@/components/NeuralCanvas";
-import { NetCanvas } from "@/components/NetCanvas";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
 import { StatusBadge } from "@/components/StatusBadge";
@@ -275,19 +275,14 @@ export default function Home() {
               </h2>
             </div>
             <div>
-              <div
-                className="relative w-full overflow-hidden rounded-xl border border-[#E4E2D9]"
-                style={{ height: 296, background: "#FBFAF7" }}
-              >
-                <NetCanvas />
-              </div>
-              <div className="mt-[14px] flex items-center gap-[9px] font-mono text-[11px] uppercase tracking-[0.14em] text-mono">
-                <span
-                  className="h-[7px] w-[7px] rounded-full bg-accent"
-                  style={{ animation: "pulseDot 2.4s ease-in-out infinite" }}
-                />
-                Neural inference · live
-              </div>
+              <Image
+                src="/illustrations/ai-vibe-coding.svg"
+                alt="Engineer building AI-powered software"
+                width={799}
+                height={756}
+                priority
+                className="h-auto w-full max-w-[440px] md:ml-auto"
+              />
             </div>
           </Reveal>
 
