@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:#FBF6EC;}
+  ::selection{background:#F0531C;color:#fff;}
+  @keyframes zFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+  @keyframes zFloat2{0%,100%{transform:translateY(0);}50%{transform:translateY(-22px);}}
+  @keyframes zPulse{0%,100%{opacity:.5;transform:scale(1);}50%{opacity:1;transform:scale(1.12);}}
+  @keyframes zBlink{0%,100%{opacity:1;}50%{opacity:.25;}}
+  @keyframes zMarquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+  @keyframes zSpinSlow{0%{transform:rotate(0);}100%{transform:rotate(360deg);}}
+</style>
+</helmet>
+
+<div id="zalpan" style="--or:#F0531C;--or2:#FF7C36;--ink:#191512;--charcoal:#26201B;--cream:#FBF6EC;--paper:#FFFDF8;--line:#E7DDC9;--green:#3F7A55;--muted:#6E6558;font-family:'IBM Plex Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;">
+
+  <!-- ================= HEADER ================= -->
+  <header style="position:sticky;top:0;z-index:100;background:rgba(251,246,236,0.82);backdrop-filter:saturate(150%) blur(14px);-webkit-backdrop-filter:saturate(150%) blur(14px);border-bottom:1px solid var(--line);">
+    <div style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,40px);height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="#zalpan" style="display:flex;align-items:center;gap:11px;text-decoration:none;flex:0 0 auto;">
+        <span style="width:38px;height:38px;border-radius:11px;background:linear-gradient(150deg,var(--or2),var(--or));display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px -6px rgba(240,83,28,0.6);flex:0 0 auto;">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M6 13c1.6 0 1.6-2 3.2-2s1.6 2 3.2 2 1.6-2 3.2-2 1.6 2 3.2 2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><path d="M5 17.2c1.7 0 1.7-1.7 3.5-1.7s1.7 1.7 3.5 1.7 1.7-1.7 3.5-1.7 1.7 1.7 3.5 1.7" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/><circle cx="12" cy="6.4" r="1.5" fill="#fff"/></svg>
+        </span>
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:23px;letter-spacing:-0.03em;color:var(--ink);">Zalpan</span>
+      </a>
+      <nav data-navlinks style="display:none;align-items:center;gap:30px;">
+        <a href="#platform" style="font-size:14.5px;color:#4A4237;text-decoration:none;font-weight:500;transition:color .2s;" style-hover="color:var(--or);">Platform</a>
+        <a href="#features" style="font-size:14.5px;color:#4A4237;text-decoration:none;font-weight:500;transition:color .2s;" style-hover="color:var(--or);">Features</a>
+        <a href="#ai" style="font-size:14.5px;color:#4A4237;text-decoration:none;font-weight:500;transition:color .2s;" style-hover="color:var(--or);">AI</a>
+        <a href="#pricing" style="font-size:14.5px;color:#4A4237;text-decoration:none;font-weight:500;transition:color .2s;" style-hover="color:var(--or);">Pricing</a>
+        <a href="#faq" style="font-size:14.5px;color:#4A4237;text-decoration:none;font-weight:500;transition:color .2s;" style-hover="color:var(--or);">Demo</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px;flex:0 0 auto;">
+        <a href="Bohniman AI.dc.html" style="display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:500;color:#6E6558;text-decoration:none;transition:color .2s;" style-hover="color:var(--or);"><span style="font-family:'IBM Plex Mono',monospace;">&larr;</span> Bohniman</a>
+        <a href="#demo" style="display:none;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;padding:10px 16px;border-radius:9px;border:1px solid var(--line);transition:border-color .2s,background .2s;" style-hover="border-color:var(--ink);" data-showsm>Book Demo</a>
+        <a href="#demo" style="font-size:14px;font-weight:600;color:#fff;text-decoration:none;padding:11px 18px;border-radius:9px;background:var(--ink);transition:background .2s,transform .15s;" style-hover="background:#000;transform:translateY(-1px);">Start Free Trial</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section style="position:relative;background:linear-gradient(180deg,#FBF6EC,#F6EFDF);background-image:linear-gradient(90deg,rgba(25,21,18,0.045) 1px,transparent 1px),linear-gradient(rgba(25,21,18,0.045) 1px,transparent 1px);background-size:100% 100%,64px 64px,64px 64px;border-bottom:1px solid var(--line);overflow:hidden;">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,7vw,92px) clamp(18px,4vw,40px) clamp(60px,7vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(40px,5vw,72px);align-items:center;">
+      <!-- copy -->
+      <div style="max-width:600px;">
+        <div data-reveal style="opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s;display:inline-flex;align-items:center;gap:9px;padding:7px 14px;border-radius:100px;background:rgba(240,83,28,0.1);border:1px solid rgba(240,83,28,0.24);margin-bottom:26px;">
+          <span style="width:7px;height:7px;border-radius:50%;background:var(--or);animation:zPulse 2s ease-in-out infinite;"></span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:#B8431A;font-weight:500;">Restaurant Operating System</span>
+        </div>
+        <h1 data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .8s .05s,transform .8s .05s;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.035em;font-size:clamp(38px,5.6vw,68px);line-height:0.98;margin:0 0 24px;text-wrap:balance;">Run your entire restaurant from one smart platform.</h1>
+        <p data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .8s .1s,transform .8s .1s;font-size:clamp(16px,1.5vw,19px);line-height:1.6;color:var(--muted);margin:0 0 34px;max-width:52ch;">Billing, kitchen display, inventory, QR ordering, CRM, vendor management, analytics, and AI-powered forecasting &mdash; built for restaurants that want faster service, lower wastage, and tighter control.</p>
+        <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .8s .15s,transform .8s .15s;display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px;">
+          <a href="#demo" style="display:inline-flex;align-items:center;gap:10px;background:var(--or);color:#fff;font-weight:600;font-size:15.5px;padding:15px 26px;border-radius:11px;text-decoration:none;box-shadow:0 12px 28px -12px rgba(240,83,28,0.7);transition:transform .15s,box-shadow .2s;" style-hover="transform:translateY(-2px);box-shadow:0 18px 34px -14px rgba(240,83,28,0.8);">Book a Demo <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span></a>
+          <a href="#tour" style="display:inline-flex;align-items:center;gap:11px;background:var(--paper);color:var(--ink);font-weight:600;font-size:15.5px;padding:15px 24px;border-radius:11px;text-decoration:none;border:1px solid var(--line);transition:border-color .2s,transform .15s;" style-hover="border-color:var(--ink);transform:translateY(-2px);"><span style="width:22px;height:22px;border-radius:50%;background:var(--ink);display:inline-flex;align-items:center;justify-content:center;"><span style="border-left:7px solid #fff;border-top:4.5px solid transparent;border-bottom:4.5px solid transparent;margin-left:2px;"></span></span>Watch Product Tour</a>
+        </div>
+        <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .8s .2s,transform .8s .2s;display:flex;flex-wrap:wrap;gap:10px 22px;">
+          <span style="display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#5B5346;"><span style="color:var(--green);font-weight:700;">&#10003;</span>Android, Web &amp; Cloud</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#5B5346;"><span style="color:var(--green);font-weight:700;">&#10003;</span>GST-ready billing</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#5B5346;"><span style="color:var(--green);font-weight:700;">&#10003;</span>UPI &amp; digital payments</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;font-size:13px;color:#5B5346;"><span style="color:var(--green);font-weight:700;">&#10003;</span>Multi-outlet ready</span>
+        </div>
+      </div>
+
+      <!-- 3D floating ops stack -->
+      <div data-hero-stage style="position:relative;height:clamp(400px,44vw,540px);perspective:1400px;">
+        <div data-hero-tilt style="position:absolute;inset:0;transform-style:preserve-3d;transition:transform .3s ease-out;">
+          <!-- revenue dashboard (back) -->
+          <div data-float data-depth="26" style="position:absolute;top:6%;left:14%;width:min(60%,320px);background:var(--charcoal);border-radius:18px;padding:20px;box-shadow:0 40px 70px -30px rgba(25,21,18,0.55);animation:zFloat2 8s ease-in-out infinite;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#9C9488;">Today&rsquo;s revenue</span><span style="font-size:10px;color:var(--or2);font-weight:600;">&#9650; 12.4%</span></div>
+            <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:30px;color:#fff;letter-spacing:-0.02em;">&#8377;1,84,720</div>
+            <div style="display:flex;align-items:flex-end;gap:6px;height:56px;margin-top:16px;">
+              <div style="flex:1;height:38%;background:#4A4238;border-radius:3px;"></div>
+              <div style="flex:1;height:56%;background:#4A4238;border-radius:3px;"></div>
+              <div style="flex:1;height:44%;background:#4A4238;border-radius:3px;"></div>
+              <div style="flex:1;height:72%;background:#5A4A38;border-radius:3px;"></div>
+              <div style="flex:1;height:90%;background:linear-gradient(180deg,var(--or2),var(--or));border-radius:3px;"></div>
+              <div style="flex:1;height:64%;background:#4A4238;border-radius:3px;"></div>
+              <div style="flex:1;height:80%;background:#5A4A38;border-radius:3px;"></div>
+            </div>
+          </div>
+          <!-- POS billing (front left) -->
+          <div data-float data-depth="60" style="position:absolute;top:34%;left:0;width:min(52%,240px);background:var(--paper);border-radius:16px;padding:18px;border:1px solid var(--line);box-shadow:0 34px 60px -26px rgba(25,21,18,0.4);animation:zFloat 6.5s ease-in-out infinite;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;"><span style="width:26px;height:26px;border-radius:7px;background:rgba(240,83,28,0.12);display:inline-flex;align-items:center;justify-content:center;color:var(--or);font-weight:700;font-size:13px;">&#8377;</span><span style="font-weight:700;font-size:13px;">POS Billing</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;color:#6E6558;margin-bottom:7px;"><span>Butter Chicken</span><span style="color:var(--ink);font-weight:600;">320</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;color:#6E6558;margin-bottom:7px;"><span>Garlic Naan &times;3</span><span style="color:var(--ink);font-weight:600;">150</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:12px;color:#6E6558;margin-bottom:12px;"><span>Masala Chai &times;2</span><span style="color:var(--ink);font-weight:600;">80</span></div>
+            <div style="border-top:1px dashed var(--line);padding-top:10px;display:flex;justify-content:space-between;align-items:center;"><span style="font-size:12px;color:#6E6558;">Total incl. GST</span><span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;">&#8377;577</span></div>
+          </div>
+          <!-- kitchen ticket (front right) -->
+          <div data-float data-depth="80" style="position:absolute;top:44%;right:2%;width:min(44%,190px);background:#1F1A16;border-radius:14px;padding:16px;box-shadow:0 30px 54px -24px rgba(25,21,18,0.5);animation:zFloat 7.5s ease-in-out infinite;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--or2);letter-spacing:0.08em;">KOT #248</span><span style="width:7px;height:7px;border-radius:50%;background:var(--green);animation:zBlink 1.4s infinite;"></span></div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#E7DDC9;line-height:1.9;">
+              <div>2&times; Paneer Tikka</div>
+              <div>1&times; Dal Makhani</div>
+              <div style="color:#9C9488;">1&times; Jeera Rice</div>
+            </div>
+            <div style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#7C746A;">TABLE 07 &middot; FIRING</div>
+          </div>
+          <!-- QR menu card (floating top right) -->
+          <div data-float data-depth="44" style="position:absolute;top:0;right:8%;width:min(30%,120px);background:var(--paper);border-radius:14px;padding:14px;border:1px solid var(--line);box-shadow:0 24px 44px -22px rgba(25,21,18,0.35);animation:zFloat2 9s ease-in-out infinite;text-align:center;">
+            <div style="width:100%;aspect-ratio:1;border-radius:8px;background:conic-gradient(from 45deg,#191512 25%,#fff 0 50%,#191512 0 75%,#fff 0);background-size:33% 33%;opacity:0.9;margin-bottom:8px;"></div>
+            <div style="font-size:10px;font-weight:600;color:var(--ink);">Scan to order</div>
+          </div>
+          <!-- inventory alert + AI (front bottom) -->
+          <div data-float data-depth="100" style="position:absolute;bottom:2%;left:20%;width:min(58%,270px);background:var(--paper);border-radius:14px;padding:14px 16px;border:1px solid rgba(240,83,28,0.3);box-shadow:0 30px 54px -24px rgba(25,21,18,0.4);animation:zFloat 6s ease-in-out infinite;">
+            <div style="display:flex;align-items:center;gap:11px;">
+              <span style="width:34px;height:34px;border-radius:9px;background:rgba(240,83,28,0.12);display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 16H3L12 3z" stroke="#F0531C" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 10v4M12 16.5v.5" stroke="#F0531C" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
+              <div><div style="font-size:12.5px;font-weight:700;color:var(--ink);">AI &middot; Low stock alert</div><div style="font-size:11.5px;color:#6E6558;margin-top:2px;">Paneer may run out by Fri evening</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- marquee strip -->
+    <div style="border-top:1px solid var(--line);background:rgba(255,253,248,0.6);overflow:hidden;padding:15px 0;">
+      <div data-marquee style="display:flex;gap:52px;white-space:nowrap;width:max-content;animation:zMarquee 26s linear infinite;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8A8072;">
+        <span>Fine Dine</span><span style="color:var(--or);">&#9679;</span><span>Caf&eacute;s</span><span style="color:var(--or);">&#9679;</span><span>Cloud Kitchens</span><span style="color:var(--or);">&#9679;</span><span>QSR</span><span style="color:var(--or);">&#9679;</span><span>Food Courts</span><span style="color:var(--or);">&#9679;</span><span>Multi-Outlet Chains</span><span style="color:var(--or);">&#9679;</span><span>Cruise Vessel Kitchens</span><span style="color:var(--or);">&#9679;</span>
+        <span>Fine Dine</span><span style="color:var(--or);">&#9679;</span><span>Caf&eacute;s</span><span style="color:var(--or);">&#9679;</span><span>Cloud Kitchens</span><span style="color:var(--or);">&#9679;</span><span>QSR</span><span style="color:var(--or);">&#9679;</span><span>Food Courts</span><span style="color:var(--or);">&#9679;</span><span>Multi-Outlet Chains</span><span style="color:var(--or);">&#9679;</span><span>Cruise Vessel Kitchens</span><span style="color:var(--or);">&#9679;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROBLEM ================= -->
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) clamp(18px,4vw,40px);">
+    <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;max-width:760px;margin-bottom:52px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:18px;">01 / The problem</div>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.03em;font-size:clamp(30px,4vw,52px);line-height:1.03;margin:0;text-wrap:balance;">Still running your restaurant on disconnected tools?</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;">
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s;background:var(--paper);padding:30px;">
+        <div style="font-size:26px;margin-bottom:14px;">&#128421;&#65039;</div>
+        <div style="font-weight:700;font-size:16px;margin-bottom:6px;">Separate POS software</div>
+        <div style="font-size:13.5px;color:var(--muted);line-height:1.55;">Billing lives in one silo, everything else somewhere else.</div>
+      </div>
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .05s,transform .6s .05s;background:var(--paper);padding:30px;">
+        <div style="font-size:26px;margin-bottom:14px;">&#128202;</div>
+        <div style="font-weight:700;font-size:16px;margin-bottom:6px;">Excel inventory</div>
+        <div style="font-size:13.5px;color:var(--muted);line-height:1.55;">Spreadsheets that are out of date the moment service starts.</div>
+      </div>
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .1s,transform .6s .1s;background:var(--paper);padding:30px;">
+        <div style="font-size:26px;margin-bottom:14px;">&#128241;</div>
+        <div style="font-weight:700;font-size:16px;margin-bottom:6px;">WhatsApp orders</div>
+        <div style="font-size:13.5px;color:var(--muted);line-height:1.55;">Orders scattered across chats, easy to miss during a rush.</div>
+      </div>
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .15s,transform .6s .15s;background:var(--paper);padding:30px;">
+        <div style="font-size:26px;margin-bottom:14px;">&#128220;</div>
+        <div style="font-weight:700;font-size:16px;margin-bottom:6px;">Paper KOT slips</div>
+        <div style="font-size:13.5px;color:var(--muted);line-height:1.55;">Handwritten tickets that get lost, smudged, or misread.</div>
+      </div>
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .2s,transform .6s .2s;background:var(--paper);padding:30px;">
+        <div style="font-size:26px;margin-bottom:14px;">&#128230;</div>
+        <div style="font-weight:700;font-size:16px;margin-bottom:6px;">Manual stock tracking</div>
+        <div style="font-size:13.5px;color:var(--muted);line-height:1.55;">No one really knows what&rsquo;s left until it runs out.</div>
+      </div>
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .25s,transform .6s .25s;background:var(--paper);padding:30px;">
+        <div style="font-size:26px;margin-bottom:14px;">&#128373;&#65039;</div>
+        <div style="font-weight:700;font-size:16px;margin-bottom:6px;">No visibility at rush hour</div>
+        <div style="font-size:13.5px;color:var(--muted);line-height:1.55;">You feel the chaos but can&rsquo;t see where it&rsquo;s coming from.</div>
+      </div>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;margin-top:40px;text-align:center;">
+      <p style="font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,32px);letter-spacing:-0.02em;line-height:1.2;margin:0;max-width:20ch;margin-inline:auto;">Replace fragmented tools with <span style="color:var(--or);">one connected restaurant OS.</span></p>
+    </div>
+  </section>
+
+  <!-- ================= PLATFORM (8 modules) ================= -->
+  <section id="platform" style="background:var(--charcoal);color:#F3ECDF;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:64px 64px;">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) clamp(18px,4vw,40px);">
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;max-width:720px;margin-bottom:56px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--or2);margin-bottom:18px;">02 / The platform</div>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.03em;font-size:clamp(30px,4vw,52px);line-height:1.03;margin:0;color:#fff;text-wrap:balance;">One platform. Complete restaurant control.</h2>
+      </div>
+      <div id="features" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;">
+        <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s;background:rgba(255,253,248,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:26px;transition:border-color .25s,transform .25s;" style-hover="border-color:rgba(240,83,28,0.5);transform:translateY(-4px);">
+          <div style="width:44px;height:44px;border-radius:11px;background:rgba(240,83,28,0.16);display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#FF7C36" stroke-width="1.7"/><path d="M8 8h8M8 12h8M8 16h4" stroke="#FF7C36" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+          <div style="font-weight:700;font-size:17px;margin-bottom:7px;color:#fff;">POS &amp; Billing</div>
+          <div style="font-size:13.5px;color:#B5AC9E;line-height:1.55;">Fast counter billing with split bills, discounts and GST invoices in seconds.</div>
+          <div style="margin-top:18px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--or),transparent);opacity:0.7;"></div>
+        </div>
+        <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .04s,transform .6s .04s;background:rgba(255,253,248,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:26px;transition:border-color .25s,transform .25s;" style-hover="border-color:rgba(240,83,28,0.5);transform:translateY(-4px);">
+          <div style="width:44px;height:44px;border-radius:11px;background:rgba(240,83,28,0.16);display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="#FF7C36" stroke-width="1.7"/><path d="M8 20h8M12 17v3" stroke="#FF7C36" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="10.5" r="2.5" stroke="#FF7C36" stroke-width="1.7"/></svg></div>
+          <div style="font-weight:700;font-size:17px;margin-bottom:7px;color:#fff;">Kitchen Display</div>
+          <div style="font-size:13.5px;color:#B5AC9E;line-height:1.55;">Digital KOTs route each order straight to the right prep station.</div>
+          <div style="margin-top:18px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--or),transparent);opacity:0.7;"></div>
+        </div>
+        <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .08s,transform .6s .08s;background:rgba(255,253,248,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:26px;transition:border-color .25s,transform .25s;" style-hover="border-color:rgba(240,83,28,0.5);transform:translateY(-4px);">
+          <div style="width:44px;height:44px;border-radius:11px;background:rgba(240,83,28,0.16);display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="7" height="7" rx="1" stroke="#FF7C36" stroke-width="1.7"/><rect x="13" y="4" width="7" height="7" rx="1" stroke="#FF7C36" stroke-width="1.7"/><rect x="4" y="13" width="7" height="7" rx="1" stroke="#FF7C36" stroke-width="1.7"/><path d="M13 13h3v3M20 20v.01M16 20h.01M20 16h.01" stroke="#FF7C36" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+          <div style="font-weight:700;font-size:17px;margin-bottom:7px;color:#fff;">QR Ordering</div>
+          <div style="font-size:13.5px;color:#B5AC9E;line-height:1.55;">Guests scan, browse, order and pay without waiting for staff.</div>
+          <div style="margin-top:18px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--or),transparent);opacity:0.7;"></div>
+        </div>
+        <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .12s,transform .6s .12s;background:rgba(255,253,248,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:26px;transition:border-color .25s,transform .25s;" style-hover="border-color:rgba(240,83,28,0.5);transform:translateY(-4px);">
+          <div style="width:44px;height:44px;border-radius:11px;background:rgba(240,83,28,0.16);display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7l8-4 8 4v10l-8 4-8-4V7z" stroke="#FF7C36" stroke-width="1.7" stroke-linejoin="round"/><path d="M4 7l8 4 8-4M12 11v10" stroke="#FF7C36" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+          <div style="font-weight:700;font-size:17px;margin-bottom:7px;color:#fff;">Inventory</div>
+          <div style="font-size:13.5px;color:#B5AC9E;line-height:1.55;">Recipe-linked stock that updates automatically with every sale.</div>
+          <div style="margin-top:18px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--or),transparent);opacity:0.7;"></div>
+        </div>
+        <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .16s,transform .6s .16s;background:rgba(255,253,248,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:26px;transition:border-color .25s,transform .25s;" style-hover="border-color:rgba(240,83,28,0.5);transform:translateY(-4px);">
+          <div style="width:44px;height:44px;border-radius:11px;background:rgba(240,83,28,0.16);display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 6h15l-1.5 9h-12L6 6zM6 6L5 3H3" stroke="#FF7C36" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="19" r="1.6" fill="#FF7C36"/><circle cx="17" cy="19" r="1.6" fill="#FF7C36"/></svg></div>
+          <div style="font-weight:700;font-size:17px;margin-bottom:7px;color:#fff;">Purchase &amp; Vendors</div>
+          <div style="font-size:13.5px;color:#B5AC9E;line-height:1.55;">Raise purchase orders and manage suppliers from one ledger.</div>
+          <div style="margin-top:18px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--or),transparent);opacity:0.7;"></div>
+        </div>
+        <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .2s,transform .6s .2s;background:rgba(255,253,248,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:26px;transition:border-color .25s,transform .25s;" style-hover="border-color:rgba(240,83,28,0.5);transform:translateY(-4px);">
+          <div style="width:44px;height:44px;border-radius:11px;background:rgba(240,83,28,0.16);display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.5A4 4 0 0119 11c0 5.5-7 10-7 10z" stroke="#FF7C36" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+          <div style="font-weight:700;font-size:17px;margin-bottom:7px;color:#fff;">CRM &amp; Loyalty</div>
+          <div style="font-size:13.5px;color:#B5AC9E;line-height:1.55;">Recognise repeat guests, their history, preferences and rewards.</div>
+          <div style="margin-top:18px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--or),transparent);opacity:0.7;"></div>
+        </div>
+        <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .24s,transform .6s .24s;background:rgba(255,253,248,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:26px;transition:border-color .25s,transform .25s;" style-hover="border-color:rgba(240,83,28,0.5);transform:translateY(-4px);">
+          <div style="width:44px;height:44px;border-radius:11px;background:rgba(240,83,28,0.16);display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="#FF7C36" stroke-width="1.7"/><path d="M3.5 20a5.5 5.5 0 0111 0M16 6a3 3 0 010 6M18 20a5 5 0 00-3-4.6" stroke="#FF7C36" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+          <div style="font-weight:700;font-size:17px;margin-bottom:7px;color:#fff;">Staff &amp; Roles</div>
+          <div style="font-size:13.5px;color:#B5AC9E;line-height:1.55;">Role-based access, shift control and accountability across outlets.</div>
+          <div style="margin-top:18px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--or),transparent);opacity:0.7;"></div>
+        </div>
+        <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .28s,transform .6s .28s;background:rgba(255,253,248,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:26px;transition:border-color .25s,transform .25s;" style-hover="border-color:rgba(240,83,28,0.5);transform:translateY(-4px);">
+          <div style="width:44px;height:44px;border-radius:11px;background:rgba(240,83,28,0.16);display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" stroke="#FF7C36" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+          <div style="font-weight:700;font-size:17px;margin-bottom:7px;color:#fff;">Analytics &amp; Reports</div>
+          <div style="font-size:13.5px;color:#B5AC9E;line-height:1.55;">Revenue, bestsellers, peak hours and outlet performance at a glance.</div>
+          <div style="margin-top:18px;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--or),transparent);opacity:0.7;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONNECTED WORKFLOW ================= -->
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) clamp(18px,4vw,40px);">
+    <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;max-width:800px;margin-bottom:60px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:18px;">03 / Connected workflow</div>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.03em;font-size:clamp(28px,3.6vw,48px);line-height:1.05;margin:0;text-wrap:balance;">From guest order to kitchen to billing to analytics &mdash; everything stays in sync.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;position:relative;">
+      <div data-step style="opacity:0.4;transform:translateY(10px);transition:opacity .5s,transform .5s;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;">
+        <div data-stepnum style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#B0A695;margin-bottom:12px;transition:color .4s;">01</div>
+        <div style="font-size:24px;margin-bottom:10px;">&#128241;</div>
+        <div style="font-weight:700;font-size:14.5px;line-height:1.3;">Guest scans QR</div>
+      </div>
+      <div data-step style="opacity:0.4;transform:translateY(10px);transition:opacity .5s .05s,transform .5s .05s;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;">
+        <div data-stepnum style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#B0A695;margin-bottom:12px;transition:color .4s;">02</div>
+        <div style="font-size:24px;margin-bottom:10px;">&#128220;</div>
+        <div style="font-weight:700;font-size:14.5px;line-height:1.3;">Menu opens, order placed</div>
+      </div>
+      <div data-step style="opacity:0.4;transform:translateY(10px);transition:opacity .5s .1s,transform .5s .1s;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;">
+        <div data-stepnum style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#B0A695;margin-bottom:12px;transition:color .4s;">03</div>
+        <div style="font-size:24px;margin-bottom:10px;">&#128187;</div>
+        <div style="font-weight:700;font-size:14.5px;line-height:1.3;">Order reaches POS</div>
+      </div>
+      <div data-step style="opacity:0.4;transform:translateY(10px);transition:opacity .5s .15s,transform .5s .15s;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;">
+        <div data-stepnum style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#B0A695;margin-bottom:12px;transition:color .4s;">04</div>
+        <div style="font-size:24px;margin-bottom:10px;">&#127859;</div>
+        <div style="font-weight:700;font-size:14.5px;line-height:1.3;">KOT fires to kitchen</div>
+      </div>
+      <div data-step style="opacity:0.4;transform:translateY(10px);transition:opacity .5s .2s,transform .5s .2s;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;">
+        <div data-stepnum style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#B0A695;margin-bottom:12px;transition:color .4s;">05</div>
+        <div style="font-size:24px;margin-bottom:10px;">&#128230;</div>
+        <div style="font-weight:700;font-size:14.5px;line-height:1.3;">Stock reduces automatically</div>
+      </div>
+      <div data-step style="opacity:0.4;transform:translateY(10px);transition:opacity .5s .25s,transform .5s .25s;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;">
+        <div data-stepnum style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#B0A695;margin-bottom:12px;transition:color .4s;">06</div>
+        <div style="font-size:24px;margin-bottom:10px;">&#129534;</div>
+        <div style="font-weight:700;font-size:14.5px;line-height:1.3;">Bill generated &amp; paid</div>
+      </div>
+      <div data-step style="opacity:0.4;transform:translateY(10px);transition:opacity .5s .3s,transform .5s .3s;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;">
+        <div data-stepnum style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#B0A695;margin-bottom:12px;transition:color .4s;">07</div>
+        <div style="font-size:24px;margin-bottom:10px;">&#128100;</div>
+        <div style="font-weight:700;font-size:14.5px;line-height:1.3;">Customer profile updated</div>
+      </div>
+      <div data-step style="opacity:0.4;transform:translateY(10px);transition:opacity .5s .35s,transform .5s .35s;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;">
+        <div data-stepnum style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#B0A695;margin-bottom:12px;transition:color .4s;">08</div>
+        <div style="font-size:24px;margin-bottom:10px;">&#128200;</div>
+        <div style="font-weight:700;font-size:14.5px;line-height:1.3;">Owner sees analytics</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE PRODUCT TOUR ================= -->
+  <section id="tour" style="background:#F3EBDB;border-block:1px solid var(--line);background-image:linear-gradient(90deg,rgba(25,21,18,0.04) 1px,transparent 1px);background-size:64px 100%;">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) clamp(18px,4vw,40px);">
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;max-width:720px;margin-bottom:44px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:18px;">04 / Product tour</div>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.03em;font-size:clamp(28px,3.6vw,48px);line-height:1.05;margin:0;text-wrap:balance;">See how it works during a real rush hour.</h2>
+      </div>
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;display:flex;flex-wrap:wrap;gap:9px;margin-bottom:32px;">
+        <button data-tab="billing" style="cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:10px 18px;border-radius:100px;border:1px solid var(--ink);background:var(--ink);color:#fff;transition:all .2s;">Billing</button>
+        <button data-tab="kitchen" style="cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:10px 18px;border-radius:100px;border:1px solid var(--line);background:transparent;color:var(--ink);transition:all .2s;">Kitchen</button>
+        <button data-tab="inventory" style="cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:10px 18px;border-radius:100px;border:1px solid var(--line);background:transparent;color:var(--ink);transition:all .2s;">Inventory</button>
+        <button data-tab="qr" style="cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:10px 18px;border-radius:100px;border:1px solid var(--line);background:transparent;color:var(--ink);transition:all .2s;">QR Order</button>
+        <button data-tab="analytics" style="cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:10px 18px;border-radius:100px;border:1px solid var(--line);background:transparent;color:var(--ink);transition:all .2s;">Analytics</button>
+        <button data-tab="crm" style="cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:10px 18px;border-radius:100px;border:1px solid var(--line);background:transparent;color:var(--ink);transition:all .2s;">CRM</button>
+        <button data-tab="ai" style="cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:10px 18px;border-radius:100px;border:1px solid var(--line);background:transparent;color:var(--ink);transition:all .2s;">AI</button>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--paper);box-shadow:0 30px 60px -40px rgba(25,21,18,0.4);">
+        <div data-tourcopy style="padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:center;">
+          <div data-tour-title style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(24px,2.6vw,32px);letter-spacing:-0.02em;margin-bottom:16px;">Fast counter billing</div>
+          <div data-tour-desc style="font-size:16px;line-height:1.6;color:var(--muted);">Fast counter billing, split bills, discounts, GST invoices, and digital payments &mdash; all from a single, keyboard-friendly screen.</div>
+          <div style="margin-top:26px;display:flex;gap:20px;">
+            <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:var(--or);">&lt;15s</div><div style="font-size:12px;color:var(--muted);">per bill</div></div>
+            <div><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:var(--or);">1-tap</div><div style="font-size:12px;color:var(--muted);">split &amp; discount</div></div>
+          </div>
+        </div>
+        <div style="background:var(--charcoal);padding:clamp(28px,4vw,48px);display:flex;align-items:center;justify-content:center;min-height:320px;">
+          <div data-tour-visual style="width:100%;max-width:340px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AI CO-PILOT ================= -->
+  <section id="ai" style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) clamp(18px,4vw,40px);">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(40px,5vw,72px);align-items:center;">
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:18px;">05 / AI co-pilot</div>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.03em;font-size:clamp(30px,4vw,52px);line-height:1.02;margin:0 0 20px;text-wrap:balance;">Meet your restaurant AI co-pilot.</h2>
+        <p style="font-size:17px;line-height:1.6;color:var(--muted);margin:0 0 30px;max-width:46ch;">Turn daily restaurant data into decisions you can act on before service, not after.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;">
+          <div style="display:flex;align-items:center;gap:9px;font-size:14px;color:#4A4237;"><span style="width:6px;height:6px;border-radius:50%;background:var(--or);"></span>Sales forecasting</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:14px;color:#4A4237;"><span style="width:6px;height:6px;border-radius:50%;background:var(--or);"></span>Inventory prediction</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:14px;color:#4A4237;"><span style="width:6px;height:6px;border-radius:50%;background:var(--or);"></span>Purchase recommendation</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:14px;color:#4A4237;"><span style="width:6px;height:6px;border-radius:50%;background:var(--or);"></span>Menu performance</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:14px;color:#4A4237;"><span style="width:6px;height:6px;border-radius:50%;background:var(--or);"></span>Repeat-visit insights</div>
+          <div style="display:flex;align-items:center;gap:9px;font-size:14px;color:#4A4237;"><span style="width:6px;height:6px;border-radius:50%;background:var(--or);"></span>Rush-hour prediction</div>
+        </div>
+      </div>
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s .1s,transform .7s .1s;position:relative;min-height:340px;">
+        <div style="position:absolute;inset:0;background:radial-gradient(circle at 60% 40%,rgba(240,83,28,0.12),transparent 65%);"></div>
+        <div id="aiStack" style="position:relative;display:flex;flex-direction:column;gap:14px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OUTCOMES ================= -->
+  <section style="background:var(--charcoal);color:#F3ECDF;">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) clamp(18px,4vw,40px);">
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;max-width:680px;margin-bottom:52px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--or2);margin-bottom:18px;">06 / Outcomes</div>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.03em;font-size:clamp(30px,4vw,52px);line-height:1.03;margin:0;color:#fff;text-wrap:balance;">Outcomes restaurant owners actually care about.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+        <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s;background:rgba(255,253,248,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:28px;">
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(36px,4.5vw,52px);letter-spacing:-0.03em;color:var(--or2);line-height:1;">[X]%</div>
+          <div style="font-weight:700;font-size:15px;color:#fff;margin-top:12px;">Faster checkout</div>
+          <div style="font-size:13px;color:#B5AC9E;margin-top:5px;line-height:1.5;">Move queues quickly during peak hours.</div>
+        </div>
+        <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .06s,transform .6s .06s;background:rgba(255,253,248,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:28px;">
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(36px,4.5vw,52px);letter-spacing:-0.03em;color:var(--or2);line-height:1;">[X]%</div>
+          <div style="font-weight:700;font-size:15px;color:#fff;margin-top:12px;">Less wastage</div>
+          <div style="font-size:13px;color:#B5AC9E;margin-top:5px;line-height:1.5;">Recipe-linked stock cuts over-ordering.</div>
+        </div>
+        <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .12s,transform .6s .12s;background:rgba(255,253,248,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:28px;">
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(36px,4.5vw,52px);letter-spacing:-0.03em;color:var(--or2);line-height:1;">[X]</div>
+          <div style="font-weight:700;font-size:15px;color:#fff;margin-top:12px;">Outlets, one dashboard</div>
+          <div style="font-size:13px;color:#B5AC9E;margin-top:5px;line-height:1.5;">Manage every location in one view.</div>
+        </div>
+        <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .18s,transform .6s .18s;background:rgba(255,253,248,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:28px;">
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(36px,4.5vw,52px);letter-spacing:-0.03em;color:var(--or2);line-height:1;">[X]+</div>
+          <div style="font-weight:700;font-size:15px;color:#fff;margin-top:12px;">Orders processed</div>
+          <div style="font-size:13px;color:#B5AC9E;margin-top:5px;line-height:1.5;">Reliable at scale, service after service.</div>
+        </div>
+        <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .24s,transform .6s .24s;background:linear-gradient(150deg,var(--or2),var(--or));border-radius:16px;padding:28px;">
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(28px,3vw,36px);letter-spacing:-0.02em;color:#fff;line-height:1.05;">More repeat customers</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.85);margin-top:8px;line-height:1.5;">CRM &amp; loyalty that bring guests back.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= USE CASES ================= -->
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) clamp(18px,4vw,40px);">
+    <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;max-width:680px;margin-bottom:52px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:18px;">07 / Use cases</div>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.03em;font-size:clamp(30px,4vw,52px);line-height:1.03;margin:0;text-wrap:balance;">Built for every restaurant format.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:30px;transition:transform .25s,border-color .25s;" style-hover="transform:translateY(-4px);border-color:var(--or);">
+        <div style="font-size:30px;margin-bottom:16px;">&#127869;&#65039;</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;margin-bottom:8px;">Fine Dine</div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.55;">Table-side QR, course-wise KOTs and guest preferences for a polished experience.</div>
+      </div>
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .05s,transform .6s .05s;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:30px;transition:transform .25s,border-color .25s;" style-hover="transform:translateY(-4px);border-color:var(--or);">
+        <div style="font-size:30px;margin-bottom:16px;">&#9749;</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;margin-bottom:8px;">Caf&eacute;</div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.55;">Quick billing, loyalty rewards and simple stock for high-frequency footfall.</div>
+      </div>
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .1s,transform .6s .1s;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:30px;transition:transform .25s,border-color .25s;" style-hover="transform:translateY(-4px);border-color:var(--or);">
+        <div style="font-size:30px;margin-bottom:16px;">&#127859;</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;margin-bottom:8px;">Cloud Kitchen</div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.55;">Aggregator-ready order flow, station-wise KOTs and tight cost control.</div>
+      </div>
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .15s,transform .6s .15s;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:30px;transition:transform .25s,border-color .25s;" style-hover="transform:translateY(-4px);border-color:var(--or);">
+        <div style="font-size:30px;margin-bottom:16px;">&#127828;</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;margin-bottom:8px;">QSR</div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.55;">Lightning-fast counters, combo billing and queue-busting QR ordering.</div>
+      </div>
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .2s,transform .6s .2s;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:30px;transition:transform .25s,border-color .25s;" style-hover="transform:translateY(-4px);border-color:var(--or);">
+        <div style="font-size:30px;margin-bottom:16px;">&#127967;</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;margin-bottom:8px;">Food Court</div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.55;">Multiple vendors, unified tokens and consolidated settlement reporting.</div>
+      </div>
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .25s,transform .6s .25s;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:30px;transition:transform .25s,border-color .25s;" style-hover="transform:translateY(-4px);border-color:var(--or);">
+        <div style="font-size:30px;margin-bottom:16px;">&#127981;</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;margin-bottom:8px;">Multi-Outlet Chain</div>
+        <div style="font-size:14px;color:var(--muted);line-height:1.55;">Central menus, pricing, inventory and analytics across every branch.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DEVICES ================= -->
+  <section style="background:#F3EBDB;border-block:1px solid var(--line);">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) clamp(18px,4vw,40px);">
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;max-width:680px;margin-bottom:52px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:18px;">08 / Anywhere</div>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.03em;font-size:clamp(30px,4vw,52px);line-height:1.03;margin:0 0 16px;text-wrap:balance;">Run it anywhere.</h2>
+        <p style="font-size:16px;color:var(--muted);line-height:1.6;margin:0;max-width:60ch;">Android devices at the counter, kitchen screens for KOTs, a mobile dashboard for owners, and a web portal for management and analytics.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+        <div data-reveal data-float data-depth="20" style="opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px;text-align:center;">
+          <div style="width:70px;height:52px;border:2px solid var(--ink);border-radius:8px;margin:0 auto 18px;position:relative;"><div style="position:absolute;inset:6px;background:rgba(240,83,28,0.14);border-radius:3px;"></div></div>
+          <div style="font-weight:700;font-size:15px;">Android POS tablet</div>
+          <div style="font-size:12.5px;color:var(--muted);margin-top:5px;">Counter billing</div>
+        </div>
+        <div data-reveal data-float data-depth="28" style="opacity:0;transform:translateY(18px);transition:opacity .6s .05s,transform .6s .05s;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px;text-align:center;">
+          <div style="width:64px;height:46px;border:2px solid var(--ink);border-radius:6px;margin:0 auto 8px;background:var(--charcoal);"></div>
+          <div style="width:20px;height:8px;background:var(--ink);margin:0 auto 18px;border-radius:0 0 3px 3px;"></div>
+          <div style="font-weight:700;font-size:15px;">Kitchen display</div>
+          <div style="font-size:12.5px;color:var(--muted);margin-top:5px;">Live KOTs</div>
+        </div>
+        <div data-reveal data-float data-depth="34" style="opacity:0;transform:translateY(18px);transition:opacity .6s .1s,transform .6s .1s;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px;text-align:center;">
+          <div style="width:30px;height:56px;border:2px solid var(--ink);border-radius:7px;margin:0 auto 18px;position:relative;"><div style="position:absolute;inset:4px;background:rgba(240,83,28,0.14);border-radius:3px;"></div></div>
+          <div style="font-weight:700;font-size:15px;">Owner mobile app</div>
+          <div style="font-size:12.5px;color:var(--muted);margin-top:5px;">Dashboard on the go</div>
+        </div>
+        <div data-reveal data-float data-depth="24" style="opacity:0;transform:translateY(18px);transition:opacity .6s .15s,transform .6s .15s;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px;text-align:center;">
+          <div style="width:74px;height:50px;border:2px solid var(--ink);border-radius:6px;margin:0 auto 18px;position:relative;"><div style="position:absolute;left:5px;right:5px;top:5px;height:7px;background:var(--ink);border-radius:2px;"></div><div style="position:absolute;left:5px;top:16px;width:22px;bottom:5px;background:rgba(240,83,28,0.14);border-radius:2px;"></div></div>
+          <div style="font-weight:700;font-size:15px;">Web admin portal</div>
+          <div style="font-size:12.5px;color:var(--muted);margin-top:5px;">Full management</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPARISON ================= -->
+  <section style="max-width:1080px;margin:0 auto;padding:clamp(64px,8vw,110px) clamp(18px,4vw,40px);">
+    <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;max-width:680px;margin-bottom:44px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:18px;">09 / Comparison</div>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.03em;font-size:clamp(30px,4vw,52px);line-height:1.03;margin:0;text-wrap:balance;">More than a traditional POS.</h2>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--paper);">
+      <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;background:var(--charcoal);color:#fff;">
+        <div style="padding:18px 22px;font-weight:600;font-size:14px;">Capability</div>
+        <div style="padding:18px 22px;font-weight:600;font-size:14px;text-align:center;color:#B5AC9E;">Traditional POS</div>
+        <div style="padding:18px 22px;font-weight:700;font-size:14px;text-align:center;color:var(--or2);">Zalpan</div>
+      </div>
+      <div data-cmp-body></div>
+    </div>
+  </section>
+
+  <!-- ================= SOCIAL PROOF ================= -->
+  <section style="background:var(--charcoal);color:#F3ECDF;overflow:hidden;">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,90px) clamp(18px,4vw,40px);text-align:center;">
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--or2);margin-bottom:22px;">Trusted by growing restaurants across India</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(40px,7vw,88px);letter-spacing:-0.03em;line-height:1;color:#fff;">1.2M+ <span style="color:var(--or2);">KOTs</span></div>
+        <div style="font-size:16px;color:#B5AC9E;margin-top:16px;max-width:36ch;margin-inline:auto;">generated without missing a single order.</div>
+        <div style="margin-top:40px;display:inline-flex;align-items:center;gap:14px;padding:16px 26px;border:1px solid rgba(255,255,255,0.12);border-radius:14px;background:rgba(255,253,248,0.03);">
+          <span style="width:42px;height:42px;border-radius:10px;background:linear-gradient(150deg,var(--or2),var(--or));display:inline-flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque';font-weight:800;color:#fff;font-size:18px;">D</span>
+          <div style="text-align:left;"><div style="font-weight:700;font-size:15px;color:#fff;">Dine Way Platz</div><div style="font-size:12.5px;color:#9C9488;">Guwahati</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRICING ================= -->
+  <section id="pricing" style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,110px) clamp(18px,4vw,40px);">
+    <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;text-align:center;max-width:640px;margin:0 auto 56px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:18px;">10 / Pricing</div>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.03em;font-size:clamp(30px,4vw,52px);line-height:1.03;margin:0;text-wrap:balance;">Plans that grow with you.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;align-items:start;">
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:32px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Starter</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.02em;margin-bottom:6px;">Let&rsquo;s talk</div>
+        <div style="font-size:13.5px;color:var(--muted);margin-bottom:24px;line-height:1.5;">Small caf&eacute;s and single-outlet restaurants.</div>
+        <div style="display:flex;flex-direction:column;gap:11px;margin-bottom:28px;">
+          <div style="display:flex;gap:9px;font-size:14px;color:#4A4237;"><span style="color:var(--green);font-weight:700;">&#10003;</span>POS &amp; billing</div>
+          <div style="display:flex;gap:9px;font-size:14px;color:#4A4237;"><span style="color:var(--green);font-weight:700;">&#10003;</span>GST invoices &amp; UPI</div>
+          <div style="display:flex;gap:9px;font-size:14px;color:#4A4237;"><span style="color:var(--green);font-weight:700;">&#10003;</span>Basic reports</div>
+        </div>
+        <a href="#demo" style="display:block;text-align:center;padding:13px;border-radius:11px;border:1px solid var(--ink);color:var(--ink);font-weight:600;font-size:14.5px;text-decoration:none;transition:background .2s,color .2s;" style-hover="background:var(--ink);color:#fff;">Talk to Sales</a>
+      </div>
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .06s,transform .6s .06s;background:var(--charcoal);color:#fff;border:1px solid var(--charcoal);border-radius:20px;padding:32px;position:relative;box-shadow:0 30px 60px -30px rgba(25,21,18,0.5);">
+        <div style="position:absolute;top:22px;right:22px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#fff;background:var(--or);padding:5px 11px;border-radius:100px;">Most popular</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--or2);margin-bottom:12px;">Growth</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.02em;margin-bottom:6px;">Let&rsquo;s talk</div>
+        <div style="font-size:13.5px;color:#B5AC9E;margin-bottom:24px;line-height:1.5;">Restaurants adding inventory, kitchen, QR &amp; CRM.</div>
+        <div style="display:flex;flex-direction:column;gap:11px;margin-bottom:28px;">
+          <div style="display:flex;gap:9px;font-size:14px;color:#E7DDC9;"><span style="color:var(--or2);font-weight:700;">&#10003;</span>Everything in Starter</div>
+          <div style="display:flex;gap:9px;font-size:14px;color:#E7DDC9;"><span style="color:var(--or2);font-weight:700;">&#10003;</span>Kitchen display &amp; QR ordering</div>
+          <div style="display:flex;gap:9px;font-size:14px;color:#E7DDC9;"><span style="color:var(--or2);font-weight:700;">&#10003;</span>Inventory &amp; CRM</div>
+          <div style="display:flex;gap:9px;font-size:14px;color:#E7DDC9;"><span style="color:var(--or2);font-weight:700;">&#10003;</span>Vendor purchase orders</div>
+        </div>
+        <a href="#demo" style="display:block;text-align:center;padding:13px;border-radius:11px;background:var(--or);color:#fff;font-weight:600;font-size:14.5px;text-decoration:none;transition:transform .15s;" style-hover="transform:translateY(-2px);">Talk to Sales</a>
+      </div>
+      <div data-reveal data-tilt style="opacity:0;transform:translateY(18px);transition:opacity .6s .12s,transform .6s .12s;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:32px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Enterprise</div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;letter-spacing:-0.02em;margin-bottom:6px;">Let&rsquo;s talk</div>
+        <div style="font-size:13.5px;color:var(--muted);margin-bottom:24px;line-height:1.5;">Multi-outlet chains &amp; cruise vessel kitchens.</div>
+        <div style="display:flex;flex-direction:column;gap:11px;margin-bottom:28px;">
+          <div style="display:flex;gap:9px;font-size:14px;color:#4A4237;"><span style="color:var(--green);font-weight:700;">&#10003;</span>Everything in Growth</div>
+          <div style="display:flex;gap:9px;font-size:14px;color:#4A4237;"><span style="color:var(--green);font-weight:700;">&#10003;</span>Advanced analytics</div>
+          <div style="display:flex;gap:9px;font-size:14px;color:#4A4237;"><span style="color:var(--green);font-weight:700;">&#10003;</span>AI forecasting</div>
+          <div style="display:flex;gap:9px;font-size:14px;color:#4A4237;"><span style="color:var(--green);font-weight:700;">&#10003;</span>Custom integrations</div>
+        </div>
+        <a href="#demo" style="display:block;text-align:center;padding:13px;border-radius:11px;border:1px solid var(--ink);color:var(--ink);font-weight:600;font-size:14.5px;text-decoration:none;transition:background .2s,color .2s;" style-hover="background:var(--ink);color:#fff;">Talk to Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" style="background:#F3EBDB;border-block:1px solid var(--line);">
+    <div style="max-width:840px;margin:0 auto;padding:clamp(64px,8vw,110px) clamp(18px,4vw,40px);">
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s;margin-bottom:44px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:18px;">11 / FAQ</div>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.03em;font-size:clamp(28px,3.6vw,46px);line-height:1.05;margin:0;text-wrap:balance;">Questions, answered.</h2>
+      </div>
+      <div data-faq-list style="border-top:1px solid var(--line);"></div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section id="demo" style="position:relative;background:var(--ink);color:#fff;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;top:-30%;right:-10%;width:60%;height:160%;background:radial-gradient(circle at 50% 50%,rgba(240,83,28,0.35),transparent 62%);filter:blur(30px);"></div>
+    <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .8s,transform .8s;position:relative;max-width:900px;margin:0 auto;padding:clamp(72px,9vw,130px) clamp(18px,4vw,40px);text-align:center;">
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-0.035em;font-size:clamp(36px,6vw,76px);line-height:0.98;margin:0 0 22px;text-wrap:balance;">Ready to run your restaurant smarter?</h2>
+      <p style="font-size:clamp(16px,1.8vw,20px);line-height:1.55;color:#C9BFB0;margin:0 auto 40px;max-width:56ch;">Bring billing, kitchen, stock, customers, payments, and growth into one connected platform.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+        <a href="#demo" style="display:inline-flex;align-items:center;gap:10px;background:var(--or);color:#fff;font-weight:600;font-size:16px;padding:17px 32px;border-radius:12px;text-decoration:none;box-shadow:0 16px 34px -14px rgba(240,83,28,0.8);transition:transform .15s;" style-hover="transform:translateY(-2px);">Book a Demo <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span></a>
+        <a href="#demo" style="display:inline-flex;align-items:center;background:transparent;color:#fff;font-weight:600;font-size:16px;padding:17px 30px;border-radius:12px;text-decoration:none;border:1px solid rgba(255,255,255,0.25);transition:border-color .2s,transform .15s;" style-hover="border-color:#fff;transform:translateY(-2px);">Start Free Trial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer style="background:var(--charcoal);color:#B5AC9E;border-top:1px solid rgba(255,255,255,0.08);">
+    <div style="max-width:1280px;margin:0 auto;padding:44px clamp(18px,4vw,40px);display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;">
+      <div style="display:flex;align-items:center;gap:11px;">
+        <span style="width:34px;height:34px;border-radius:10px;background:linear-gradient(150deg,var(--or2),var(--or));display:flex;align-items:center;justify-content:center;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 13c1.6 0 1.6-2 3.2-2s1.6 2 3.2 2 1.6-2 3.2-2 1.6 2 3.2 2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="6.4" r="1.5" fill="#fff"/></svg>
+        </span>
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:19px;color:#fff;">Zalpan</span>
+      </div>
+      <div style="font-size:13px;color:#8A8072;">A <a href="Bohniman AI.dc.html" style="color:var(--or2);text-decoration:none;font-weight:600;">Bohniman</a> product &middot; Restaurant Operating System</div>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+
+  componentDidMount() {
+    this.buildComparison();
+    this.buildFaq();
+    this.buildAiCards();
+    this.setupResponsiveNav();
+    this.setupTabs();
+    // Defer style-mutating setups until after the runtime's initial post-mount
+    // commit, which otherwise re-applies the template's inline opacity:0.
+    this._defer = setTimeout(() => {
+      this.setupReveal();
+      this.setupFloat();
+      this.setupWorkflow();
+    }, 90);
+  }
+
+  componentWillUnmount() {
+    if (this._revScroll) window.removeEventListener('scroll', this._revScroll);
+    if (this._wfScroll) window.removeEventListener('scroll', this._wfScroll);
+    if (this._revSafety) clearTimeout(this._revSafety);
+    if (this._wfSafety) clearTimeout(this._wfSafety);
+    if (this._aiTimer) clearInterval(this._aiTimer);
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._onResize) window.removeEventListener('resize', this._onResize);
+    if (this._onMove) { const s = document.querySelector('[data-hero-stage]'); if (s) s.removeEventListener('mousemove', this._onMove); }
+    if (this._defer) clearTimeout(this._defer);
+  }
+
+  root() { return document.getElementById('zalpan'); }
+
+  setupReveal() {
+    const reveals = Array.from(this.root().querySelectorAll('[data-reveal]'));
+    const check = () => {
+      const vh = window.innerHeight;
+      for (let i = reveals.length - 1; i >= 0; i--) {
+        const el = reveals[i];
+        const r = el.getBoundingClientRect();
+        if (r.top < vh * 0.9 && r.bottom > 0) {
+          el.style.opacity = '1'; el.style.transform = 'none';
+          reveals.splice(i, 1);
+        }
+      }
+      if (!reveals.length && this._revScroll) window.removeEventListener('scroll', this._revScroll);
+    };
+    this._revScroll = check;
+    window.addEventListener('scroll', check, { passive: true });
+    check();
+    // safety: nothing should ever stay invisible even if geometry checks fail
+    this._revSafety = setTimeout(() => { reveals.forEach((el) => { el.style.opacity = '1'; el.style.transform = 'none'; }); }, 2600);
+  }
+
+  setupResponsiveNav() {
+    const apply = () => {
+      const wide = window.innerWidth >= 860;
+      const nav = this.root().querySelector('[data-navlinks]');
+      if (nav) nav.style.display = wide ? 'flex' : 'none';
+      this.root().querySelectorAll('[data-showsm]').forEach((b) => { b.style.display = wide ? 'inline-flex' : 'none'; });
+    };
+    apply();
+    this._onResize = apply;
+    window.addEventListener('resize', apply);
+  }
+
+  setupFloat() {
+    const stage = this.root().querySelector('[data-hero-stage]');
+    const tilt = this.root().querySelector('[data-hero-tilt]');
+    const floats = Array.from(this.root().querySelectorAll('[data-float]'));
+    // parallax scroll
+    this._onScroll = () => {
+      const vh = window.innerHeight;
+      floats.forEach((el) => {
+        const depth = parseFloat(el.getAttribute('data-depth') || '30') / 100;
+        const r = el.getBoundingClientRect();
+        const center = r.top + r.height / 2;
+        const off = (center - vh / 2) / vh;   // -0.5..0.5-ish
+        el.style.setProperty('--pscroll', (off * depth * -46).toFixed(1) + 'px');
+        el.style.transform = 'translate3d(0,' + (off * depth * -46).toFixed(1) + 'px,0)';
+      });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+    // mouse tilt on hero
+    if (stage && tilt) {
+      this._onMove = (e) => {
+        const r = stage.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        tilt.style.transform = 'rotateY(' + (px * 10).toFixed(2) + 'deg) rotateX(' + (-py * 10).toFixed(2) + 'deg)';
+      };
+      stage.addEventListener('mousemove', this._onMove);
+      stage.addEventListener('mouseleave', () => { tilt.style.transform = 'rotateY(0) rotateX(0)'; });
+    }
+  }
+
+  tourData() {
+    return {
+      billing: { title: 'Fast counter billing', desc: 'Fast counter billing, split bills, discounts, GST invoices, and digital payments \u2014 all from a single, keyboard-friendly screen.', visual: this.vBilling() },
+      kitchen: { title: 'Digital kitchen display', desc: 'Digital KOTs route each order to the right preparation station, colour-coded and timed so nothing is missed during the rush.', visual: this.vKitchen() },
+      inventory: { title: 'Recipe-linked inventory', desc: 'Recipe-linked stock updates automatically with every sale, so counts stay accurate without anyone touching a spreadsheet.', visual: this.vInventory() },
+      qr: { title: 'Scan, order, pay', desc: 'Guests scan a QR, browse the live menu, order and pay \u2014 without waiting for staff or a printed card.', visual: this.vQR() },
+      analytics: { title: 'Owner analytics', desc: 'Track revenue, bestsellers, peak hours, and outlet performance in dashboards built for quick decisions.', visual: this.vAnalytics() },
+      crm: { title: 'Know every guest', desc: 'Know repeat customers, their visit history, preferences and loyalty activity \u2014 and turn one-time diners into regulars.', visual: this.vCRM() },
+      ai: { title: 'AI that looks ahead', desc: 'Predict demand, stock needs, peak hours and sales anomalies before they become problems on the floor.', visual: this.vAI() }
+    };
+  }
+
+  vBilling() {
+    return `<div style="background:#FFFDF8;border-radius:12px;padding:16px;font-family:'IBM Plex Sans';">
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:#6E6558;margin-bottom:9px;"><span>Paneer Tikka &times;2</span><span style="color:#191512;font-weight:600;">440</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:#6E6558;margin-bottom:9px;"><span>Butter Naan &times;4</span><span style="color:#191512;font-weight:600;">200</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:#6E6558;margin-bottom:12px;"><span>Gulab Jamun &times;2</span><span style="color:#191512;font-weight:600;">120</span></div>
+      <div style="border-top:1px dashed #E7DDC9;padding-top:11px;display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;"><span style="font-size:12px;color:#6E6558;">Total incl. GST</span><span style="font-family:'Bricolage Grotesque';font-weight:800;font-size:20px;">&#8377;798</span></div>
+      <div style="display:flex;gap:8px;"><div style="flex:1;text-align:center;background:#F0531C;color:#fff;font-weight:600;font-size:12px;padding:10px;border-radius:8px;">UPI</div><div style="flex:1;text-align:center;background:#F3EBDB;color:#191512;font-weight:600;font-size:12px;padding:10px;border-radius:8px;">Card</div><div style="flex:1;text-align:center;background:#F3EBDB;color:#191512;font-weight:600;font-size:12px;padding:10px;border-radius:8px;">Cash</div></div>
+    </div>`;
+  }
+  vKitchen() {
+    return `<div style="display:flex;gap:10px;">
+      <div style="flex:1;background:#1F1A16;border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px;"><div style="font-family:'IBM Plex Mono';font-size:10px;color:#FF7C36;margin-bottom:8px;">KOT #248 &middot; 04:12</div><div style="font-family:'IBM Plex Mono';font-size:11px;color:#E7DDC9;line-height:1.8;">2&times; Paneer Tikka<br>1&times; Dal Makhani</div></div>
+      <div style="flex:1;background:#1F1A16;border:1px solid rgba(63,122,85,0.5);border-radius:10px;padding:12px;"><div style="font-family:'IBM Plex Mono';font-size:10px;color:#5EAE7C;margin-bottom:8px;">KOT #249 &middot; READY</div><div style="font-family:'IBM Plex Mono';font-size:11px;color:#E7DDC9;line-height:1.8;">3&times; Masala Dosa<br>2&times; Filter Coffee</div></div>
+    </div>`;
+  }
+  vInventory() {
+    return `<div style="background:#FFFDF8;border-radius:12px;padding:16px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;"><div style="flex:1;"><div style="font-size:12px;font-weight:600;color:#191512;">Paneer</div><div style="height:6px;background:#F3EBDB;border-radius:3px;margin-top:5px;overflow:hidden;"><div style="width:22%;height:100%;background:#F0531C;"></div></div></div><span style="font-family:'IBM Plex Mono';font-size:11px;color:#F0531C;">2.2 kg</span></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;"><div style="flex:1;"><div style="font-size:12px;font-weight:600;color:#191512;">Basmati Rice</div><div style="height:6px;background:#F3EBDB;border-radius:3px;margin-top:5px;overflow:hidden;"><div style="width:68%;height:100%;background:#3F7A55;"></div></div></div><span style="font-family:'IBM Plex Mono';font-size:11px;color:#3F7A55;">14 kg</span></div>
+      <div style="display:flex;align-items:center;gap:10px;"><div style="flex:1;"><div style="font-size:12px;font-weight:600;color:#191512;">Butter</div><div style="height:6px;background:#F3EBDB;border-radius:3px;margin-top:5px;overflow:hidden;"><div style="width:45%;height:100%;background:#C08A2C;"></div></div></div><span style="font-family:'IBM Plex Mono';font-size:11px;color:#C08A2C;">5.1 kg</span></div>
+    </div>`;
+  }
+  vQR() {
+    return `<div style="background:#FFFDF8;border-radius:12px;padding:18px;text-align:center;">
+      <div style="width:110px;aspect-ratio:1;margin:0 auto 12px;border-radius:10px;background:conic-gradient(from 45deg,#191512 25%,#fff 0 50%,#191512 0 75%,#fff 0);background-size:22% 22%;"></div>
+      <div style="font-weight:700;font-size:14px;color:#191512;">Table 07 &middot; Scan to order</div>
+      <div style="font-size:12px;color:#6E6558;margin-top:4px;">Menu &middot; Order &middot; Pay</div>
+    </div>`;
+  }
+  vAnalytics() {
+    return `<div style="background:#FFFDF8;border-radius:12px;padding:16px;">
+      <div style="display:flex;justify-content:space-between;margin-bottom:14px;"><span style="font-size:11px;color:#6E6558;">This week</span><span style="font-size:11px;color:#3F7A55;font-weight:600;">&#9650; 18%</span></div>
+      <div style="display:flex;align-items:flex-end;gap:6px;height:80px;">
+        <div style="flex:1;height:40%;background:#F3EBDB;border-radius:3px;"></div><div style="flex:1;height:58%;background:#F3EBDB;border-radius:3px;"></div><div style="flex:1;height:48%;background:#F3EBDB;border-radius:3px;"></div><div style="flex:1;height:74%;background:#FFCBA8;border-radius:3px;"></div><div style="flex:1;height:100%;background:linear-gradient(180deg,#FF7C36,#F0531C);border-radius:3px;"></div><div style="flex:1;height:66%;background:#F3EBDB;border-radius:3px;"></div><div style="flex:1;height:86%;background:#FFCBA8;border-radius:3px;"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:12px;font-family:'IBM Plex Mono';font-size:9px;color:#9C9488;"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+    </div>`;
+  }
+  vCRM() {
+    return `<div style="background:#FFFDF8;border-radius:12px;padding:16px;">
+      <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px;"><span style="width:38px;height:38px;border-radius:50%;background:linear-gradient(150deg,#FF7C36,#F0531C);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:'Bricolage Grotesque';">R</span><div><div style="font-size:13px;font-weight:700;color:#191512;">Riya Sharma</div><div style="font-size:11px;color:#6E6558;">12 visits &middot; Gold tier</div></div></div>
+      <div style="display:flex;gap:8px;"><div style="flex:1;background:#F3EBDB;border-radius:8px;padding:10px;text-align:center;"><div style="font-family:'Bricolage Grotesque';font-weight:800;font-size:16px;color:#191512;">&#8377;9.4k</div><div style="font-size:10px;color:#6E6558;">lifetime</div></div><div style="flex:1;background:#F3EBDB;border-radius:8px;padding:10px;text-align:center;"><div style="font-family:'Bricolage Grotesque';font-weight:800;font-size:16px;color:#191512;">240</div><div style="font-size:10px;color:#6E6558;">points</div></div></div>
+      <div style="margin-top:10px;font-size:11px;color:#6E6558;">Favourite: <span style="color:#191512;font-weight:600;">Paneer Tikka</span></div>
+    </div>`;
+  }
+  vAI() {
+    return `<div style="background:#FFFDF8;border-radius:12px;padding:16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;"><span style="width:8px;height:8px;border-radius:50%;background:#F0531C;"></span><span style="font-family:'IBM Plex Mono';font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#B8431A;">AI forecast</span></div>
+      <div style="font-size:13.5px;color:#191512;font-weight:600;line-height:1.5;margin-bottom:10px;">Peak predicted 7:30&ndash;9:15 PM tonight.</div>
+      <div style="font-size:12.5px;color:#6E6558;line-height:1.5;">Prep +18 portions of Butter Chicken and roster one extra server for the dinner rush.</div>
+    </div>`;
+  }
+
+  setupTabs() {
+    const data = this.tourData();
+    const btns = Array.from(this.root().querySelectorAll('[data-tab]'));
+    const titleEl = this.root().querySelector('[data-tour-title]');
+    const descEl = this.root().querySelector('[data-tour-desc]');
+    const visEl = this.root().querySelector('[data-tour-visual]');
+    const select = (key) => {
+      const d = data[key]; if (!d) return;
+      titleEl.style.opacity = '0'; descEl.style.opacity = '0'; visEl.style.opacity = '0';
+      setTimeout(() => {
+        titleEl.textContent = d.title; descEl.textContent = d.desc; visEl.innerHTML = d.visual;
+        titleEl.style.transition = descEl.style.transition = visEl.style.transition = 'opacity .3s';
+        titleEl.style.opacity = '1'; descEl.style.opacity = '1'; visEl.style.opacity = '1';
+      }, 130);
+      btns.forEach((b) => {
+        const on = b.getAttribute('data-tab') === key;
+        b.style.background = on ? 'var(--ink)' : 'transparent';
+        b.style.color = on ? '#fff' : 'var(--ink)';
+        b.style.borderColor = on ? 'var(--ink)' : 'var(--line)';
+      });
+    };
+    btns.forEach((b) => b.addEventListener('click', () => select(b.getAttribute('data-tab'))));
+    visEl.innerHTML = data.billing.visual;
+  }
+
+  setupWorkflow() {
+    const steps = Array.from(this.root().querySelectorAll('[data-step]'));
+    const light = (el) => {
+      el.style.opacity = '1'; el.style.transform = 'none';
+      el.style.borderColor = 'var(--or)';
+      el.style.boxShadow = '0 14px 30px -18px rgba(240,83,28,0.5)';
+      const num = el.querySelector('[data-stepnum]'); if (num) num.style.color = 'var(--or)';
+    };
+    const check = () => {
+      const vh = window.innerHeight;
+      for (let i = steps.length - 1; i >= 0; i--) {
+        const r = steps[i].getBoundingClientRect();
+        if (r.top < vh * 0.82 && r.bottom > 0) { light(steps[i]); steps.splice(i, 1); }
+      }
+      if (!steps.length && this._wfScroll) window.removeEventListener('scroll', this._wfScroll);
+    };
+    this._wfScroll = check;
+    window.addEventListener('scroll', check, { passive: true });
+    check();
+    this._wfSafety = setTimeout(() => { steps.forEach(light); }, 2800);
+  }
+
+  buildComparison() {
+    const rows = [
+      ['Billing', true, true], ['Kitchen display', false, true], ['QR ordering', false, true],
+      ['Inventory', false, true], ['Vendor purchase orders', false, true], ['CRM & loyalty', false, true],
+      ['Multi-outlet control', false, true], ['AI forecasting', false, true],
+      ['Owner analytics', 'basic', true], ['Staff roles', false, true]
+    ];
+    const yes = '<span style="color:#3F7A55;font-weight:700;font-size:16px;">&#10003;</span>';
+    const no = '<span style="color:#C9BFB0;font-size:18px;">&minus;</span>';
+    const basic = '<span style="font-size:11px;color:#B0A695;font-family:\'IBM Plex Mono\';">basic</span>';
+    const el = this.root().querySelector('[data-cmp-body]');
+    el.innerHTML = rows.map((r, i) => {
+      const bg = i % 2 ? 'rgba(231,221,201,0.28)' : 'transparent';
+      const trad = r[1] === true ? yes : (r[1] === 'basic' ? basic : no);
+      return '<div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;border-top:1px solid var(--line);background:' + bg + ';">'
+        + '<div style="padding:15px 22px;font-size:14px;font-weight:500;color:#191512;">' + r[0] + '</div>'
+        + '<div style="padding:15px 22px;text-align:center;">' + trad + '</div>'
+        + '<div style="padding:15px 22px;text-align:center;background:rgba(240,83,28,0.05);">' + yes + '</div>'
+        + '</div>';
+    }).join('');
+  }
+
+  buildFaq() {
+    const faqs = [
+      ['Does it work for Indian restaurants?', 'Yes. Zalpan is built for Indian F&B \u2014 GST-ready invoicing, UPI and digital payments, regional menu structures, and workflows that match how restaurants here actually run.'],
+      ['Can it run on Android tablets?', 'Absolutely. The counter POS and kitchen display run on standard Android devices, alongside the web portal and an owner mobile app.'],
+      ['Does it support QR ordering?', 'Yes. Guests scan a table QR, browse a live menu, order and pay \u2014 orders flow straight into the POS and kitchen with no manual re-entry.'],
+      ['Can it work if the internet is unstable?', 'Zalpan is designed to keep billing and KOTs running through patchy connectivity, syncing automatically once the connection is back.'],
+      ['Does it support inventory and purchase orders?', 'Yes. Recipe-linked inventory updates with every sale, and you can raise purchase orders and manage vendors from the same ledger.'],
+      ['Can I manage multiple outlets?', 'Yes. Central menus, pricing, inventory and consolidated analytics let you run many outlets \u2014 including cruise vessel kitchens \u2014 from one dashboard.'],
+      ['Does it include AI forecasting?', 'AI forecasting for demand, stock, peak hours and menu performance is available on higher plans as your restaurant\u2019s co-pilot.'],
+      ['Can it integrate with payment systems?', 'Yes. Zalpan supports UPI and major digital payment methods, and can integrate with payment and third-party systems for enterprise setups.']
+    ];
+    const el = this.root().querySelector('[data-faq-list]');
+    el.innerHTML = faqs.map((f, i) =>
+      '<div data-faq-item style="border-bottom:1px solid var(--line);">'
+      + '<button data-faq-q style="cursor:pointer;width:100%;text-align:left;background:none;border:none;font-family:inherit;padding:22px 4px;display:flex;align-items:center;justify-content:space-between;gap:16px;">'
+      + '<span style="font-weight:600;font-size:clamp(15px,1.7vw,18px);color:#191512;">' + f[0] + '</span>'
+      + '<span data-faq-icon style="flex:0 0 auto;width:26px;height:26px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:18px;color:#F0531C;transition:transform .25s,background .2s;">+</span>'
+      + '</button>'
+      + '<div data-faq-a style="max-height:0;overflow:hidden;transition:max-height .3s ease;"><p style="margin:0;padding:0 4px 24px;font-size:15px;line-height:1.62;color:#6E6558;max-width:64ch;">' + f[1] + '</p></div>'
+      + '</div>'
+    ).join('');
+    el.querySelectorAll('[data-faq-item]').forEach((item) => {
+      const btn = item.querySelector('[data-faq-q]');
+      const ans = item.querySelector('[data-faq-a]');
+      const icon = item.querySelector('[data-faq-icon]');
+      btn.addEventListener('click', () => {
+        const open = ans.style.maxHeight && ans.style.maxHeight !== '0px';
+        el.querySelectorAll('[data-faq-a]').forEach((a) => { a.style.maxHeight = '0px'; });
+        el.querySelectorAll('[data-faq-icon]').forEach((ic) => { ic.style.transform = 'rotate(0)'; ic.textContent = '+'; ic.style.background = 'transparent'; ic.style.color = '#F0531C'; });
+        if (!open) { ans.style.maxHeight = ans.scrollHeight + 'px'; icon.style.transform = 'rotate(45deg)'; icon.style.background = '#F0531C'; icon.style.color = '#fff'; }
+      });
+    });
+  }
+
+  buildAiCards() {
+    this._ai = [
+      ['Inventory', 'Paneer stock may run low by Friday evening.'],
+      ['Rush hour', 'Peak predicted today: 7:30 PM \u2013 9:15 PM.'],
+      ['Menu', 'Butter Chicken sales are up 34% this week.'],
+      ['Staffing', 'You may be short-staffed for Saturday dinner.'],
+      ['Cost', 'Food cost increased 8% versus last week.']
+    ];
+    this._aiIdx = 0;
+    const stack = this.root().querySelector('#aiStack');
+    const render = () => {
+      stack.innerHTML = this._ai.map((c, i) => {
+        const active = i === this._aiIdx;
+        return '<div style="display:flex;align-items:flex-start;gap:14px;background:' + (active ? 'linear-gradient(150deg,#FFFDF8,#FDF3E8)' : 'var(--paper)') + ';border:1px solid ' + (active ? 'rgba(240,83,28,0.5)' : 'var(--line)') + ';border-radius:14px;padding:18px;transition:all .4s;transform:scale(' + (active ? '1.03' : '1') + ');box-shadow:' + (active ? '0 20px 40px -24px rgba(240,83,28,0.55)' : 'none') + ';">'
+          + '<span style="width:34px;height:34px;flex:0 0 auto;border-radius:9px;background:' + (active ? 'linear-gradient(150deg,#FF7C36,#F0531C)' : 'rgba(240,83,28,0.12)') + ';display:flex;align-items:center;justify-content:center;">'
+          + '<svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke="' + (active ? '#fff' : '#F0531C') + '" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2" stroke="' + (active ? '#fff' : '#F0531C') + '" stroke-width="1.8"/></svg></span>'
+          + '<div><div style="font-family:\'IBM Plex Mono\';font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#B8431A;margin-bottom:4px;">' + c[0] + '</div>'
+          + '<div style="font-size:14.5px;font-weight:600;color:#191512;line-height:1.4;">' + c[1] + '</div></div></div>';
+      }).join('');
+    };
+    render();
+    this._aiTimer = setInterval(() => { this._aiIdx = (this._aiIdx + 1) % this._ai.length; render(); }, 2600);
+  }
+}
+</script>
+</body>
+</html>

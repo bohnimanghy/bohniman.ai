@@ -1,0 +1,180 @@
+Bohniman Systems Private Limited
+Bohniman Systems Private Limited is an ISO 9001 and ISO 27001 certified technology company delivering secure, scalable, enterprise-grade software solutions since 1999.
+With 250+ projects across government, public sector, and enterprise domains, we help organizations modernize operations through custom software development, AI-driven automation, digital transformation, and data platforms.
+We specialize in mission-critical systems requiring high availability, security, compliance, and scalability, including citizen service platforms, judicial workflows, large-scale digitization programs, enterprise automation, and data processing systems.
+
+Key Project Experience
+• Large-scale citizen data digitization and linkage systems • Judicial case management and workflow platforms • Government permit and identity verification systems • Legacy record digitization, OCR, and structured data transformation • Secure enterprise systems with biometrics, document workflows, compliance architecture
+
+Core Expertise
+• Disaster Recovery & Business Continuity • Security-First Infrastructure Engineering • STQC-Compliant & Audit-Ready Systems • VAPT Remediation & Secure Deployments • High-Traffic System Engineering • Auto-Scaling, Load Balancing & Optimization • Distributed Systems & Microservices • Enterprise API, Middleware & System Integration • ERP, CRM & Payment Gateway Integration • Identity & e-KYC / Biometric Systems • Workflow Automation & Orchestration • Cloud & Hybrid Infrastructure • Infrastructure Automation & Monitoring • Multi-Environment Deployments • Docker & Kubernetes
+
+SAP Ecosystem & Extension Development
+We build custom applications around SAP ECC / S/4HANA that extend ERP capabilities without modifying core systems.
+Capabilities: • SAP-integrated peripheral applications and workflows • Business process extensions for SAP modules (FI, MM, HR) • Secure integration using SAP APIs (OData/REST/SOAP), BAPI, RFC, IDoc • Real-time and batch SAP data synchronization • SAP-connected dashboards and enterprise portals • Middleware-based SAP and third-party integrations
+This enables organizations to extend SAP functionality while keeping SAP as the core system of record.
+
+Technology Stack
+Java, Spring Boot, Python, Node.js, React, React Native, Flutter, TensorFlow, PyTorch, PostgreSQL, MySQL, Docker, Kubernetes, AWS, cloud-native technologies.
+
+Why Clients Choose Us
+• 25+ years of delivery experience • Expertise in large-scale, high-volume systems • Security-first engineering culture • Reliable execution and transparent communication • Long-term enterprise partnership approach
+
+Summary
+We deliver secure, scalable digital systems combining legacy modernization, enterprise platforms, and SAP ecosystem extensions. Our strength lies in building integrated solutions that improve enterprise workflows, enhance usability, and enable large-scale digital transformation.
+Case Study: e-Court Management & Biometric Verification Platform
+Client Goal
+The client required a large-scale digital governance platform to modernize sensitive legal and administrative workflows across distributed operational departments. Existing processes relied heavily on fragmented manual records, physical files, and disconnected workflows, creating operational delays, limited traceability, and difficulty in tracking repeat suspects who could change identities and relocate across jurisdictions.
+The two primary objectives of the project were:
+Establish a biometric-enabled digital case initiation system to uniquely identify new suspects and prevent identity manipulation.
+Digitize and migrate approximately 0.45 million historical legacy cases accumulated over nearly 27 years into a centralized searchable digital platform.
+The solution also needed to support secure workflow orchestration, hearing management, inter-department coordination, centralized monitoring, and long-term archival continuity across geographically distributed operational units.
+What We Did
+Bohniman Systems Pvt. Ltd. acted as the prime contractor and full system integrator for the project, including software development, data center setup, digitization, deployment, VPN integration, biometric systems integration, training, and onsite operational support.
+The project covered:
+Digitization of over 5.5 million historical records
+Migration of approximately 0.45 million legacy cases
+Deployment across 100 tribunal offices
+Integration with 319 police stations and 34 district police headquarters
+Centralized management of nearly 1 TB of operational and archival data
+We developed:
+Complete case workflow engine
+Biometric enrollment and verification system
+Android-based field verification application
+Hearing and notice management system
+Secure document and evidence repository
+Synchronization and VPN-based connectivity framework
+Role-based access management
+Supervisory dashboards and MIS reporting
+Searchable archival and document indexing platform
+The operational workflow enabled police units to initiate new suspect cases through Android devices with biometric capture, including fingerprint and retina scan acquisition, geo-tagged verification, image capture, and supporting document upload. Verification data synchronized securely through VPN or police station networks to the centralized platform.
+Once uploaded, tribunal workflows were automatically initiated for hearing scheduling, verification processing, order management, and case archival. Historical legacy records were scanned, indexed, metadata-tagged, and migrated into a searchable centralized repository to ensure continuity between legacy and newly created digital cases.
+One of the project’s biggest engineering challenges was the migration and digitization of nearly three decades of sensitive historical records while simultaneously deploying a secure biometric-enabled workflow system across geographically distributed operational units.
+The deployment included:
+Cloud-hosted centralized architecture
+VPN-secured statewide connectivity
+Biometric device integration
+Android deployment across 319 police stations
+Training and operational onboarding programs
+The project execution involved:
+6 developers
+101 field engineers
+30 digitization operators
+4 trainers
+4 support personnel
+The implementation and rollout extended over multiple phases, including one year of implementation, large-scale archival migration, statewide rollout, and five years of operational maintenance and support.
+Project Success
+The project successfully transformed fragmented manual legal workflows into a centralized, biometric-enabled, audit-ready digital governance ecosystem.
+Key outcomes included:
+Biometric-backed digital identification for new suspect cases
+Successful migration of approximately 0.45 million historical cases
+Digitization of over 5.5 million legacy records
+Centralized searchable access to historical and active case records
+Improved inter-agency coordination across tribunals and police units
+Faster case handling and reduced dependency on manual systems
+Enhanced traceability and monitoring of operational workflows
+Secure statewide access through VPN-enabled infrastructure
+Long-term archival continuity and searchable record management
+The platform demonstrated Bohniman Systems’ capability in delivering enterprise-grade digital governance solutions involving biometric verification, mobile-enabled field operations, secure workflow orchestration, large-scale archival modernization, and legally sensitive distributed operational environments.
+
+Case Study: Large-Scale Legacy Data Digitization & Citizen Search Platform
+1. Client Goal
+A large-scale citizen verification initiative required the digitization, indexing, and statewide publication of historical archival records dating from 1951 to 1971. Earlier attempts at manual verification had faced severe operational and public-access challenges because applicants were required to physically visit district offices to search decades-old paper records. The client’s objective was to create a secure, searchable, scalable, and citizen-accessible digital platform that could make legacy records available across the state through both online and assisted access channels.
+The project involved highly sensitive archival documents spread across 25 district headquarters. Many of the records, including documents over 65 years old, were in fragile and deteriorated condition. The solution needed to support millions of searches within strict timelines while ensuring high availability, multilingual accessibility, and operational reliability across geographically distributed locations.
+
+2. What We Did
+Bohniman Systems Pvt. Ltd. acted as the prime contractor for the complete DLDD (Digitization and Legacy Data Distribution) initiative, including scanning operations, software development, indexing, deployment, and statewide rollout.
+The project covered:
+Digitization of approximately 6.25 lakh archival pages
+Processing of over 2.02 crore indexed legacy records
+Management of nearly 300 GB of searchable archival data
+Our field teams physically visited 25 district headquarters across the state to scan and digitize archival records, including historical registers and electoral rolls from 1951–1971. Due to the fragile nature of many records, specialized scanning workflows and handling protocols were developed to preserve document readability and integrity.
+The engineering scope included:
+Development of a multilingual citizen search platform
+Record-level indexing and metadata tagging
+High-speed search engine with phonetic and multilingual search capability
+Search by name, father’s name, village, district, and legacy code
+Preprocessed multilingual data storage in Assamese, Bengali, and English
+Image rendering and linked archival record retrieval
+Custom transliteration utilities for multilingual data preparation
+Compression and optimization of archival image storage
+Administrative monitoring dashboards
+Local replication and deployment tools
+Disaster recovery and backup mechanisms
+One of the most critical engineering challenges was record-level indexing and mapping of archival images to individual records. This activity was executed using a combination of custom-built tools and a large operational workforce involving more than 200 trained personnel.
+To overcome internet limitations in rural and distributed environments, Bohniman designed a hybrid deployment architecture:
+Cloud-hosted citizen access portal
+Distributed deployment on 5,000 laptops
+Operations across 2,500 assisted service centers statewide
+The same searchable database and archival image repository were made available through both online and local assisted-access environments, ensuring uninterrupted citizen access regardless of connectivity limitations.
+The project was executed under strict timelines with:
+15 software developers
+40 scanning operators
+40 field engineers
+200+ support and indexing personnel
+The complete statewide implementation was delivered within approximately six months, including scanning, indexing, software deployment, training, and operational rollout.
+
+3. Project Success Overview
+The project successfully transformed a historically manual and operationally difficult archival verification process into a scalable digital citizen service platform.
+Key outcomes included:
+Statewide public accessibility of legacy archival records
+Elimination of large-scale physical dependency on district offices
+Successful support for millions of citizen searches
+Approximately 17 million platform hits within six months
+More than 43 lakh legacy code retrievals/downloads by citizens
+Support for nearly the entire applicant population of the initiative
+High system stability under heavy concurrent usage
+Reliable operation across both online and distributed assisted-access infrastructure
+The platform played a foundational role in enabling large-scale citizen data verification workflows through technology-driven access to historical archival records. The project demonstrated Bohniman Systems’ capability in executing mission-critical, high-volume, multilingual government technology programs involving archival digitization, distributed infrastructure deployment, and citizen-scale search systems under stringent operational timelines.
+
+Case Study: Large-Scale Family Linkage Verification & Distributed Verification Workflow Platform
+Client Goal
+A large-scale citizen verification initiative required a technology platform to validate lineage relationships between applicants and historical legacy records. The objective was to identify false or inconsistent claims where legacy reference codes belonging to unrelated families were used by applicants, while also assisting statutory verification officers in conducting structured verification and hearing processes at statewide scale.
+The challenge involved validating relationship linkages across millions of citizens and households within strict timelines. Since the same legacy code could legitimately appear across siblings, cousins, and multiple households, the system needed to intelligently generate relationship-based family trees and assist officers in identifying inconsistencies through structured verification workflows.
+What We Did
+Bohniman Systems Pvt. Ltd. acted as the prime contractor for design, development, deployment, and operational support of the distributed Family Tree Verification platform.
+The system processed:
+57 lakh family trees
+90 lakh individual verification cases
+Over 43 lakh legacy codes
+Coverage across all districts of the state
+Approximately 250 GB of distributed verification data
+We developed:
+Family tree generation engine
+Relationship linkage algorithms
+Verification workflow system
+Hearing management modules
+Case assignment engine
+Reporting and dashboard systems
+Distributed synchronization engine
+Operator utilities and reporting tools
+Offline-first district deployment architecture
+The core workflow automatically generated computerized family trees whenever multiple applicants used the same legacy reference code. These family trees consolidated related applicants across different households and generations into a unified relationship structure.
+Verification officers compared the system-generated family trees with manually submitted family trees collected from applicants. The platform enabled officers to identify mismatches, inconsistencies, and potential false linkage claims, after which hearings and verification workflows were initiated.
+One of the biggest engineering challenges was managing large-scale relational complexity where the same historical legacy code could appear across extended family structures spanning multiple households and districts. Additional complexity arose from spelling variations and strict implementation timelines.
+The solution was deployed across:
+5,000 laptops
+2,500 distributed service centers
+27 districts simultaneously
+An offline-first architecture was implemented to overcome connectivity limitations. Verification data from distributed laptop deployments were synchronized to centralized servers through scheduled replication processes.
+The project was completed within an aggressive timeline:
+2 months implementation
+15 days statewide rollout
+15 days training and operational onboarding
+The deployment involved:
+15 developers
+10 field engineers
+6 trainers
+6 support personnel
+6 district coordinators
+Project Success
+The platform successfully enabled large-scale relationship verification and assisted statutory officers in managing one of the largest distributed citizen verification workflows undertaken at the time.
+Key outcomes included:
+Successful generation and verification of 57 lakh computerized family trees
+Processing of 90 lakh verification cases
+Statewide distributed deployment across all operational districts
+Efficient identification of relationship inconsistencies and false linkage claims
+Structured support for hearings and verification workflows
+Reliable synchronization from distributed offline environments
+Stable execution under strict operational timelines and legally sensitive conditions
+The project demonstrated Bohniman Systems’ capability in designing and executing complex relational-data platforms, distributed workflow systems, and large-scale verification architectures involving millions of linked records and geographically distributed operational teams.

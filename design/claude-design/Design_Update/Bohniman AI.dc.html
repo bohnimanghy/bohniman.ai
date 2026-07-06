@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
 <style>
   html,body{margin:0;padding:0;background:#F5F4EF;}
   *{box-sizing:border-box;}
@@ -40,8 +41,10 @@
       </a>
       <nav style="display:flex;align-items:center;gap:34px;">
         <a href="#products" style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#3A3E45;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Products</a>
-        <a href="#contact" style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#3A3E45;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Services</a>
+        <a href="#cases" style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#3A3E45;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Case Studies</a>
+        <a href="#contact" style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#3A3E45;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Enterprise</a>
         <a href="#about" style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#3A3E45;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">About</a>
+        <a href="#news" style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#3A3E45;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">News Room</a>
         <a href="#contact" style="font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:#3A3E45;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Contact</a>
       </nav>
       <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;background:#17191E;color:#F5F4EF;padding:11px 20px;border-radius:9px;font-size:14px;font-weight:500;text-decoration:none;transition:background .2s;" style-hover="background:#2A2D34;">Book a demo</a>
@@ -134,7 +137,7 @@
         <div>
           <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:22px;">
             <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A8E96;">Event Management · Flagship</span>
-            <span style="display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#17191E;"><span style="width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px color-mix(in oklab,var(--accent) 22%,transparent);animation:pulseDot 2.4s ease-in-out infinite;"></span>LIVE</span>
+            <span style="display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;color:#17191E;"><span style="width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px color-mix(in oklab,var(--accent) 22%,transparent);animation:pulseDot 2.4s ease-in-out infinite;"></span>LAUNCHING Q3 2026</span>
           </div>
           <div style="display:flex;align-items:center;gap:18px;">
             <svg width="58" height="58" viewBox="0 0 72 72" fill="none" style="flex:0 0 auto;">
@@ -196,7 +199,7 @@
             </svg>
             <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;letter-spacing:-0.01em;font-size:27px;color:#17191E;margin:0;">Curioversity</h3>
           </div>
-          <p style="font-size:15.5px;line-height:1.6;color:#5A5E66;margin:0 0 22px;">The operating system for modern institutions.</p>
+          <p style="font-size:15.5px;line-height:1.6;color:#5A5E66;margin:0 0 22px;">University &amp; college management &mdash; the entire student lifecycle, from admissions to examinations. Live across universities, now expanding into HR &amp; payroll.</p>
           <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;color:color-mix(in oklab,var(--accent),black 18%);font-size:14px;font-weight:500;text-decoration:none;transition:gap .2s;" style-hover="gap:12px;">Learn more <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span></a>
         </div>
 
@@ -206,17 +209,18 @@
             <span style="display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:#8A6A1E;"><span style="width:6px;height:6px;border-radius:50%;background:#C08A2C;"></span>BETA</span>
           </div>
           <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px;">
-            <svg width="40" height="38" viewBox="0 0 56 52" fill="none" style="flex:0 0 auto;">
-              <line x1="12" y1="26" x2="28" y2="26" stroke="#17191E" stroke-width="1.6"/>
-              <line x1="28" y1="26" x2="44" y2="26" stroke="#17191E" stroke-width="1.6"/>
-              <circle cx="12" cy="26" r="5" fill="none" stroke="#17191E" stroke-width="1.6"/>
-              <circle cx="28" cy="26" r="5" fill="none" stroke="#17191E" stroke-width="1.6"/>
-              <circle cx="44" cy="26" r="5.5" fill="var(--accent)"/>
-            </svg>
-            <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;letter-spacing:-0.01em;font-size:27px;color:#17191E;margin:0;">RasoiOS</h3>
+            <span style="width:44px;height:44px;border-radius:12px;background:linear-gradient(150deg,#FF7C36,#F0531C);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px -7px rgba(240,83,28,0.6);flex:0 0 auto;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 13c1.6 0 1.6-2 3.2-2s1.6 2 3.2 2 1.6-2 3.2-2 1.6 2 3.2 2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><path d="M5 17.2c1.7 0 1.7-1.7 3.5-1.7s1.7 1.7 3.5 1.7 1.7-1.7 3.5-1.7 1.7 1.7 3.5 1.7" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/><circle cx="12" cy="6.4" r="1.5" fill="#fff"/></svg>
+            </span>
+            <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;letter-spacing:-0.01em;font-size:27px;color:#17191E;margin:0;">Zalpan</h3>
           </div>
-          <p style="font-size:15.5px;line-height:1.6;color:#5A5E66;margin:0 0 22px;">From order to kitchen to ledger &mdash; your restaurant, orchestrated.</p>
-          <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;color:color-mix(in oklab,var(--accent),black 18%);font-size:14px;font-weight:500;text-decoration:none;transition:gap .2s;" style-hover="gap:12px;">Learn more <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span></a>
+          <p style="font-size:15.5px;line-height:1.6;color:#5A5E66;margin:0 0 18px;">Run your entire restaurant from one smart platform.</p>
+          <div style="display:flex;align-items:center;gap:10px;margin:0 0 22px;padding:10px 14px;border-radius:9px;background:rgba(240,83,28,0.06);border:1px solid rgba(240,83,28,0.16);">
+            <span style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:16px;letter-spacing:-0.01em;color:color-mix(in oklab,var(--accent),black 6%);white-space:nowrap;">1.2M+ KOTs</span>
+            <span style="width:4px;height:4px;border-radius:50%;background:#C9B8A6;flex:0 0 auto;"></span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.05em;color:#7A7266;white-space:nowrap;">none missed</span>
+          </div>
+          <a href="Zalpan.dc.html" style="display:inline-flex;align-items:center;gap:8px;color:color-mix(in oklab,var(--accent),black 18%);font-size:14px;font-weight:500;text-decoration:none;transition:gap .2s;" style-hover="gap:12px;">Explore Zalpan <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span></a>
         </div>
 
         <div data-product style="padding:36px;border-right:1px solid #E2E0D7;border-bottom:1px solid #E2E0D7;transition:background .25s;" style-hover="background:#FBFAF6;">
@@ -232,7 +236,7 @@
             </svg>
             <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;letter-spacing:-0.01em;font-size:27px;color:#17191E;margin:0;">Biocrat</h3>
           </div>
-          <p style="font-size:15.5px;line-height:1.6;color:#5A5E66;margin:0 0 22px;">Healthcare operations, intelligently managed.</p>
+          <p style="font-size:15.5px;line-height:1.6;color:#5A5E66;margin:0 0 22px;">A healthcare platform for clinical information exchange across human&ndash;machine interfaces.</p>
           <span style="display:inline-flex;align-items:center;gap:8px;color:#A6A399;font-size:14px;font-weight:500;font-family:'IBM Plex Sans';">In development</span>
         </div>
 
@@ -272,8 +276,200 @@
         <div style="padding:36px 0 8px 34px;">
           <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:20px;">03</div>
           <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;letter-spacing:-0.01em;font-size:23px;line-height:1.2;color:#17191E;margin:0 0 14px;">AI where it matters</h3>
-          <p style="font-size:16px;line-height:1.62;color:#54585F;margin:0;">We build AI into products that solve real operational problems &mdash; events, kitchens, clinics, classrooms and 22 Indic languages.</p>
+          <p style="font-size:16px;line-height:1.62;color:#54585F;margin:0;">We build AI into products that solve real operational problems &mdash; events, restaurants, clinics, classrooms and 22 Indic languages.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROOF / CASE STUDIES ============ -->
+  <section id="cases" style="border-top:1px solid #E2E0D7;background:#FAF9F3;">
+    <div style="max-width:1240px;margin:0 auto;padding:96px 40px;">
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);max-width:860px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;">03 / Proof</div>
+        <h2 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.025em;font-size:clamp(30px,3.8vw,48px);line-height:1.08;color:#17191E;margin:0 0 18px;text-wrap:balance;">Not slideware. Systems that ran at state scale.</h2>
+        <p style="font-size:18px;line-height:1.62;color:#54585F;margin:0;max-width:64ch;">Our products inherit <span data-yrs>26</span> years of mission-critical delivery &mdash; biometric identity, crore-scale digitization and distributed workflows that already run in the field. A selection of the record.</p>
+      </div>
+
+      <div style="margin-top:56px;display:flex;flex-direction:column;gap:26px;">
+
+        <!-- CASE 1 -->
+        <div data-reveal data-product style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1) .05s,transform .7s cubic-bezier(.2,.6,.2,1) .05s,box-shadow .25s,border-color .25s;border:1px solid #E2E0D7;border-radius:16px;background:#FCFBF8;padding:40px;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr);gap:48px;align-items:start;" style-hover="border-color:color-mix(in oklab,var(--accent) 32%,#E2E0D7);box-shadow:0 18px 44px -30px rgba(20,22,27,0.4);">
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px;flex-wrap:wrap;">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A8E96;">Justice &amp; Public Safety</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#54585F;border:1px solid #DDD9CE;border-radius:20px;padding:4px 11px;">Prime Contractor · SI</span>
+            </div>
+            <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.02em;font-size:clamp(23px,2.4vw,30px);line-height:1.12;color:#17191E;margin:0 0 16px;text-wrap:balance;">e-Court &amp; Biometric Verification Platform</h3>
+            <p style="font-size:16px;line-height:1.62;color:#54585F;margin:0 0 22px;max-width:52ch;">Replaced fragmented paper legal workflows with a biometric-enabled digital governance system &mdash; uniquely identifying suspects, preventing identity manipulation, and migrating nearly three decades of legacy cases into one searchable platform.</p>
+            <div style="display:flex;align-items:baseline;gap:10px;padding-top:18px;border-top:1px solid #EDEBE2;">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);flex:0 0 auto;">&rarr;</span>
+              <span style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.5;color:#3F434A;">Powers our biometric identity &amp; secure-workflow engineering.</span>
+            </div>
+          </div>
+          <div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid #E7E4DA;border-left:1px solid #E7E4DA;">
+              <div style="padding:22px 20px;border-right:1px solid #E7E4DA;border-bottom:1px solid #E7E4DA;"><div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;color:#17191E;line-height:1;">5.5M</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8E96;margin-top:9px;">Records digitized</div></div>
+              <div style="padding:22px 20px;border-right:1px solid #E7E4DA;border-bottom:1px solid #E7E4DA;"><div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;color:#17191E;line-height:1;">0.45M</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8E96;margin-top:9px;">Legacy cases migrated</div></div>
+              <div style="padding:22px 20px;border-right:1px solid #E7E4DA;border-bottom:1px solid #E7E4DA;"><div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;color:#17191E;line-height:1;">100</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8E96;margin-top:9px;">Tribunal offices</div></div>
+              <div style="padding:22px 20px;border-right:1px solid #E7E4DA;border-bottom:1px solid #E7E4DA;"><div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;color:#17191E;line-height:1;">319</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8E96;margin-top:9px;">Police stations integrated</div></div>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#9A9E96;margin-top:16px;">State judicial &amp; police administration · ~1 TB managed · multi-year engagement</div>
+          </div>
+        </div>
+
+        <!-- CASE 2 -->
+        <div data-reveal data-product style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1) .05s,transform .7s cubic-bezier(.2,.6,.2,1) .05s,box-shadow .25s,border-color .25s;border:1px solid #E2E0D7;border-radius:16px;background:#FCFBF8;padding:40px;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr);gap:48px;align-items:start;" style-hover="border-color:color-mix(in oklab,var(--accent) 32%,#E2E0D7);box-shadow:0 18px 44px -30px rgba(20,22,27,0.4);">
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px;flex-wrap:wrap;">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A8E96;">Digital Governance</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#54585F;border:1px solid #DDD9CE;border-radius:20px;padding:4px 11px;">Delivered in 6 months</span>
+            </div>
+            <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.02em;font-size:clamp(23px,2.4vw,30px);line-height:1.12;color:#17191E;margin:0 0 16px;text-wrap:balance;">Legacy Digitization &amp; Citizen Search Platform</h3>
+            <p style="font-size:16px;line-height:1.62;color:#54585F;margin:0 0 22px;max-width:52ch;">Digitized fragile 1951&ndash;1971 archival records across 25 district headquarters and published them statewide as a multilingual, phonetic search platform &mdash; in Assamese, Bengali and English &mdash; served online and through offline-first assisted centers.</p>
+            <div style="display:flex;align-items:baseline;gap:10px;padding-top:18px;border-top:1px solid #EDEBE2;">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);flex:0 0 auto;">&rarr;</span>
+              <span style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.5;color:#3F434A;">The Indic-language &amp; document-intelligence work behind <strong style="font-weight:600;color:#17191E;">Kathan&nbsp;AI</strong>.</span>
+            </div>
+          </div>
+          <div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid #E7E4DA;border-left:1px solid #E7E4DA;">
+              <div style="padding:22px 20px;border-right:1px solid #E7E4DA;border-bottom:1px solid #E7E4DA;"><div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;color:#17191E;line-height:1;">2.02 Cr</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8E96;margin-top:9px;">Records indexed</div></div>
+              <div style="padding:22px 20px;border-right:1px solid #E7E4DA;border-bottom:1px solid #E7E4DA;"><div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;color:#17191E;line-height:1;">17M</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8E96;margin-top:9px;">Citizen hits in 6 months</div></div>
+              <div style="padding:22px 20px;border-right:1px solid #E7E4DA;border-bottom:1px solid #E7E4DA;"><div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;color:#17191E;line-height:1;">43 L</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8E96;margin-top:9px;">Record retrievals</div></div>
+              <div style="padding:22px 20px;border-right:1px solid #E7E4DA;border-bottom:1px solid #E7E4DA;"><div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;color:#17191E;line-height:1;">25</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8E96;margin-top:9px;">District headquarters</div></div>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#9A9E96;margin-top:16px;">State digital-governance programme · 5,000 laptops · 2,500 assisted centers</div>
+          </div>
+        </div>
+
+        <!-- CASE 3 -->
+        <div data-reveal data-product style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1) .05s,transform .7s cubic-bezier(.2,.6,.2,1) .05s,box-shadow .25s,border-color .25s;border:1px solid #E2E0D7;border-radius:16px;background:#FCFBF8;padding:40px;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr);gap:48px;align-items:start;" style-hover="border-color:color-mix(in oklab,var(--accent) 32%,#E2E0D7);box-shadow:0 18px 44px -30px rgba(20,22,27,0.4);">
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px;flex-wrap:wrap;">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#8A8E96;">Citizen Verification</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#54585F;border:1px solid #DDD9CE;border-radius:20px;padding:4px 11px;">Offline-first · ~3 months</span>
+            </div>
+            <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.02em;font-size:clamp(23px,2.4vw,30px);line-height:1.12;color:#17191E;margin:0 0 16px;text-wrap:balance;">Family Linkage Verification Platform</h3>
+            <p style="font-size:16px;line-height:1.62;color:#54585F;margin:0 0 22px;max-width:52ch;">Generated computerized family trees from millions of citizen records to validate lineage claims and surface false linkages &mdash; consolidating siblings, cousins and households sharing a legacy code, and equipping statutory officers with structured hearing workflows.</p>
+            <div style="display:flex;align-items:baseline;gap:10px;padding-top:18px;border-top:1px solid #EDEBE2;">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);flex:0 0 auto;">&rarr;</span>
+              <span style="font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.5;color:#3F434A;">Behind our relational-data &amp; distributed, offline-first platforms.</span>
+            </div>
+          </div>
+          <div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid #E7E4DA;border-left:1px solid #E7E4DA;">
+              <div style="padding:22px 20px;border-right:1px solid #E7E4DA;border-bottom:1px solid #E7E4DA;"><div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;color:#17191E;line-height:1;">57 L</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8E96;margin-top:9px;">Family trees generated</div></div>
+              <div style="padding:22px 20px;border-right:1px solid #E7E4DA;border-bottom:1px solid #E7E4DA;"><div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;color:#17191E;line-height:1;">90 L</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8E96;margin-top:9px;">Verification cases</div></div>
+              <div style="padding:22px 20px;border-right:1px solid #E7E4DA;border-bottom:1px solid #E7E4DA;"><div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;color:#17191E;line-height:1;">43 L+</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8E96;margin-top:9px;">Legacy codes resolved</div></div>
+              <div style="padding:22px 20px;border-right:1px solid #E7E4DA;border-bottom:1px solid #E7E4DA;"><div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:32px;letter-spacing:-0.02em;color:#17191E;line-height:1;">27</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#8A8E96;margin-top:9px;">Districts, simultaneously</div></div>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#9A9E96;margin-top:16px;">Statewide citizen-verification initiative · scheduled replication from the field</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);margin-top:30px;font-family:'IBM Plex Sans',sans-serif;font-size:13px;color:#9A9E96;">Client identities withheld under confidentiality. Named references available on request.</div>
+    </div>
+  </section>
+
+  <!-- ============ FLOW DIVIDER (business flow) ============ -->
+  <section aria-label="Enabling business flow" style="position:relative;height:clamp(230px,27vh,310px);background:#0E1013;overflow:hidden;">
+    <canvas id="flowCanvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;"></canvas>
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg,#0E1013 0%,rgba(14,16,19,0) 22%,rgba(14,16,19,0) 78%,#0E1013 100%);pointer-events:none;"></div>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;pointer-events:none;padding:0 24px;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:color-mix(in oklab,var(--accent),white 20%);">Since 1999</span>
+      <div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.02em;font-size:clamp(27px,3.6vw,46px);line-height:1;color:#F6F5EF;text-wrap:balance;">Enabling business flow.</div>
+    </div>
+  </section>
+
+  <!-- ============ NEWS ROOM ============ -->
+  <section id="news" data-screen-label="News Room" style="border-top:1px solid #E2E0D7;background:#FCFBF8;">
+    <div style="max-width:1240px;margin:0 auto;padding:96px 40px;">
+      <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap;max-width:920px;">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;">05 / News Room</div>
+          <h2 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.025em;font-size:clamp(30px,3.8vw,48px);line-height:1.08;color:#17191E;margin:0 0 18px;text-wrap:balance;">In the press.</h2>
+          <p style="font-size:18px;line-height:1.62;color:#54585F;margin:0;max-width:60ch;">National and regional coverage of the work &mdash; from state-scale citizen systems to AI decoding Assam&rsquo;s literary heritage.</p>
+        </div>
+      </div>
+
+      <!-- FEATURED -->
+      <a href="https://assamtribune.com/guwahati/rare-assamese-journals-and-books-to-be-digitized-1475989" target="_blank" rel="noopener" data-reveal data-product style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1) .05s,transform .7s cubic-bezier(.2,.6,.2,1) .05s,box-shadow .25s,border-color .25s;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;margin-top:52px;border:1px solid #E2E0D7;border-radius:18px;overflow:hidden;background:#FAF9F3;text-decoration:none;" style-hover="border-color:color-mix(in oklab,var(--accent) 34%,#E2E0D7);box-shadow:0 22px 50px -34px rgba(20,22,27,0.45);">
+        <div style="position:relative;background:linear-gradient(150deg,#1B1D22,#232730 60%,#14161B);padding:44px;min-height:340px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;">
+          <div aria-hidden="true" style="position:absolute;inset:0;background-image:linear-gradient(rgba(240,83,28,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(240,83,28,0.10) 1px,transparent 1px);background-size:26px 26px;-webkit-mask-image:radial-gradient(120% 100% at 78% 12%,#000,transparent 72%);mask-image:radial-gradient(120% 100% at 78% 12%,#000,transparent 72%);"></div>
+          <div style="position:relative;display:flex;align-items:center;gap:10px;">
+            <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px color-mix(in oklab,var(--accent) 26%,transparent);"></span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#C9C7BE;">Featured &middot; Indic-language AI</span>
+          </div>
+          <div style="position:relative;">
+            <div style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;font-size:clamp(40px,4vw,60px);letter-spacing:-0.02em;line-height:1;color:#F6F5EF;">2.76M</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#9A9E96;margin-top:12px;max-width:30ch;line-height:1.5;">Pages of Assamese literature decoded &amp; made keyword-searchable with AI</div>
+          </div>
+        </div>
+        <div style="padding:44px;display:flex;flex-direction:column;justify-content:space-between;gap:26px;">
+          <div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+              <span style="font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.01em;color:#17191E;">The Assam Tribune</span>
+              <span style="width:3px;height:3px;border-radius:50%;background:#C4C1B7;"></span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8A8E96;">2025</span>
+            </div>
+            <h3 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.02em;font-size:clamp(24px,2.6vw,33px);line-height:1.14;color:#17191E;margin:0 0 18px;text-wrap:balance;">Rare Assamese journals and books, digitized and searchable with AI</h3>
+            <p style="font-size:16px;line-height:1.62;color:#54585F;margin:0;max-width:50ch;">As technology partner to the Nanda Talukdar Foundation&rsquo;s <em>Digitizing Assam</em> initiative, Bohniman used AI to decode, index and organize decades of manuscripts, journals and books published between 1840 and 1970 &mdash; one of the harder language-processing problems in India.</p>
+          </div>
+          <span style="display:inline-flex;align-items:center;gap:9px;font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:500;color:var(--accent);">Read the coverage <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span></span>
+        </div>
+      </a>
+
+      <!-- LIST -->
+      <div style="margin-top:26px;border-top:1px solid #E7E4DA;">
+
+        <a href="https://www.indiatoday.in/pti-feed/story/guwahati-based-it-firm-digitized-data-of-3-cr-people-for-nrc-1299506-2018-07-29" target="_blank" rel="noopener" data-reveal style="opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1),background .2s;display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:28px;align-items:center;padding:28px 16px;border-bottom:1px solid #E7E4DA;text-decoration:none;" style-hover="background:#F4F2EA;">
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <span style="font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:14px;color:#17191E;">India Today</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.06em;color:#9A9E96;">Jul 29, 2018 &middot; PTI</span>
+          </div>
+          <h4 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;font-size:clamp(18px,1.7vw,21px);line-height:1.3;letter-spacing:-0.01em;color:#25272D;margin:0;text-wrap:balance;">Guwahati-based IT firm digitized data of 3 crore people for the NRC</h4>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#B4B2A8;transition:color .2s;justify-self:end;" style-hover="color:var(--accent);">&rarr;</span>
+        </a>
+
+        <a href="https://thenewsmill.com/2018/01/backbone-nrc-update-process-assam-backroom-assam-engineers/" target="_blank" rel="noopener" data-reveal style="opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1),background .2s;display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:28px;align-items:center;padding:28px 16px;border-bottom:1px solid #E7E4DA;text-decoration:none;" style-hover="background:#F4F2EA;">
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <span style="font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:14px;color:#17191E;">The News Mill</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.06em;color:#9A9E96;">Jan 4, 2018</span>
+          </div>
+          <h4 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;font-size:clamp(18px,1.7vw,21px);line-height:1.3;letter-spacing:-0.01em;color:#25272D;margin:0;text-wrap:balance;">Backbone of the NRC update process: the backroom Assam engineers</h4>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#B4B2A8;transition:color .2s;justify-self:end;" style-hover="color:var(--accent);">&rarr;</span>
+        </a>
+
+        <a href="https://www.financialexpress.com/life/technology-egov-illegal-immigrants-bohniman-systems-to-the-rescue-as-assam-embarks-on-citizen-hunt-653242/" target="_blank" rel="noopener" data-reveal style="opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1),background .2s;display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:28px;align-items:center;padding:28px 16px;border-bottom:1px solid #E7E4DA;text-decoration:none;" style-hover="background:#F4F2EA;">
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <span style="font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:14px;color:#17191E;">Financial Express</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.06em;color:#9A9E96;">2017 &middot; eGov</span>
+          </div>
+          <h4 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;font-size:clamp(18px,1.7vw,21px);line-height:1.3;letter-spacing:-0.01em;color:#25272D;margin:0;text-wrap:balance;">Bohniman Systems to the rescue as Assam embarks on its citizen-verification drive</h4>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#B4B2A8;transition:color .2s;justify-self:end;" style-hover="color:var(--accent);">&rarr;</span>
+        </a>
+
+        <a href="https://economictimes.indiatimes.com/news/politics-and-nation/arunachal-pradesh-launches-e-inner-line-permit-programme/articleshow/59401268.cms" target="_blank" rel="noopener" data-reveal style="opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1),background .2s;display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:28px;align-items:center;padding:28px 16px;border-bottom:1px solid #E7E4DA;text-decoration:none;" style-hover="background:#F4F2EA;">
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <span style="font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:14px;color:#17191E;">The Economic Times</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.06em;color:#9A9E96;">2017 &middot; e-Governance</span>
+          </div>
+          <h4 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;font-size:clamp(18px,1.7vw,21px);line-height:1.3;letter-spacing:-0.01em;color:#25272D;margin:0;text-wrap:balance;">Arunachal Pradesh launches e-Inner Line Permit programme, built by Bohniman</h4>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#B4B2A8;transition:color .2s;justify-self:end;" style-hover="color:var(--accent);">&rarr;</span>
+        </a>
+
+      </div>
+
+      <!-- PRESS CONTACT -->
+      <div data-reveal style="opacity:0;transform:translateY(14px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;padding:26px 30px;border:1px solid #E2E0D7;border-radius:14px;background:#FAF9F3;">
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <span style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:600;font-size:17px;color:#17191E;">Press &amp; media enquiries</span>
+          <span style="font-family:'IBM Plex Sans',sans-serif;font-size:14.5px;color:#6E7178;">For interviews, briefings or a media kit, reach the communications desk.</span>
+        </div>
+        <a href="mailto:press@bohniman.com" style="display:inline-flex;align-items:center;gap:9px;background:#17191E;color:#F5F4EF;padding:12px 22px;border-radius:9px;font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:500;text-decoration:none;transition:background .2s;white-space:nowrap;" style-hover="background:#2A2D34;">press@bohniman.com <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span></a>
       </div>
     </div>
   </section>
@@ -281,10 +477,13 @@
   <!-- ============ SERVICES CTA + FOOTER (dark) ============ -->
   <section id="contact" style="background:#14161B;color:#EDECE6;position:relative;overflow:hidden;">
     <div aria-hidden="true" style="position:absolute;top:-15%;left:-8%;width:65%;height:130%;background:radial-gradient(circle at 42% 42%,rgba(240,83,28,0.18),rgba(255,122,0,0.06) 42%,transparent 62%);filter:blur(28px);pointer-events:none;animation:glowDrift 18s ease-in-out infinite;"></div>
+    <div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:60%;z-index:0;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 42%);mask-image:linear-gradient(to bottom,transparent,#000 42%);">
+      <canvas id="hillsCanvas" style="display:block;width:100%;height:100%;"></canvas>
+    </div>
     <div style="max-width:1240px;margin:0 auto;padding:92px 40px 0;position:relative;z-index:1;">
       <div data-reveal style="opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);display:grid;grid-template-columns:minmax(0,0.95fr) minmax(0,1.05fr);gap:56px;align-items:end;padding-bottom:80px;">
         <div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:color-mix(in oklab,var(--accent),white 18%);margin-bottom:22px;">03 / Custom work</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:color-mix(in oklab,var(--accent),white 18%);margin-bottom:22px;">04 / Enterprise</div>
           <h2 style="font-family:'Schibsted Grotesk','IBM Plex Sans',sans-serif;font-weight:700;letter-spacing:-0.025em;font-size:clamp(32px,4vw,50px);line-height:1.05;letter-spacing:-0.01em;color:#F6F5EF;margin:0;text-wrap:balance;">Need something custom?</h2>
         </div>
         <div>
@@ -309,7 +508,7 @@
             <a href="#products" style="font-size:15px;color:#C7CAD0;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Samagam &mdash; Event Management</a>
             <a href="#products" style="font-size:15px;color:#C7CAD0;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Kathan AI &mdash; Speech-to-Text</a>
             <a href="#products" style="font-size:15px;color:#C7CAD0;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Curioversity &mdash; Education</a>
-            <a href="#products" style="font-size:15px;color:#C7CAD0;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">RasoiOS &mdash; Restaurant</a>
+            <a href="#products" style="font-size:15px;color:#C7CAD0;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Zalpan &mdash; Restaurant</a>
             <a href="#products" style="font-size:15px;color:#C7CAD0;text-decoration:none;transition:color .2s;" style-hover="color:var(--accent);">Biocrat &mdash; Health</a>
           </div>
         </div>
@@ -363,6 +562,8 @@ class Component extends DCLogic {
     this.applyYears();
     this.initNeural();
     this.initNet();
+    this.initHills();
+    this.initFlow();
     this.initCountUp();
     this.initProductHover();
     const reveal = this.props.scrollReveal ?? true;
@@ -390,6 +591,242 @@ class Component extends DCLogic {
     if (this._raf2) cancelAnimationFrame(this._raf2);
     if (this._ro2) this._ro2.disconnect();
     if (this._yearTimer) clearInterval(this._yearTimer);
+    if (this._hillsRaf) cancelAnimationFrame(this._hillsRaf);
+    if (this._hillsResize) window.removeEventListener('resize', this._hillsResize);
+    if (this._hillsRenderer) this._hillsRenderer.dispose();
+    if (this._flowRaf) cancelAnimationFrame(this._flowRaf);
+    if (this._flowResize) window.removeEventListener('resize', this._flowResize);
+  }
+
+  initFlow() {
+    const canvas = document.getElementById('flowCanvas');
+    if (!canvas || this._flowCanvas === canvas) return;
+    const opts = { preserveDrawingBuffer: true, antialias: true, premultipliedAlpha: false };
+    const gl = canvas.getContext('webgl', opts) || canvas.getContext('experimental-webgl', opts);
+    if (!gl) return;
+    this._flowCanvas = canvas;
+
+    const vs = `attribute vec4 aVertexPosition; void main(){ gl_Position = aVertexPosition; }`;
+    const fs = `
+      precision highp float;
+      uniform vec2 iResolution;
+      uniform float iTime;
+      const float overallSpeed = 0.07;
+      const float gridSmoothWidth = 0.015;
+      const float scale = 5.0;
+      const vec4 lineColor = vec4(0.941, 0.325, 0.110, 1.0);   /* #F0531C accent */
+      const float minLineWidth = 0.002;
+      const float maxLineWidth = 0.04;
+      const float lineSpeed = 1.0 * overallSpeed;
+      const float lineAmplitude = 1.0;
+      const float lineFrequency = 0.2;
+      const float warpSpeed = 0.2 * overallSpeed;
+      const float warpFrequency = 0.5;
+      const float warpAmplitude = 1.0;
+      const float offsetFrequency = 0.5;
+      const float offsetSpeed = 1.33 * overallSpeed;
+      const float minOffsetSpread = 0.6;
+      const float maxOffsetSpread = 2.0;
+      const int linesPerGroup = 16;
+      #define drawCircle(pos, radius, coord) smoothstep(radius + gridSmoothWidth, radius, length(coord - (pos)))
+      #define drawSmoothLine(pos, halfWidth, t) smoothstep(halfWidth, 0.0, abs(pos - (t)))
+      #define drawCrispLine(pos, halfWidth, t) smoothstep(halfWidth + gridSmoothWidth, halfWidth, abs(pos - (t)))
+      float random(float t){ return (cos(t)+cos(t*1.3+1.3)+cos(t*1.4+1.4))/3.0; }
+      float getPlasmaY(float x, float horizontalFade, float offset){ return random(x*lineFrequency+iTime*lineSpeed)*horizontalFade*lineAmplitude+offset; }
+      void main(){
+        vec2 fragCoord = gl_FragCoord.xy;
+        vec4 fragColor;
+        vec2 uv = fragCoord.xy / iResolution.xy;
+        vec2 space = (fragCoord - iResolution.xy/2.0)/iResolution.x*2.0*scale;
+        float horizontalFade = 1.0 - (cos(uv.x*6.28)*0.5+0.5);
+        float verticalFade = 1.0 - (cos(uv.y*6.28)*0.5+0.5);
+        space.y += random(space.x*warpFrequency+iTime*warpSpeed)*warpAmplitude*(0.5+horizontalFade);
+        space.x += random(space.y*warpFrequency+iTime*warpSpeed+2.0)*warpAmplitude*horizontalFade;
+        vec4 lines = vec4(0.0);
+        vec4 bgColor1 = vec4(0.055, 0.062, 0.075, 1.0);   /* cool near-black */
+        vec4 bgColor2 = vec4(0.16, 0.075, 0.035, 1.0);    /* warm ember */
+        for(int l=0; l<linesPerGroup; l++){
+          float normalizedLineIndex = float(l)/float(linesPerGroup);
+          float offsetTime = iTime*offsetSpeed;
+          float offsetPosition = float(l)+space.x*offsetFrequency;
+          float rand = random(offsetPosition+offsetTime)*0.5+0.5;
+          float halfWidth = mix(minLineWidth, maxLineWidth, rand*horizontalFade)/2.0;
+          float offset = random(offsetPosition+offsetTime*(1.0+normalizedLineIndex))*mix(minOffsetSpread, maxOffsetSpread, horizontalFade);
+          float linePosition = getPlasmaY(space.x, horizontalFade, offset);
+          float line = drawSmoothLine(linePosition, halfWidth, space.y)/2.0 + drawCrispLine(linePosition, halfWidth*0.15, space.y);
+          float circleX = mod(float(l)+iTime*lineSpeed, 25.0)-12.0;
+          vec2 circlePosition = vec2(circleX, getPlasmaY(circleX, horizontalFade, offset));
+          float circle = drawCircle(circlePosition, 0.01, space)*4.0;
+          line = line + circle;
+          lines += line*lineColor*rand;
+        }
+        fragColor = mix(bgColor1, bgColor2, uv.x);
+        fragColor *= verticalFade;
+        fragColor.a = 1.0;
+        fragColor += lines;
+        gl_FragColor = fragColor;
+      }`;
+
+    const compile = (type, src) => {
+      const s = gl.createShader(type);
+      gl.shaderSource(s, src); gl.compileShader(s);
+      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) { console.error('flow shader', gl.getShaderInfoLog(s)); gl.deleteShader(s); return null; }
+      return s;
+    };
+    const prog = gl.createProgram();
+    const v = compile(gl.VERTEX_SHADER, vs), f = compile(gl.FRAGMENT_SHADER, fs);
+    if (!v || !f) return;
+    gl.attachShader(prog, v); gl.attachShader(prog, f); gl.linkProgram(prog);
+    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) { console.error('flow link', gl.getProgramInfoLog(prog)); return; }
+
+    const buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+    const aPos = gl.getAttribLocation(prog, 'aVertexPosition');
+    const uRes = gl.getUniformLocation(prog, 'iResolution');
+    const uTime = gl.getUniformLocation(prog, 'iTime');
+
+    const resize = () => {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const w = Math.max(1, Math.floor(canvas.clientWidth * dpr));
+      const h = Math.max(1, Math.floor(canvas.clientHeight * dpr));
+      if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+      gl.viewport(0, 0, canvas.width, canvas.height);
+    };
+    this._flowResize = resize;
+    window.addEventListener('resize', resize);
+    resize();
+
+    const start = Date.now();
+    const loop = () => {
+      resize();
+      gl.clearColor(0, 0, 0, 1); gl.clear(gl.COLOR_BUFFER_BIT);
+      gl.useProgram(prog);
+      gl.uniform2f(uRes, canvas.width, canvas.height);
+      gl.uniform1f(uTime, (Date.now() - start) / 1000);
+      gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+      gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
+      gl.enableVertexAttribArray(aPos);
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      this._flowRaf = requestAnimationFrame(loop);
+    };
+    loop();
+  }
+
+  initHills(attempt) {
+    const canvas = document.getElementById('hillsCanvas');
+    if (!canvas || this._hillsCanvas === canvas) return;
+    // Three.js loads async from the helmet — poll briefly until ready.
+    if (typeof window.THREE === 'undefined') {
+      if ((attempt || 0) > 80) return;
+      this._hillsWait = setTimeout(() => this.initHills((attempt || 0) + 1), 60);
+      return;
+    }
+    const THREE = window.THREE;
+    this._hillsCanvas = canvas;
+
+    const PLANE = 256, SPEED = 0.25, CAM_Z = 125;
+    const parent = canvas.parentElement;
+    const size = () => ({ w: Math.max(1, parent.clientWidth), h: Math.max(1, parent.clientHeight) });
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setClearColor(0x000000, 0);
+    this._hillsRenderer = renderer;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, 1, 1, 10000);
+    camera.position.set(0, 16, CAM_Z);
+    camera.lookAt(new THREE.Vector3(0, 28, 0));
+    const clock = new THREE.Clock();
+
+    const uniforms = { time: { type: 'f', value: 0 } };
+    const mesh = new THREE.Mesh(
+      new THREE.PlaneGeometry(PLANE, PLANE, PLANE, PLANE),
+      new THREE.RawShaderMaterial({
+        uniforms,
+        transparent: true,
+        vertexShader: `#define GLSLIFY 1
+          attribute vec3 position;
+          uniform mat4 projectionMatrix;
+          uniform mat4 modelViewMatrix;
+          uniform float time;
+          varying vec3 vPosition;
+          mat4 rotateMatrixX(float radian){return mat4(1.0,0.0,0.0,0.0,0.0,cos(radian),-sin(radian),0.0,0.0,sin(radian),cos(radian),0.0,0.0,0.0,0.0,1.0);}
+          vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}
+          vec4 mod289(vec4 x){return x-floor(x*(1.0/289.0))*289.0;}
+          vec4 permute(vec4 x){return mod289(((x*34.0)+1.0)*x);}
+          vec4 taylorInvSqrt(vec4 r){return 1.79284291400159-0.85373472095314*r;}
+          vec3 fade(vec3 t){return t*t*t*(t*(t*6.0-15.0)+10.0);}
+          float cnoise(vec3 P){
+            vec3 Pi0=floor(P);vec3 Pi1=Pi0+vec3(1.0);Pi0=mod289(Pi0);Pi1=mod289(Pi1);
+            vec3 Pf0=fract(P);vec3 Pf1=Pf0-vec3(1.0);
+            vec4 ix=vec4(Pi0.x,Pi1.x,Pi0.x,Pi1.x);vec4 iy=vec4(Pi0.yy,Pi1.yy);
+            vec4 iz0=Pi0.zzzz;vec4 iz1=Pi1.zzzz;
+            vec4 ixy=permute(permute(ix)+iy);vec4 ixy0=permute(ixy+iz0);vec4 ixy1=permute(ixy+iz1);
+            vec4 gx0=ixy0*(1.0/7.0);vec4 gy0=fract(floor(gx0)*(1.0/7.0))-0.5;gx0=fract(gx0);
+            vec4 gz0=vec4(0.5)-abs(gx0)-abs(gy0);vec4 sz0=step(gz0,vec4(0.0));
+            gx0-=sz0*(step(0.0,gx0)-0.5);gy0-=sz0*(step(0.0,gy0)-0.5);
+            vec4 gx1=ixy1*(1.0/7.0);vec4 gy1=fract(floor(gx1)*(1.0/7.0))-0.5;gx1=fract(gx1);
+            vec4 gz1=vec4(0.5)-abs(gx1)-abs(gy1);vec4 sz1=step(gz1,vec4(0.0));
+            gx1-=sz1*(step(0.0,gx1)-0.5);gy1-=sz1*(step(0.0,gy1)-0.5);
+            vec3 g000=vec3(gx0.x,gy0.x,gz0.x);vec3 g100=vec3(gx0.y,gy0.y,gz0.y);
+            vec3 g010=vec3(gx0.z,gy0.z,gz0.z);vec3 g110=vec3(gx0.w,gy0.w,gz0.w);
+            vec3 g001=vec3(gx1.x,gy1.x,gz1.x);vec3 g101=vec3(gx1.y,gy1.y,gz1.y);
+            vec3 g011=vec3(gx1.z,gy1.z,gz1.z);vec3 g111=vec3(gx1.w,gy1.w,gz1.w);
+            vec4 norm0=taylorInvSqrt(vec4(dot(g000,g000),dot(g010,g010),dot(g100,g100),dot(g110,g110)));
+            g000*=norm0.x;g010*=norm0.y;g100*=norm0.z;g110*=norm0.w;
+            vec4 norm1=taylorInvSqrt(vec4(dot(g001,g001),dot(g011,g011),dot(g101,g101),dot(g111,g111)));
+            g001*=norm1.x;g011*=norm1.y;g101*=norm1.z;g111*=norm1.w;
+            float n000=dot(g000,Pf0);float n100=dot(g100,vec3(Pf1.x,Pf0.yz));
+            float n010=dot(g010,vec3(Pf0.x,Pf1.y,Pf0.z));float n110=dot(g110,vec3(Pf1.xy,Pf0.z));
+            float n001=dot(g001,vec3(Pf0.xy,Pf1.z));float n101=dot(g101,vec3(Pf1.x,Pf0.y,Pf1.z));
+            float n011=dot(g011,vec3(Pf0.x,Pf1.yz));float n111=dot(g111,Pf1);
+            vec3 fade_xyz=fade(Pf0);
+            vec4 n_z=mix(vec4(n000,n100,n010,n110),vec4(n001,n101,n011,n111),fade_xyz.z);
+            vec2 n_yz=mix(n_z.xy,n_z.zw,fade_xyz.y);
+            float n_xyz=mix(n_yz.x,n_yz.y,fade_xyz.x);
+            return 2.2*n_xyz;
+          }
+          void main(void){
+            vec3 updatePosition=(rotateMatrixX(radians(90.0))*vec4(position,1.0)).xyz;
+            float sin1=sin(radians(updatePosition.x/128.0*90.0));
+            vec3 noisePosition=updatePosition+vec3(0.0,0.0,time*-30.0);
+            float noise1=cnoise(noisePosition*0.08);
+            float noise2=cnoise(noisePosition*0.06);
+            float noise3=cnoise(noisePosition*0.4);
+            vec3 lastPosition=updatePosition+vec3(0.0,noise1*sin1*8.0+noise2*sin1*8.0+noise3*(abs(sin1)*2.0+0.5)+pow(sin1,2.0)*40.0,0.0);
+            vPosition=lastPosition;
+            gl_Position=projectionMatrix*modelViewMatrix*vec4(lastPosition,1.0);
+          }`,
+        fragmentShader: `precision highp float;
+          #define GLSLIFY 1
+          varying vec3 vPosition;
+          void main(void){
+            float opacity=(96.0-length(vPosition))/256.0*0.9;
+            vec3 color=vec3(0.72);
+            gl_FragColor=vec4(color,opacity);
+          }`
+      })
+    );
+    scene.add(mesh);
+
+    const resize = () => {
+      const { w, h } = size();
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    };
+    this._hillsResize = resize;
+    window.addEventListener('resize', resize);
+    resize();
+
+    const loop = () => {
+      uniforms.time.value += clock.getDelta() * SPEED;
+      renderer.render(scene, camera);
+      this._hillsRaf = requestAnimationFrame(loop);
+    };
+    loop();
   }
 
   initNet() {
