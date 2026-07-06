@@ -4,10 +4,13 @@ import type { Metadata } from "next";
 import { StatusBadge } from "@/components/StatusBadge";
 import { SamagamHubIcon, ProductIcon } from "@/components/ProductIcon";
 import { Reveal } from "@/components/Reveal";
-import { products, getProduct } from "@/lib/site";
+import { products, getProduct, productHref } from "@/lib/site";
 
 export function generateStaticParams() {
-  return products.map((p) => ({ slug: p.slug }));
+  // Products with their own standalone site (e.g. Zalpan) have no internal page.
+  return products
+    .filter((p) => !p.externalUrl)
+    .map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -31,7 +34,8 @@ export default async function ProductPage({
 }) {
   const { slug } = await params;
   const product = getProduct(slug);
-  if (!product) notFound();
+  // Externally-hosted products (e.g. Zalpan) have no internal detail page.
+  if (!product || product.externalUrl) notFound();
 
   const others = products.filter((p) => p.slug !== product.slug);
 
@@ -118,7 +122,9 @@ export default async function ProductPage({
             {others.map((p) => (
               <Link
                 key={p.slug}
-                href={`/products/${p.slug}`}
+                href={productHref(p)}
+                target={p.externalUrl ? "_blank" : undefined}
+                rel={p.externalUrl ? "noopener" : undefined}
                 className="group border-b border-line p-9 transition-colors hover:bg-[#FBFAF6] sm:border-r"
               >
                 <div className="mb-[22px] flex items-center justify-between gap-3">

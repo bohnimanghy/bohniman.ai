@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { ProductIcon } from "./ProductIcon";
 import { StatusBadge } from "./StatusBadge";
-import { products } from "@/lib/site";
+import { products, productHref } from "@/lib/site";
 
 export function ProductsMenu() {
   const [open, setOpen] = useState(false);
@@ -63,7 +63,9 @@ export function ProductsMenu() {
             {products.map((p) => (
               <Link
                 key={p.slug}
-                href={`/products/${p.slug}`}
+                href={productHref(p)}
+                target={p.externalUrl ? "_blank" : undefined}
+                rel={p.externalUrl ? "noopener" : undefined}
                 onClick={() => setOpen(false)}
                 className="group/item flex gap-3.5 bg-canvas-soft p-4 transition-colors hover:bg-white"
               >

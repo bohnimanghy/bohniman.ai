@@ -36,8 +36,15 @@ export type Product = {
   tagline: string;
   description: string;
   flagship?: boolean;
+  /** If set, the product links to its own standalone site instead of an internal page. */
+  externalUrl?: string;
   features: { title: string; body: string }[];
 };
+
+/** Where a product card should link — its own site if it has one, else the internal page. */
+export function productHref(p: Product): string {
+  return p.externalUrl ?? `/products/${p.slug}`;
+}
 
 export const products: Product[] = [
   {
@@ -93,6 +100,7 @@ export const products: Product[] = [
     name: "Zalpan",
     category: "Restaurant Management",
     status: "BETA",
+    externalUrl: "https://zalpan.com",
     tagline: "From order to kitchen to ledger — your restaurant, orchestrated.",
     description:
       "From order to kitchen to ledger — your restaurant, orchestrated. Orders, inventory, billing and analytics in one AI-assisted platform.",

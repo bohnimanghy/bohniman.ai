@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { site, products, yearsSince } from "@/lib/site";
+import { HillsCanvas } from "./HillsCanvas";
+import { site, products, yearsSince, productHref } from "@/lib/site";
 
 export function Footer() {
   const years = yearsSince();
@@ -24,6 +25,16 @@ export function Footer() {
           animation: "glowDrift 18s ease-in-out infinite",
         }}
       />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-[60%]"
+        style={{
+          WebkitMaskImage: "linear-gradient(to bottom,transparent,#000 42%)",
+          maskImage: "linear-gradient(to bottom,transparent,#000 42%)",
+        }}
+      >
+        <HillsCanvas />
+      </div>
       <div className="relative z-[1] mx-auto max-w-[1240px] px-6 pt-[92px] md:px-10">
         {/* CTA */}
         <div className="grid grid-cols-1 items-end gap-14 border-none pb-20 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] md:gap-14">
@@ -75,7 +86,9 @@ export function Footer() {
               {products.map((p) => (
                 <Link
                   key={p.slug}
-                  href={`/products/${p.slug}`}
+                  href={productHref(p)}
+                  target={p.externalUrl ? "_blank" : undefined}
+                  rel={p.externalUrl ? "noopener" : undefined}
                   className="text-[15px] text-[#C7CAD0] transition-colors hover:text-accent"
                 >
                   {p.name} — {p.category}

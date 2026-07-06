@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { NeuralCanvas } from "@/components/NeuralCanvas";
 import { FlowCanvas } from "@/components/FlowCanvas";
+import { StreamCanvas } from "@/components/StreamCanvas";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
 import { StatusBadge } from "@/components/StatusBadge";
@@ -12,6 +13,7 @@ import {
   caseStudies,
   featuredPress,
   pressItems,
+  productHref,
 } from "@/lib/site";
 
 export default function Home() {
@@ -158,6 +160,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ============ FLOW DIVIDER (business flow) ============ */}
+      <section
+        aria-label="Enabling business flow"
+        className="relative h-[clamp(230px,27vh,310px)] overflow-hidden border-b border-line"
+        style={{ background: "#0E1013" }}
+      >
+        <FlowCanvas />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(90deg,#0E1013 0%,rgba(14,16,19,0) 22%,rgba(14,16,19,0) 78%,#0E1013 100%)",
+          }}
+        />
+        <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-4 px-6 text-center">
+          <span
+            className="font-mono text-[11px] uppercase tracking-[0.3em]"
+            style={{ color: "color-mix(in oklab,var(--accent),white 20%)" }}
+          >
+            Since 1999
+          </span>
+          <div className="font-display text-[clamp(27px,3.6vw,46px)] font-bold leading-none tracking-[-0.02em] text-[#F6F5EF] text-balance">
+            Enabling business flow.
+          </div>
+        </div>
+      </section>
+
       {/* ============ PRODUCTS ============ */}
       <section id="products" className="border-b border-line">
         <div className="mx-auto max-w-[1240px] px-6 py-24 md:px-10">
@@ -249,15 +279,17 @@ export default function Home() {
                   </span>
                 ) : (
                   <Link
-                    href={`/products/${p.slug}`}
+                    href={productHref(p)}
+                    target={p.externalUrl ? "_blank" : undefined}
+                    rel={p.externalUrl ? "noopener" : undefined}
                     className="group/link inline-flex items-center gap-2 text-[14px] font-medium"
                     style={{
                       color: "color-mix(in oklab,var(--accent),black 18%)",
                     }}
                   >
-                    Learn more{" "}
+                    {p.externalUrl ? "Visit site" : "Learn more"}{" "}
                     <span className="font-mono transition-all group-hover/link:translate-x-[4px]">
-                      &rarr;
+                      {p.externalUrl ? <>&#8599;</> : <>&rarr;</>}
                     </span>
                   </Link>
                 )}
@@ -428,19 +460,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ FLOW DIVIDER (business flow) ============ */}
+      {/* ============ THROUGHPUT BAND (proof → press) ============ */}
       <section
-        aria-label="Enabling business flow"
-        className="relative h-[clamp(230px,27vh,310px)] overflow-hidden"
+        aria-label="Proven at state scale"
+        className="relative h-[clamp(230px,27vh,310px)] overflow-hidden border-t border-line"
         style={{ background: "#0E1013" }}
       >
-        <FlowCanvas />
+        <StreamCanvas />
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(90deg,#0E1013 0%,rgba(14,16,19,0) 22%,rgba(14,16,19,0) 78%,#0E1013 100%)",
+              "linear-gradient(90deg,#0E1013 0%,rgba(14,16,19,0) 24%,rgba(14,16,19,0) 76%,#0E1013 100%)",
           }}
         />
         <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-4 px-6 text-center">
@@ -448,10 +480,10 @@ export default function Home() {
             className="font-mono text-[11px] uppercase tracking-[0.3em]"
             style={{ color: "color-mix(in oklab,var(--accent),white 20%)" }}
           >
-            Since 1999
+            250+ projects · every one delivered
           </span>
           <div className="font-display text-[clamp(27px,3.6vw,46px)] font-bold leading-none tracking-[-0.02em] text-[#F6F5EF] text-balance">
-            Enabling business flow.
+            Reliability, at state scale.
           </div>
         </div>
       </section>
