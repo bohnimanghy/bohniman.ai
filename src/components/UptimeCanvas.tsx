@@ -131,7 +131,7 @@ export function UptimeCanvas() {
     // "#RRGGBB" + alpha → rgba()
     function hexA(hex: string, a: number) {
       const h = hex.replace("#", "");
-      if (h.length !== 6) return `rgba(240,83,28,${a})`;
+      if (h.length !== 6) return `rgba(37,99,235,${a})`;
       const r = parseInt(h.slice(0, 2), 16);
       const g = parseInt(h.slice(2, 4), 16);
       const b = parseInt(h.slice(4, 6), 16);

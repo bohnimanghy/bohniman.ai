@@ -20,7 +20,7 @@ export function Footer() {
           width: "65%",
           height: "130%",
           background:
-            "radial-gradient(circle at 42% 42%,rgba(240,83,28,0.18),rgba(255,122,0,0.06) 42%,transparent 62%)",
+            "radial-gradient(circle at 42% 42%,rgba(37,99,235,0.18),rgba(96,165,250,0.06) 42%,transparent 62%)",
           filter: "blur(28px)",
           animation: "glowDrift 18s ease-in-out infinite",
         }}

@@ -6,7 +6,7 @@
   --color-canvas-soft: #fcfbf8;
   --color-ink: #17191e;
   --color-ink-soft: #14161b;
-  --color-accent: #f0531c;
+  --color-accent: #2563eb;
   --color-line: #e2e0d7;
   --color-line-soft: #e9e7de;
   --color-muted: #54585f;
@@ -19,8 +19,8 @@
 }
 
 :root {
-  /* Live accent — read by canvas scripts via getComputedStyle */
-  --accent: #f0531c;
+  /* Live accent (blue) — read by canvas scripts via getComputedStyle */
+  --accent: #2563eb;
 }
 
 * {

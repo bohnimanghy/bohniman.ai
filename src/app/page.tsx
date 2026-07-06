@@ -529,7 +529,7 @@ export default function Home() {
                   className="pointer-events-none absolute inset-0"
                   style={{
                     backgroundImage:
-                      "linear-gradient(rgba(240,83,28,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(240,83,28,0.10) 1px,transparent 1px)",
+                      "linear-gradient(rgba(37,99,235,0.10) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,0.10) 1px,transparent 1px)",
                     backgroundSize: "26px 26px",
                     WebkitMaskImage:
                       "radial-gradient(120% 100% at 78% 12%,#000,transparent 72%)",

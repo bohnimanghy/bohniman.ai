@@ -8,7 +8,7 @@ export const site = {
   phoneHref: "tel:+918047789933",
   address:
     "4A Kalindi Plaza, Dr. J.C. Das Road, Panbazar, Guwahati, Assam 781001",
-  accent: "#F0531C",
+  accent: "#2563EB",
 } as const;
 
 /** Years since founding — matches design's `new Date().getFullYear() - 1999`. */

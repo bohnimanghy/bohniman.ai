@@ -90,7 +90,7 @@ export function AdminEditor({ today }: { today: string }) {
       ) : (
         <form action={action} className="grid gap-6">
           {state.error && (
-            <div className="rounded-[10px] border border-[#E7C4B6] bg-[#FBEEE8] px-4 py-3 text-[14px] text-[#8A3A1E]">
+            <div className="rounded-[10px] border border-[#E6C0C0] bg-[#FBEDED] px-4 py-3 text-[14px] text-[#B42318]">
               {state.error}
             </div>
           )}

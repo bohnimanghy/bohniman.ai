@@ -30,7 +30,7 @@ export function FlowCanvas() {
       const float overallSpeed = 0.07;
       const float gridSmoothWidth = 0.015;
       const float scale = 5.0;
-      const vec4 lineColor = vec4(0.941, 0.325, 0.110, 1.0);   /* #F0531C accent */
+      const vec4 lineColor = vec4(0.145, 0.388, 0.922, 1.0);   /* #2563EB accent */
       const float minLineWidth = 0.002;
       const float maxLineWidth = 0.04;
       const float lineSpeed = 1.0 * overallSpeed;

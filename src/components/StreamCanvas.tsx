@@ -86,7 +86,7 @@ export function StreamCanvas() {
 
         // trail
         const grad = ctx.createLinearGradient(p.x - p.len, y, p.x, y);
-        grad.addColorStop(0, "rgba(240,83,28,0)");
+        grad.addColorStop(0, "rgba(37,99,235,0)");
         grad.addColorStop(1, acc);
         ctx.strokeStyle = grad;
         ctx.lineWidth = p.r;
@@ -98,7 +98,7 @@ export function StreamCanvas() {
 
         // head glow
         ctx.globalAlpha = 1;
-        ctx.fillStyle = p.bright ? "#FFD9C6" : acc;
+        ctx.fillStyle = p.bright ? "#C6DBFF" : acc;
         if (p.bright) {
           ctx.shadowColor = acc;
           ctx.shadowBlur = 12;

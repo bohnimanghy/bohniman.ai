@@ -48,7 +48,7 @@ export function ContactForm() {
   return (
     <form action={formAction} className="grid grid-cols-1 gap-6">
       {state.error && (
-        <div className="rounded-[10px] border border-[#E7C4B6] bg-[#FBEEE8] px-4 py-3 text-[14px] text-[#8A3A1E]">
+        <div className="rounded-[10px] border border-[#E6C0C0] bg-[#FBEDED] px-4 py-3 text-[14px] text-[#B42318]">
           {state.error}
         </div>
       )}
@@ -70,7 +70,7 @@ export function ContactForm() {
           </label>
           <input id="name" name="name" required className={inputClass} placeholder="Your name" />
           {state.fieldErrors?.name && (
-            <p className="mt-2 text-[13px] text-[#8A3A1E]">{state.fieldErrors.name}</p>
+            <p className="mt-2 text-[13px] text-[#B42318]">{state.fieldErrors.name}</p>
           )}
         </div>
         <div>
@@ -79,7 +79,7 @@ export function ContactForm() {
           </label>
           <input id="email" name="email" type="email" required className={inputClass} placeholder="you@company.com" />
           {state.fieldErrors?.email && (
-            <p className="mt-2 text-[13px] text-[#8A3A1E]">{state.fieldErrors.email}</p>
+            <p className="mt-2 text-[13px] text-[#B42318]">{state.fieldErrors.email}</p>
           )}
         </div>
       </div>
@@ -104,7 +104,7 @@ export function ContactForm() {
           placeholder="Tell us about your project or which product you're interested in…"
         />
         {state.fieldErrors?.message && (
-          <p className="mt-2 text-[13px] text-[#8A3A1E]">{state.fieldErrors.message}</p>
+          <p className="mt-2 text-[13px] text-[#B42318]">{state.fieldErrors.message}</p>
         )}
       </div>
 
