@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { StatusBadge } from "@/components/StatusBadge";
-import { SamagamHubIcon, ProductIcon } from "@/components/ProductIcon";
+import { BookmanchHubIcon, ProductIcon } from "@/components/ProductIcon";
 import { Reveal } from "@/components/Reveal";
 import { products, getProduct, productHref } from "@/lib/site";
 
@@ -59,7 +59,7 @@ export default async function ProductPage({
           <div className="mb-7 flex items-center gap-5">
             <span className="inline-block">
               {product.flagship ? (
-                <SamagamHubIcon />
+                <BookmanchHubIcon />
               ) : (
                 <ProductIcon slug={product.slug} />
               )}
@@ -136,7 +136,7 @@ export default async function ProductPage({
                 <div className="mb-3 flex items-center gap-[14px]">
                   <span className="inline-block transition-transform duration-[380ms] group-hover:scale-110">
                     {p.flagship ? (
-                      <SamagamHubIcon />
+                      <BookmanchHubIcon />
                     ) : (
                       <ProductIcon slug={p.slug} />
                     )}

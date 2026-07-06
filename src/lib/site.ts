@@ -48,8 +48,8 @@ export function productHref(p: Product): string {
 
 export const products: Product[] = [
   {
-    slug: "samagam",
-    name: "Samagam",
+    slug: "bookmanch",
+    name: "Bookmanch",
     category: "Event Management",
     status: "LIVE",
     flagship: true,

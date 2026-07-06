@@ -17,8 +17,8 @@ const RING = [
   [54.4, 54.4],
 ] as const;
 
-/** Flagship Samagam mark — nodes on a ring converging to a beating core. */
-export function SamagamHubIcon() {
+/** Flagship Bookmanch mark — nodes on a ring converging to a beating core. */
+export function BookmanchHubIcon() {
   return (
     <svg width="58" height="58" viewBox="0 0 72 72" fill="none" style={iconTransition}>
       {/* gathering ring */}
@@ -51,7 +51,7 @@ export function SamagamHubIcon() {
 /** Small per-product icons (also used in the nav mega-menu). */
 export function ProductIcon({ slug }: { slug: string }) {
   switch (slug) {
-    case "samagam":
+    case "bookmanch":
       return (
         <svg width="38" height="38" viewBox="0 0 72 72" fill="none" style={iconTransition}>
           <circle cx="36" cy="36" r="26" stroke="#C9C6BC" strokeWidth="1.1" opacity="0.55" />

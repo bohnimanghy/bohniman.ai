@@ -6,7 +6,7 @@ import { StreamCanvas } from "@/components/StreamCanvas";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
 import { StatusBadge } from "@/components/StatusBadge";
-import { SamagamHubIcon, ProductIcon } from "@/components/ProductIcon";
+import { BookmanchHubIcon, ProductIcon } from "@/components/ProductIcon";
 import {
   products,
   yearsSince,
@@ -222,7 +222,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-[18px]">
                 <span className="inline-block transition-transform duration-[380ms] group-hover:scale-110">
-                  <SamagamHubIcon />
+                  <BookmanchHubIcon />
                 </span>
                 <h3 className="m-0 font-display text-[clamp(34px,4vw,48px)] font-bold leading-none tracking-[-0.01em] text-ink">
                   {flagship.name}

@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     template: "%s · Bohniman AI",
   },
   description:
-    "Bohniman Systems builds AI products on 26 years of mission-critical engineering — Samagam, Kathan AI, Curioversity, Zalpan and Biocrat.",
-  icons: { icon: [{ url: "/bohniman.svg", type: "image/svg+xml" }] },
+    "Bohniman Systems builds AI products on 26 years of mission-critical engineering — Bookmanch, Kathan AI, Curioversity, Zalpan and Biocrat.",
+  icons: { icon: [{ url: "/logo/mark.svg", type: "image/svg+xml" }] },
   openGraph: {
     title: "Bohniman AI — AI products, built on 26 years of proof",
     description:

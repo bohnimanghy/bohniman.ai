@@ -13,7 +13,7 @@ export function Header() {
       }}
     >
       <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-6 px-6 py-[15px] md:px-10">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex shrink-0 items-center gap-3">
           <Logo color="#17191E" />
         </Link>
 
