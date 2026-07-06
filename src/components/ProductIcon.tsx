@@ -83,13 +83,14 @@ export function ProductIcon({ slug }: { slug: string }) {
         </svg>
       );
     case "zalpan":
+      // Zalpan brand mark — Z in a two-handled orange plate (own colours, not the site accent)
       return (
-        <svg width="40" height="38" viewBox="0 0 56 52" fill="none" style={iconTransition}>
-          <line x1="12" y1="26" x2="28" y2="26" stroke="#17191E" strokeWidth="1.6" />
-          <line x1="28" y1="26" x2="44" y2="26" stroke="#17191E" strokeWidth="1.6" />
-          <circle cx="12" cy="26" r="5" fill="none" stroke="#17191E" strokeWidth="1.6" />
-          <circle cx="28" cy="26" r="5" fill="none" stroke="#17191E" strokeWidth="1.6" />
-          <circle cx="44" cy="26" r="5.5" fill="var(--accent)" />
+        <svg width="42" height="42" viewBox="-33 -26 140 140" fill="none" style={iconTransition}>
+          <circle cx="37.1" cy="44" r="57" fill="none" stroke="#f0531c" strokeWidth="4" />
+          <circle cx="37.1" cy="44" r="50" fill="none" stroke="#f0531c" strokeWidth="3" />
+          <path d="M 73.4 -0.9 C 81.9 -15.6 66.3 -24.6 57.8 -9.9" fill="none" stroke="#f0531c" strokeWidth="4.5" strokeLinecap="round" />
+          <path d="M 0.8 88.9 C -7.7 103.6 7.9 112.6 16.4 97.9" fill="none" stroke="#f0531c" strokeWidth="4.5" strokeLinecap="round" />
+          <path fillRule="evenodd" fill="#1f2a37" d="M 13 17.957 L 13 23.949 28.384 24.225 L 43.767 24.500 27.885 46.500 C 14.116 65.574, 12.003 68.999, 12.002 72.250 L 12 76 37.055 76 L 62.110 76 61.805 71.250 L 61.500 66.500 45.164 66 L 28.828 65.500 44.973 43.280 C 60.502 21.909, 61.106 20.898, 60.809 16.780 L 60.500 12.500 36.750 12.232 L 13 11.964 13 17.957" />
         </svg>
       );
     case "biocrat":
