@@ -75,11 +75,13 @@ export function ProductIcon({ slug }: { slug: string }) {
         </svg>
       );
     case "curioversity":
+      // Curioversity brand mark — graduation cap (own colours: indigo board, emerald tassel)
       return (
-        <svg width="38" height="38" viewBox="0 0 52 52" fill="none" style={iconTransition}>
-          <rect x="9" y="9" width="34" height="34" rx="3" transform="rotate(45 26 26)" stroke="#17191E" strokeWidth="1.6" />
-          <rect x="17" y="17" width="18" height="18" rx="2.5" transform="rotate(45 26 26)" stroke="#17191E" strokeWidth="1.6" />
-          <rect x="22" y="22" width="8" height="8" rx="1.5" transform="rotate(45 26 26)" fill="var(--accent)" />
+        <svg width="40" height="40" viewBox="0 0 52 52" fill="none" style={iconTransition}>
+          <path d="M26 8 L48 19 L26 30 L4 19 Z" fill="#4338ca" />
+          <path d="M12 22.5 V32 c0 3.6 28 3.6 28 0 V22.5 L26 29.5 Z" fill="#3730a3" />
+          <path d="M48 19 V33.5" stroke="#10b981" strokeWidth="2.6" strokeLinecap="round" />
+          <circle cx="48" cy="35" r="2.8" fill="#10b981" />
         </svg>
       );
     case "zalpan":

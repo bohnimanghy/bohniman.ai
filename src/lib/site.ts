@@ -85,6 +85,7 @@ export const products: Product[] = [
     name: "Curioversity",
     category: "Education",
     status: "LIVE",
+    externalUrl: "https://curioversity.com",
     tagline: "The operating system for modern institutions.",
     description:
       "The operating system for modern institutions — admissions, academics, operations and communication, unified and intelligent.",
