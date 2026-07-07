@@ -3,6 +3,7 @@ import { Schibsted_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/googl
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ScrollTop } from "@/components/ScrollTop";
 
 const schibsted = Schibsted_Grotesk({
   variable: "--font-schibsted",
@@ -56,6 +57,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <ScrollTop />
       </body>
     </html>
   );
